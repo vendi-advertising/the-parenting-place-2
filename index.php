@@ -16,8 +16,15 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
+		<main id="main" class="site-main">
+		
+			
+			
+		<article id="post-<?php the_ID(); ?>"> <?php post_class(); ?>
+
+		</article>
+		
 		<?php
 		if ( have_posts() ) :
 

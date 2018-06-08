@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container">
+	<footer id="colophon" class="site-footer container-fluid w-100 bg-dark text-light py-3">
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-parenting-place-2018' ); ?></button>
 			<?php
@@ -37,6 +37,7 @@
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
