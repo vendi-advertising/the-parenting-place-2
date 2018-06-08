@@ -47,7 +47,7 @@ if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
 
 		/**
 		 * Register Menu Locations
-		 */
+		 */		 
 		$args = array(
 			'main' 		=>  __( 'Main Menu', 'the_parenting_place_2018'),
 			'sub' 		=>  __( 'Sub Menu', 'the_parenting_place_2018'),
