@@ -42,7 +42,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "libs/bootstrap";
+
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 

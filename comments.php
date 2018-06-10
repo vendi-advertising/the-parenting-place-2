@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<?php  //DEV ?> <?php echo basename( __FILE__ ); ?>
 <div id="comments" class="comments-area">
 
 	<?php
