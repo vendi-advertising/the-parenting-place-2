@@ -65,6 +65,7 @@ get_header('blog');
 			endif;
 			?>
             
+			<?php echo paginate_links( ); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 

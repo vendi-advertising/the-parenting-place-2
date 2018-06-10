@@ -10,8 +10,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title"><a/ href="' . get_permalink(  ) . ' ">', '</a></h2>' ); ?>
+
+	
+			<div class="row  no-gutters">
+				<div class="col-11">
+					<?php the_title( '<h2 class="entry-title"><a/ href="' . get_permalink(  ) . ' ">', '</a></h2>' ); ?>
+				</div>
+				<div class="col">
+					<!-- post format based icon -->
+					<span class="dashicons dashicons-format-<?php echo get_post_format($post->ID); ?>"></span>
+				</div>
+			</div>
+	
 	</header><!-- .entry-header -->
 
 	<?php the_parenting_place_2018_post_thumbnail(); ?>
