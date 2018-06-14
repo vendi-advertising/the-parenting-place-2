@@ -74,15 +74,21 @@ get_header(); ?>
     <div class="col-md-10">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
-
-                    <?php
+           
+                <?php
+                     
                     while ( have_posts() ) : the_post();
-                        
-                        var_dump(get_post());
-                        get_template_part( 'template-parts/content', 'page' );
 
+                       $part = $post->post_name;
+                       
+                       if($part){
+                           get_template_part('template-parts/content', $part); 
+                       }else{
+                           get_template_part( 'template-parts/content', 'none' );
+                       }
+                       
                     endwhile; // End of the loop.
-                    ?>
+                ?>
 
             </main><!-- #main -->
         </div><!-- #primary -->
