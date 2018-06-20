@@ -24,12 +24,36 @@ if($slides) : ?>
                     <div class="carousel-item<?php if($iterator==0) : echo ' active'; endif; ?>">
                         <img src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['alt']; ?>" />
                         <div class="container">
-                            <div class="carousel-caption text-left">
+                            <?php
+                                $text_align = '';
+                        
+                                switch($slide['text_alignment']) {
+                                    case 'left':
+                                        $text_align = 'text-left';
+                                        break;
+                                    case 'center':
+                                        break;
+                                    case 'right':
+                                        $text_align = 'text-right';
+                                        break;
+                                }
+                            ?>
+                            <div class="carousel-caption <?php echo $text_align; ?>">
                                 <h1><?php echo $slide['title']; ?></h1>
                                 <p><?php echo $slide['caption']; ?></p>
-                                <p>
-                                    <a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
-                                </p>
+                                <?php 
+                                    
+                                    if($slide['include_button']){
+                                        echo do_shortcode(
+                                            "[button 
+                                                button_color='{$slide['button_color']}'
+                                                button_link='{$slide['button_link']}'
+                                                button_text='{$slide['button_text']}'
+                                            ]"
+                                        );
+                                    }
+
+                                ?>
                             </div>
                         </div>                
                     </div><!-- item -->

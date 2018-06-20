@@ -18,6 +18,16 @@ $iterator=0;
  * Template
  */
 include(locate_template('template-parts/content-image-slider.php'));
+
+
+/**
+ * Card Params
+ */
+$cards=get_field('cards');
+/**
+ * Template
+ */
+include(locate_template('template-parts/content-cards.php'));
 ?>
 
 <!-- Main Loop -->
