@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+<?php  //DEV ?> <?php echo basename( __FILE__ ); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 

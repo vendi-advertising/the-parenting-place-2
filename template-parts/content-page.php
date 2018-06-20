@@ -15,7 +15,7 @@
 	</header><!-- .entry-header -->
 
 	<?php the_parenting_place_2018_post_thumbnail(); ?>
-
+	
 	<div class="entry-content">
 		<?php
 		the_content();

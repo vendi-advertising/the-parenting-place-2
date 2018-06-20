@@ -7,9 +7,6 @@
  * @package the-parenting-place-2018
  */
 
-// Register Custom Navigation Walker
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-
 if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -47,7 +44,7 @@ if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
 
 		/**
 		 * Register Menu Locations
-		 */
+		 */		 
 		$args = array(
 			'main' 		=>  __( 'Main Menu', 'the_parenting_place_2018'),
 			'sub' 		=>  __( 'Sub Menu', 'the_parenting_place_2018'),
@@ -130,9 +127,19 @@ add_action( 'after_setup_theme', 'the_parenting_place_2018_content_width', 0 );
  */
 function the_parenting_place_2018_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'the-parenting-place-2018' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'the-parenting-place-2018' ),
+		'name'          => esc_html__( ' Main Sidebar', 'the-parenting-place-2018' ),
+		'id'            => 'main-sidebar',
+		'description'   => esc_html__( 'Add widgets for the main sidebar here.', 'the-parenting-place-2018' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( ' Footer Sidebar', 'the-parenting-place-2018' ),
+		'id'            => 'footer-sidebar',
+		'description'   => esc_html__( 'Add widgets for the footer sidebar here.', 'the-parenting-place-2018' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -148,7 +155,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  function the_parenting_place_2018_styles(){
 
 	// main style 
-	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/dist/style.css', array(), time(), 'all');
+	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/style.css', array(), time(), 'all');
 
  }
  add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_styles' );
@@ -159,7 +166,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
 function the_parenting_place_2018_scripts() {
 
 	// bundle
-	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/dist/bundle.js', array(), time(), true );
+	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/bundle.js', array(), time(), true );
 	
 	// additonal scripts
 	wp_enqueue_script( 'the-parenting-place-2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -199,3 +206,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Addtional Includes
+
+// Custom Navigation Walker
+require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+ 

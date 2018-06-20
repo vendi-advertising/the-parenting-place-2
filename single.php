@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all blog posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -10,28 +10,69 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<?php  //DEV ?> <?php echo basename( __FILE__ ); 
+?>
+<?php
+	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
+?>
+<div class="container">
+	<div class="row">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php if ( $default_sidebar_position === 'no' ) : ?>
+		<div class="col-md-12 wp-bp-content-width">
+	<?php else : ?>
+		<div class="col-md-8 wp-bp-content-width">
+	<?php endif; ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
 
-			the_post_navigation();
+			<?php
+				while ( have_posts() ) :
+						the_post();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+					get_template_part( 'template-parts/content', get_post_format());
+					
+					the_post_navigation();
 
-		endwhile; // End of the loop.
-		?>
+				// If comments are open or we have at least one comment, load up the comment template. 
+				if ( comments_open() || get_comments_number()) :
+					comments_template();
+				endif;
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				endwhile; // End of the loop.
+			?>
+
+			</main>
+			<!-- #main -->
+		</div>
+		<!-- #primary -->
+
+	</div>
+	<!-- /.col-md-8 -->
+	<?php if ( $default_sidebar_position != 'no' ) : ?>
+
+		<?php if ( $default_sidebar_position === 'right' ) : ?>
+
+			<div class="col-md-4 wp-bp-sidebar-width">
+
+		<?php elseif ( $default_sidebar_position === 'left' ) : ?>
+
+			<div class="col-md-4 order-md-first wp-bp-sidebar-width">
+
+		<?php endif; ?>
+
+				<?php get_sidebar(); ?>
+
+			</div>
+			<!-- /.col-md-4 -->
+
+	<?php endif; ?>
+
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.container -->
 
 <?php
-get_sidebar();
 get_footer();

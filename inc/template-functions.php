@@ -35,3 +35,23 @@ function the_parenting_place_2018_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'the_parenting_place_2018_pingback_header' );
+
+
+/**
+ * Shortcodes
+ * 
+ */
+function button_shortcode( $atts ) {
+	ob_start();
+	?> 
+		<p>
+			<a class="btn btn-lg btn-<?php echo $atts['button_color']; ?>" href="<?php echo $atts['button_link']; ?>"" role="button">
+				<?php echo $atts['button_text'] ?>
+			</a>
+    	</p>
+	<?php
+	return ob_get_clean();
+
+	return '<span class="caption">' . $content . '</span>';
+}
+add_shortcode( 'button', 'button_shortcode' );

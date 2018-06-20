@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container">
+	<footer id="colophon" class="site-footer container-fluid w-100 bg-dark text-light py-3">
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-parenting-place-2018' ); ?></button>
 			<?php
@@ -24,12 +24,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'the-parenting-place-2018' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'the-parenting-place-2018' ), 'WordPress' );
-				?>
-			</a>
+			<?php get_sidebar('footer'); ?>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
@@ -37,6 +32,7 @@
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
