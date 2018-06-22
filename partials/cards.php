@@ -1,5 +1,5 @@
 <?php 
-// used include in the parent template so the part would have access to the image variable
+$cards = $value;
 if($cards) : ?>
 
 <div class="row">

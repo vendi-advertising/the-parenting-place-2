@@ -1,4 +1,6 @@
 <?php 
+$iterator=0;
+$slides = $value;
 if($slides) : ?>
 
 <div class="row">
