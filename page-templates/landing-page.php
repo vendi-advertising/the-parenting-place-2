@@ -10,14 +10,14 @@ get_header(); ?>
 /**
  * Carousel Params
  */
-$slides=get_field('slides');
+$slides=get_field('banner_image_slider');
 
 $iterator=0;
 
 /**
  * Template
  */
-include(locate_template('template-parts/content-image-slider.php'));
+include(locate_template('partials/content-image-slider.php'));
 
 
 /**
@@ -27,7 +27,7 @@ $cards=get_field('cards');
 /**
  * Template
  */
-include(locate_template('template-parts/content-cards.php'));
+include(locate_template('partials/content-cards.php'));
 ?>
 
 <!-- Main Loop -->
@@ -43,9 +43,9 @@ include(locate_template('template-parts/content-cards.php'));
                        $part = $post->post_name;
                        
                        if($part){
-                           get_template_part('template-parts/content', $part); 
+                           get_template_part('partials/content', $part); 
                        }else{
-                           get_template_part( 'template-parts/content', 'none' );
+                           get_template_part( 'partials/content', 'none' );
                        }
                        
                     endwhile; // End of the loop.

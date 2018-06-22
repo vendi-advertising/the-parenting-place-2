@@ -43,12 +43,14 @@ if($slides) : ?>
                                 <p><?php echo $slide['caption']; ?></p>
                                 <?php 
                                     
+                                    $button = $slide['button']['button'];
+                                    var_dump($button);
                                     if($slide['include_button']){
                                         echo do_shortcode(
                                             "[button 
-                                                button_color='{$slide['button_color']}'
-                                                button_link='{$slide['button_link']}'
-                                                button_text='{$slide['button_text']}'
+                                                button_color='{$button['button_color']}'
+                                                button_link='{$button['button_link']}'
+                                                button_text='{$button['button_text']}'
                                             ]"
                                         );
                                     }
