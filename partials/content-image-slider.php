@@ -1,5 +1,4 @@
 <?php 
-// used include in the parent template so the part would have access to the image variable
 if($slides) : ?>
 
 <div class="row">
@@ -44,15 +43,8 @@ if($slides) : ?>
                                 <?php 
                                     
                                     $button = $slide['button']['button'];
-                                    var_dump($button);
                                     if($slide['include_button']){
-                                        echo do_shortcode(
-                                            "[button 
-                                                button_color='{$button['button_color']}'
-                                                button_link='{$button['button_link']}'
-                                                button_text='{$button['button_text']}'
-                                            ]"
-                                        );
+                                        include('components/button.php');
                                     }
 
                                 ?>
