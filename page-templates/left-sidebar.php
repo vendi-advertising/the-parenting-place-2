@@ -4,11 +4,18 @@
 */
 
 get_header(); ?>
+    <?php 
+     $render = ['banner_image_slider'];
+     $field = prepare_fields($render);
+     render_fields($field);
+    ?>
 
     <div class="container">
         <div class="row">
             <div class="col-md-4 wp-bp-sidebar-width">
-                <?php get_sidebar(); ?>
+                <?php 
+                    get_sidebar(); 
+                ?>
             </div>
             <!-- /.col-md-4 -->
 
@@ -17,16 +24,13 @@ get_header(); ?>
                     <main id="main" class="site-main">
 
                         <?php
-                        while ( have_posts() ) : the_post();
+                  
+                            $already_rendered = $render;
+                            $fields = prepare_fields();
 
-                            get_template_part( 'partials/content', 'page' );
+                            render_fields($fields, $already_rendered);
 
-                            // If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
 
-                        endwhile; // End of the loop.
                         ?>
 
                     </main><!-- #main -->

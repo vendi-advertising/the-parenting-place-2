@@ -1,27 +1,29 @@
 <?php 
 $cards = $value;
 if($cards) : ?>
-
-<div class="row">
-
-    <div class="col-md-12">
-        <?php foreach( $cards as $card ): ?>
-            <div class="card">
-                <div class="card-body">
-                    <div class="row p-3">
-                        <div class="col-12">
-                            <h3>Sponsor</h3>
-                            <img src="//unsplash.it/400x200" class="img-fluid">
-                            <hr>
-                            <p class="">Shiny, shiny. Varius azdipiscing elit. Duis pharetra codeply varius quam sit amet vulputate. Ovi lipsim diro?</p>
-                            <button class="btn btn-secondary">Take Action!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <!-- /.col-md-12 -->
-</div>
-<!-- /.row -->
+<section class="background">
+	<div class="container full-width">
+		<div class="row card-group text-white">
+			<div class="column-4">
+				<div class="card card-custom bg-dark-blue">
+					<div class="card-header">
+						<div class="icon">
+							<span class="ti-desktop font-size-48"></span>
+							<span class="ti-desktop two font-size-48"></span>
+						</div>
+					</div><!-- /.card-header -->
+					<div class="card-body">
+						<div class="card-title">
+							<a href="#" title="" class="text-white">Web Development</a>
+						</div>
+						<div class="card-text">
+						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <br />anim id est laborum</p>
+							<a href="#" title="" class="text-white">VIEW SERVICES</a>
+						</div>
+					</div><!-- /content -->
+				</div><!-- /.card-custom -->
+			</div><!-- /.column-4 -->
+		</div><!-- /.row -->
+	</div><!-- /.container-->
+</section>
 <?php endif; ?>

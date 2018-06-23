@@ -12,8 +12,14 @@ if ( ! is_active_sidebar( 'main-sidebar' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area sidebar-1-area mt-3r card">
-	<?php  //DEV ?> <?php echo basename( __FILE__ ); ?>
-	<?php dynamic_sidebar( 'main-sidebar' ); ?>
+<aside id="secondary" class="widget-area">
+	<!-- <?php  //DEV ?> <?php echo basename( __FILE__ ); ?> -->
+
+	<div class="sidebar" id="sidebar" role="navigation">
+		<?php dynamic_sidebar( 'main-sidebar' ); ?>
+	</div>
 
 </aside><!-- #secondary -->
+
+
+
