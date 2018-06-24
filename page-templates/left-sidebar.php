@@ -5,12 +5,9 @@
 
 get_header(); ?>
     <?php 
-    //  $render = ['banner_image_slider'];
-    //  $field = prepare_fields();
-    //  echo '<pre>';
-    //  var_dump($field);
-    //  echo '</pre>';
-    //  render_fields($field);
+        $render = ['banner_image_slider'];
+        $field = prepare_fields($render);
+        render_fields($field);
     ?>
 
     <div class="container">
@@ -31,7 +28,7 @@ get_header(); ?>
                             // $already_rendered = $render;
                             $fields = prepare_fields();
                                                         
-                            render_fields($fields);
+                            render_fields($fields, ['banner_image_slider']);
 
 
                         ?>

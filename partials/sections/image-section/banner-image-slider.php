@@ -1,6 +1,6 @@
 <?php 
 $iterator=0;
-$slides = $contents;
+$slides = $contents[$contents['acf_fc_layout']];
 if($slides) : ?>
 
 <div class="row">
@@ -22,11 +22,7 @@ if($slides) : ?>
             </pre>
             <div class="carousel-inner">
                 <?php $iterator=0;?>
-                <?php  foreach( $slides as $slide ): ?>
-                    <?php 
-                     $field = $slide[$slide['acf_fc_layout']];
-                     foreach($field as $value):          
-                    ?>
+                <?php  foreach( $slides as $slide => $value): ?>                 
                     <div class="carousel-item<?php if($iterator==0) : echo esc_html_e( ' active' ); endif; ?>">
                         <img src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>" />
                         <div class="container">
@@ -58,8 +54,7 @@ if($slides) : ?>
                     </div><!-- item -->
                 <?php 
                     $iterator++;        
-                    endforeach; 
-                endforeach; 		
+                    endforeach; 		
                 ?> 
             </div>
             <a class="carousel-control-prev" href="#front-page-image-slider" role="button" data-slide="prev">

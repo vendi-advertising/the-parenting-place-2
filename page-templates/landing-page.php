@@ -9,7 +9,5 @@ get_header(); ?>
 <?php
 
 $fields = prepare_fields();
-
 render_fields($fields);
-
 get_footer();
