@@ -1,6 +1,6 @@
 <?php 
 $iterator=0;
-$slides = $value;
+$slides = $contents;
 if($slides) : ?>
 
 <div class="row">
@@ -12,23 +12,28 @@ if($slides) : ?>
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <?php foreach( $slides as $slide ): ?>
-                <li data-target="#carousel" data-slide-to="<?php echo $iterator; ?>" <?php if($iterator==0) : ?>class="active"<?php endif; ?>></li>      
+                <li data-target="#carousel" data-slide-to="<?php echo esc_html_e( $iterator ); ?>" <?php if($iterator==0) : ?>class="active"<?php endif; ?>></li>      
                 <?php 
                     $iterator++;
                     endforeach; 
                 ?>
             </ol>
+            </pre>
+            </pre>
             <div class="carousel-inner">
                 <?php $iterator=0;?>
                 <?php  foreach( $slides as $slide ): ?>
-                
-                    <div class="carousel-item<?php if($iterator==0) : echo ' active'; endif; ?>">
-                        <img src="<?php echo $slide['image']['url']; ?>" alt="<?php echo $slide['image']['alt']; ?>" />
+                    <?php 
+                     $field = $slide[$slide['acf_fc_layout']];
+                     foreach($field as $value):          
+                    ?>
+                    <div class="carousel-item<?php if($iterator==0) : echo esc_html_e( ' active' ); endif; ?>">
+                        <img src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>" />
                         <div class="container">
                             <?php
                                 $text_align = '';
                         
-                                switch($slide['text_alignment']) {
+                                switch($value['text_alignment']) {
                                     case 'left':
                                         $text_align = 'text-left';
                                         break;
@@ -39,23 +44,22 @@ if($slides) : ?>
                                         break;
                                 }
                             ?>
-                            <div class="carousel-caption <?php echo $text_align; ?>">
-                                <h1><?php echo $slide['title']; ?></h1>
-                                <p><?php echo $slide['caption']; ?></p>
+                            <div class="carousel-caption <?php echo esc_html_e( $text_align ); ?>">
+                                <h1><?php echo esc_html_e( $value['title'] ); ?></h1>
+                                <p><?php echo esc_html_e( $value['caption'] ); ?></p>
                                 <?php 
-                                    
-                                    $button = $slide['button']['button'];
-                                    if($slide['include_button']){
-                                        include('components/button.php');
+                                    $button = $value['button']['button'];
+                                    if($value['include_button']){
+                                        include( get_template_directory() . '/partials/components/button.php');
                                     }
-
                                 ?>
                             </div>
                         </div>                
                     </div><!-- item -->
                 <?php 
                     $iterator++;        
-                    endforeach; 		
+                    endforeach; 
+                endforeach; 		
                 ?> 
             </div>
             <a class="carousel-control-prev" href="#front-page-image-slider" role="button" data-slide="prev">

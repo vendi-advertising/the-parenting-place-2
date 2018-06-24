@@ -89,53 +89,67 @@ add_action( 'wp_head', 'the_parenting_place_2018_pingback_header' );
 
 
 /**************************************************************/
-/* ACF                                                        */
+/* ACF  HELPERS                                               */
 /**************************************************************/
 
  function prepare_fields($fields_to_prepare = []){
-	$clean_fields = array();
-	$field_groups = acf_get_field_groups();
-	foreach ( $field_groups as $group ) {
-		// DO NOT USE here: $fields = acf_get_fields($group['key']);
-		// because it causes repeater field bugs and returns "trashed" fields
-		$fields = get_posts(array(
-			'posts_per_page'   => -1,
-			'post_type'        => 'acf-field',
-			'orderby'          => 'menu_order',
-			'order'            => 'ASC',
-			'suppress_filters' => true, // DO NOT allow WPML to modify the query
-			'post_parent'      => $group['ID'],
-			'post_status'      => 'any',
-			'update_post_meta_cache' => false
-		));
+	$sections = acf_get_field_groups();
+	foreach( $sections as $section ){
 
-		foreach ( $fields as $field ) {
-					// echo'<pre>';
-					// var_export($field);
-					// // var_export($value);
-					// echo '</pre>';
-			$field_key = $field->post_excerpt;
-			if(!empty($fields_to_prepare)){
-				if(in_array($field_key, $fields_to_prepare) ){
-					$clean_fields[$field_key] = get_field($field_key);
-				}
-				return $clean_fields;
+		$sections = [];
+		$field_groups = acf_get_field_groups();
+	
+		foreach ( $field_groups as $group ) {
+			// DO NOT USE here: $fields = acf_get_fields($group['key']);
+			// because it causes repeater field bugs and returns "trashed" fields
+			$fields = get_posts(array(
+				'posts_per_page'   => -1,
+				'post_type'        => 'acf-field',
+				'orderby'          => 'menu_order',
+				'order'            => 'ASC',
+				'suppress_filters' => true, // DO NOT allow WPML to modify the query
+				'post_parent'      => $group['ID'],
+				'post_status'      => 'any',
+				'update_post_meta_cache' => false
+			));
+			foreach ( $fields as $field ) {
+		
+				$field_value = get_field($field->post_name);
+
+				$field_key = $field->post_excerpt;
+				// if(!empty($fields_to_prepare)){
+				// 	if(in_array($field_key, $fields_to_prepare) ){
+				// 		$sections[$field_key] = $field['value'];
+				// 	}
+				// 	return $sections;
+				// }
+				$sections[$field_key] = $field_value;
 			}
-			$clean_fields[$field_key] = get_field($field_key);
-		}
 
-	 }
-	 
-	 return $clean_fields;
+			foreach( $sections as $section ){
+		
+				foreach( $section as $layout ){
+					if(array_key_exists('acf_fc_layout', $layout)){				
+						$clean_fields[$layout["acf_fc_layout"]] = $layout["section_layout"];
+					}
+				}
+			}
+	
+		 }
+		 return $clean_fields;
+	}
 
 }
 	
 function render_fields($all_fields, $exclude = []){
-	$fields = array_diff_key($all_fields, array_flip($exclude));
-	foreach($fields as $field => $value){
-
-		if(!empty($field) && $field !== 'page_components'){
-			include(locate_template('partials/' . str_replace('_', '-', $field ) . '.php'));
+	$sections = array_diff_key($all_fields, array_flip($exclude));
+	foreach($sections as $section => $contents){
+		if(!empty($section && $section !== 'page_components')){
+			foreach( $contents as $layout ){
+				$path = '/partials/sections/' . str_replace('_', '-', $section ) . "/" . str_replace('_', '-', $layout['acf_fc_layout'] ) . '.php';
+				include(locate_template( $path ));
+			}
+			
 		}
 	}
 }
