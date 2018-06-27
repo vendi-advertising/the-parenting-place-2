@@ -209,6 +209,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Register Addtional Includes
 
+// spl_autoload_register(function($class) {
+//     include $class . '.php';
+// });
+
 // Custom Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+require_once get_template_directory() . '/inc/classes/acf-buddy.php';
  
