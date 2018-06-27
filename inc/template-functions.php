@@ -92,10 +92,10 @@ add_action( 'wp_head', 'the_parenting_place_2018_pingback_header' );
 /* ACF  HELPERS                                               */
 /**************************************************************/
 
- function prepare_fields($requested_fields = []){
+ function prepare_sections($requested_sections = []){
 
-	$clean_fields = [];
-	$clean_requested_fields = [];
+	$clean_sections = [];
+	$clean_requested_sections = [];
 	$field_groups = acf_get_field_groups();
 
 	foreach ( $field_groups as $group ) {
@@ -120,28 +120,31 @@ add_action( 'wp_head', 'the_parenting_place_2018_pingback_header' );
 			if($layout_type !== 'page_components'){
 				foreach($layout as $key => $value){
 					$field_values = $value["section_layout"][0];
-					if(in_array($field_values['acf_fc_layout'], $requested_fields)){
-						$clean_requested_fields[$value["acf_fc_layout"]] = $field_values ;
+					if(is_null($field_values)){
+						$field_values = "";
+					}
+					if(in_array($value['acf_fc_layout'], $requested_sections)){
+						$clean_requested_sections[$value["acf_fc_layout"]] = $field_values ;
 					}else{
-						$clean_fields[$value["acf_fc_layout"]] = $field_values ;
+						$clean_sections[$value["acf_fc_layout"]] = $field_values ;
 					}
 				}
 			}
 		}
 	}
 
-	if(!empty($requested_fields)){
-		return $clean_requested_fields;
+	if(!empty($requested_sections)){
+		return $clean_requested_sections;
 	}
 
-	return $clean_fields;
+	return $clean_sections;
 }
 
 
 	
 function render_fields($all_sections, $exclude = []){
 	foreach($all_sections as $section => $contents){
-		if($section !== 'page_components' && !in_array($contents['acf_fc_layout'], $exclude)){
+		if($section !== 'page_components' && !in_array($section, $exclude)){
 			$folder = '/partials/sections/' . str_replace('_', '-', $section ) . "/";
 			$path = $folder . str_replace('_', '-', $contents['acf_fc_layout'] ) . '.php';
 			include(locate_template( $path ));	

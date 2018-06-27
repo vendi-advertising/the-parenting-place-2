@@ -1,4 +1,5 @@
 <?php 
+$iterator=0;
 $slides = $contents[$contents['acf_fc_layout']];
 if($slides) : ?>
 
@@ -7,20 +8,22 @@ if($slides) : ?>
     <div class="col-md-12">
 
 
-        <div id="image-section-image-slider" class="carousel slide" data-ride="carousel">
+        <div id="banner-section-image-slider" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <?php foreach( $slides as $slide => $value ): ?>
-                <li data-target="#image-section-image-slider" data-slide-to="<?php echo esc_html_e( $slide ); ?>" <?php if($slide==0) : ?>class="active"<?php endif;?>></li>      
+                <?php foreach( $slides as $slide ): ?>
+                <li data-target="#banner-section-image-slide" data-slide-to="<?php echo esc_html_e( $iterator ); ?>" <?php if($iterator==0) : ?>class="active"<?php endif;?>></li>      
                 <?php 
+                    $iterator++; 
                     endforeach; 
                 ?>
             </ol>
             </pre>
             </pre>
             <div class="carousel-inner">
+                <?php $iterator=0;?>
                 <?php  foreach( $slides as $slide => $value): ?>                 
-                    <div class="carousel-item<?php if($slide==0) : echo esc_html_e( ' active' ); endif; ?>">
+                    <div class="carousel-item<?php if($iterator==0) : echo esc_html_e( ' active' ); endif; ?>">
                         <img src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>" />
                         <div class="container">
                             <?php
@@ -49,15 +52,16 @@ if($slides) : ?>
                             </div>
                         </div>                
                     </div><!-- item -->
-                <?php  
+                <?php 
+                    $iterator++;        
                     endforeach; 		
                 ?> 
             </div>
-            <a class="carousel-control-prev" href="#image-section-image-slider" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#banner-section-image-slider" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#image-section-image-slider" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#banner-section-image-slider" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

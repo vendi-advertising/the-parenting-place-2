@@ -5,9 +5,9 @@
 
 get_header(); ?>
     <?php 
-        $render = ['banner_image_slider'];
-        $field = prepare_fields($render);
-        render_fields($field);
+        $render = ['banner_section'];
+        $section = prepare_sections($render);
+        render_fields($section);
     ?>
 
     <div class="container">
@@ -26,9 +26,9 @@ get_header(); ?>
                         <?php
                   
                             // $already_rendered = $render;
-                            $fields = prepare_fields();
+                            $sections = prepare_sections();
                                                         
-                            render_fields($fields, ['banner_image_slider']);
+                            render_fields($sections, ['banner_section']);
 
 
                         ?>
