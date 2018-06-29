@@ -215,5 +215,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Custom Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
-require_once get_template_directory() . '/inc/classes/acf-buddy.php';
+// require_once get_template_directory() . '/inc/classes/acf-buddy.php';
  
