@@ -26,7 +26,7 @@ get_header(); ?>
                         <?php
                   
                             // $already_rendered = $render;
-                            $sections = AFC_Buddy::prepare_sections();
+                            $sections = AFC_Buddy::prepare_sections(['card_section']);
                                                         
                             AFC_Buddy::render_fields($sections, ['banner_section']);
 

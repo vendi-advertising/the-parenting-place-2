@@ -1,5 +1,5 @@
 <?php 
-$cards = $contents[$contents['acf_fc_layout']];
+$cards = $fields[$fields['acf_fc_layout']];
 if($cards) : ?>
 <section class="background">
 	<div class="container-fluid">
