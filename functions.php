@@ -180,40 +180,7 @@ function the_parenting_place_2018_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-// Register Addtional Includes
-
-// spl_autoload_register(function($class) {
-//     include $class . '.php';
-// });
-
-// Custom Navigation Walker
+// // Custom Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
-// require_once get_template_directory() . '/inc/classes/acf-buddy.php';
+
  
