@@ -4,6 +4,11 @@
 */
 
 get_header(); ?>
+     <?php 
+        $render = ['banner_section'];
+        $section = AFC_Buddy::prepare_sections($render);
+        AFC_Buddy::render_fields($section);
+    ?>
 
     <div class="container">
         <div class="row">
@@ -12,17 +17,13 @@ get_header(); ?>
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main">
 
+                    
                         <?php
-                        while ( have_posts() ) : the_post();
+                  
+                            $sections = AFC_Buddy::prepare_sections();
+                                                        
+                            AFC_Buddy::render_fields($sections, ['banner_section']);
 
-                            get_template_part( 'partials/content', 'page' );
-
-                            // If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-
-                        endwhile; // End of the loop.
                         ?>
 
                     </main><!-- #main -->

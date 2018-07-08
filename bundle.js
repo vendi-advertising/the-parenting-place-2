@@ -139,7 +139,66 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_2__);\n/**\n * Main entry point for theme JavaScript\n */\n\n\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./libs */ \"./src/js/libs/index.js\");\n/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules */ \"./src/js/modules/index.js\");\n/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules__WEBPACK_IMPORTED_MODULE_4__);\n/**\n * External libs\n */\n\n\n\n\n\n\n/**\n * Theme modules\n */\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/libs/customizer.js":
+/*!***********************************!*\
+  !*** ./src/js/libs/customizer.js ***!
+  \***********************************/
+/*! exports provided: customizer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"customizer\", function() { return customizer; });\n/**\n * File customizer.js.\n *\n * Theme Customizer enhancements for a better user experience.\n *\n * Contains handlers to make Theme Customizer preview reload changes asynchronously.\n */\n\nfunction customizer($) {\n  // Site title and description.\n  wp.customize(\"blogname\", function (value) {\n    value.bind(function (to) {\n      $(\".site-title a\").text(to);\n    });\n  });\n  wp.customize(\"blogdescription\", function (value) {\n    value.bind(function (to) {\n      $(\".site-description\").text(to);\n    });\n  });\n\n  // Header text color.\n  wp.customize(\"header_textcolor\", function (value) {\n    value.bind(function (to) {\n      global.jQuery = global.$ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n      if (\"blank\" === to) {\n        $(\".site-title, .site-description\").css({\n          clip: \"rect(1px, 1px, 1px, 1px)\",\n          position: \"absolute\"\n        });\n      } else {\n        $(\".site-title, .site-description\").css({\n          clip: \"auto\",\n          position: \"relative\"\n        });\n        $(\".site-title a, .site-description\").css({\n          color: to\n        });\n      }\n    });\n  });\n};\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./src/js/libs/customizer.js?");
+
+/***/ }),
+
+/***/ "./src/js/libs/index.js":
+/*!******************************!*\
+  !*** ./src/js/libs/index.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _customizer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./customizer */ \"./src/js/libs/customizer.js\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/js/libs/nav.js\");\n/* harmony import */ var _slff__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slff */ \"./src/js/libs/slff.js\");\n\n\n\ncustomizer();\nnav();\nslff();\n\n//# sourceURL=webpack:///./src/js/libs/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/libs/nav.js":
+/*!****************************!*\
+  !*** ./src/js/libs/nav.js ***!
+  \****************************/
+/*! exports provided: nav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"nav\", function() { return nav; });\n/**\n * File navigation.js.\n *\n * Handles toggling the navigation menu for small screens and enables TAB key\n * navigation support for dropdown menus.\n */\nfunction nav() {\n\tvar container, button, menu, links, i, len;\n\n\tcontainer = document.getElementById('site-navigation');\n\tif (!container) {\n\t\treturn;\n\t}\n\n\tbutton = container.getElementsByTagName('button')[0];\n\tif ('undefined' === typeof button) {\n\t\treturn;\n\t}\n\n\tmenu = container.getElementsByTagName('ul')[0];\n\n\t// Hide menu toggle button if menu is empty and return early.\n\tif ('undefined' === typeof menu) {\n\t\tbutton.style.display = 'none';\n\t\treturn;\n\t}\n\n\tmenu.setAttribute('aria-expanded', 'false');\n\tif (-1 === menu.className.indexOf('nav-menu')) {\n\t\tmenu.className += ' nav-menu';\n\t}\n\n\tbutton.onclick = function () {\n\t\tif (-1 !== container.className.indexOf('toggled')) {\n\t\t\tcontainer.className = container.className.replace(' toggled', '');\n\t\t\tbutton.setAttribute('aria-expanded', 'false');\n\t\t\tmenu.setAttribute('aria-expanded', 'false');\n\t\t} else {\n\t\t\tcontainer.className += ' toggled';\n\t\t\tbutton.setAttribute('aria-expanded', 'true');\n\t\t\tmenu.setAttribute('aria-expanded', 'true');\n\t\t}\n\t};\n\n\t// Get all the link elements within the menu.\n\tlinks = menu.getElementsByTagName('a');\n\n\t// Each time a menu link is focused or blurred, toggle focus.\n\tfor (i = 0, len = links.length; i < len; i++) {\n\t\tlinks[i].addEventListener('focus', toggleFocus, true);\n\t\tlinks[i].addEventListener('blur', toggleFocus, true);\n\t}\n\n\t/**\n\t * Sets or removes .focus class on an element.\n\t */\n\tfunction toggleFocus() {\n\t\tvar self = this;\n\n\t\t// Move up through the ancestors of the current link until we hit .nav-menu.\n\t\twhile (-1 === self.className.indexOf('nav-menu')) {\n\n\t\t\t// On li elements toggle the class .focus.\n\t\t\tif ('li' === self.tagName.toLowerCase()) {\n\t\t\t\tif (-1 !== self.className.indexOf('focus')) {\n\t\t\t\t\tself.className = self.className.replace(' focus', '');\n\t\t\t\t} else {\n\t\t\t\t\tself.className += ' focus';\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tself = self.parentElement;\n\t\t}\n\t}\n\n\t/**\n\t * Toggles `focus` class to allow submenu access on tablets.\n\t */\n\t(function (container) {\n\t\tvar touchStartFn, i,\n\t\t\tparentLink = container.querySelectorAll('.menu-item-has-children > a, .page_item_has_children > a');\n\n\t\tif ('ontouchstart' in window) {\n\t\t\ttouchStartFn = function (e) {\n\t\t\t\tvar menuItem = this.parentNode,\n\t\t\t\t\ti;\n\n\t\t\t\tif (!menuItem.classList.contains('focus')) {\n\t\t\t\t\te.preventDefault();\n\t\t\t\t\tfor (i = 0; i < menuItem.parentNode.children.length; ++i) {\n\t\t\t\t\t\tif (menuItem === menuItem.parentNode.children[i]) {\n\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t}\n\t\t\t\t\t\tmenuItem.parentNode.children[i].classList.remove('focus');\n\t\t\t\t\t}\n\t\t\t\t\tmenuItem.classList.add('focus');\n\t\t\t\t} else {\n\t\t\t\t\tmenuItem.classList.remove('focus');\n\t\t\t\t}\n\t\t\t};\n\n\t\t\tfor (i = 0; i < parentLink.length; ++i) {\n\t\t\t\tparentLink[i].addEventListener('touchstart', touchStartFn, false);\n\t\t\t}\n\t\t}\n\t}(container));\n};\n\n//# sourceURL=webpack:///./src/js/libs/nav.js?");
+
+/***/ }),
+
+/***/ "./src/js/libs/slff.js":
+/*!*****************************!*\
+  !*** ./src/js/libs/slff.js ***!
+  \*****************************/
+/*! exports provided: slff */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"slff\", function() { return slff; });\n/**\n * File skip-link-focus-fix.js.\n *\n * Helps with accessibility for keyboard only users.\n *\n * Learn more: https://git.io/vWdr2\n */\nfunction slff() {\n\tvar isIe = /(trident|msie)/i.test(navigator.userAgent);\n\n\tif (isIe && document.getElementById && window.addEventListener) {\n\t\twindow.addEventListener('hashchange', function () {\n\t\t\tvar id = location.hash.substring(1),\n\t\t\t\telement;\n\n\t\t\tif (!(/^[A-z0-9_-]+$/.test(id))) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\telement = document.getElementById(id);\n\n\t\t\tif (element) {\n\t\t\t\tif (!(/^(?:a|select|input|button|textarea)$/i.test(element.tagName))) {\n\t\t\t\t\telement.tabIndex = -1;\n\t\t\t\t}\n\n\t\t\t\telement.focus();\n\t\t\t}\n\t\t}, false);\n\t}\n};\n\n//# sourceURL=webpack:///./src/js/libs/slff.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/index.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/index.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("console.log(\"hello\");\n\n//# sourceURL=webpack:///./src/js/modules/index.js?");
 
 /***/ }),
 
