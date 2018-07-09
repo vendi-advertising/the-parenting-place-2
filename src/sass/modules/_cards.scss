@@ -1,4 +1,7 @@
-.info-card {
-    padding: 100px;
-    color: $white;
+.card {
+    &.info{
+        color: $white;
+        height: 300px;
+
+    }    
 }

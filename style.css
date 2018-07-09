@@ -7444,9 +7444,9 @@ figure {
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
-.info-card {
-  padding: 100px;
-  color: #f4f4f4; }
+.card.info {
+  color: #f4f4f4;
+  height: 300px; }
 
 /*THE CAROUSEL
 -------------------------------------------------- */
@@ -7578,9 +7578,9 @@ table {
   .featurette-heading {
     margin-top: 7rem; } }
 
-.info-card {
-  padding: 100px;
-  color: #f4f4f4; }
+.card.info {
+  color: #f4f4f4;
+  height: 300px; }
 
 site-footer {
   background: #fff;
