@@ -4,7 +4,10 @@
 import "jquery";
 import "popper.js";
 import "bootstrap";
-import 'owl.carousel';
+import {
+    tns
+}
+from "../../node_modules/tiny-slider/src/tiny-slider"
 
 
 /**
