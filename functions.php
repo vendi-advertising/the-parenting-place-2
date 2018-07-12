@@ -167,12 +167,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
 function the_parenting_place_2018_scripts() {
 
 	// bundle
-	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/bundle.js', array(), time(), true );
-	
-	// additonal scripts
-	wp_enqueue_script( 'the-parenting-place-2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/bundle.js', array(), time(), false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
