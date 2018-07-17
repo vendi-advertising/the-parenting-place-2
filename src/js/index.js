@@ -4,10 +4,6 @@
 import "jquery";
 import "popper.js";
 import "bootstrap";
-import {
-    tns
-}
-from "../../node_modules/tiny-slider/src/tiny-slider"
 
 
 /**
