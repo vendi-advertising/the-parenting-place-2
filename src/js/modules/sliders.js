@@ -4,7 +4,7 @@ import {
 from "../libs/tiny-slider"
 
 let custom = tns({
-        "container": "#customize",
+        "container": ".standard",
         "items": 3,
         "controlsContainer": "#customize-controls",
         "navContainer": "#customize-thumbnails",
@@ -17,7 +17,6 @@ let custom = tns({
     sliders = {
         custom
     }
-console.log(tns);
 export {
     sliders
 }

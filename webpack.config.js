@@ -4,7 +4,7 @@ module.exports = {
   entry: ["./src/js/index.js", "./src/scss/style.scss"],
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname)
+    path: `${path.resolve(__dirname)}/assets`
   },
   module: {
     rules: [{
@@ -12,9 +12,7 @@ module.exports = {
       exclude: /node_modules/,
       use: {
         loader: "babel-loader"
-      }
-    }],
-    rules: [{
+      },
       test: /\.scss$/,
       use: [{
           loader: "file-loader",
@@ -32,13 +30,13 @@ module.exports = {
           loader: "sass-loader"
         }
       ]
-    }],
+    }]
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      "window.jQuery": "jquery",
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
     })
   ]
 };

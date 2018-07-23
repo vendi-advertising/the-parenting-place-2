@@ -1,4 +1,4 @@
-<div class="customize" id="customize">
+<div class="standard" id="standard">
 	<div>
 		<div>
 			<img src="" alt="" width="600" height="400">
@@ -60,10 +60,10 @@
 	</ul>
 	<ul class="controls" id="customize-controls">
 		<li class="prev">
-			<img src="images/angle-left.png" alt="">
+			<img src="assets/img/angle-left.png" alt="">
 		</li>
 		<li class="next">
-			<img src="images/angle-right.png" alt="">
+			<img src="assets/img/angle-right.png" alt="">
 		</li>
 	</ul>
 	<div class="playbutton-wrapper">

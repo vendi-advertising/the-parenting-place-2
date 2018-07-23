@@ -156,7 +156,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  function the_parenting_place_2018_styles(){
 
 	// main style 
-	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/style.css', array(), time(), 'all');
+	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/assets/style.css', array(), time(), 'all');
 
  }
  add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_styles' );
@@ -167,7 +167,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
 function the_parenting_place_2018_scripts() {
 
 	// bundle
-	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/bundle.js', array(), time(), true );
+	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/assets/bundle.js', array(), time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
