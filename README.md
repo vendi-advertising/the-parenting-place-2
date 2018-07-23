@@ -1,46 +1,198 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
-_s
-===
-
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
-
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-Note: `.no-sidebar` styles are not automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
-
-Getting Started
----------------
-
-If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
-
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
-
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in `style.css`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
-
-OR
-
-1. Search for: `'_s'` and replace with: `'megatherium-is-awesome'`
-2. Search for: `_s_` and replace with: `megatherium_is_awesome_`
-3. Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium-is-awesome` in `style.css`.
-4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium_is_Awesome</code>
-5. Search for: `_s-` and replace with: `megatherium-is-awesome-`
-
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+.
+├── 404.php
+├── archive.php
+├── assets
+│   ├── bundle.js
+│   └── style.css
+├── comments.php
+├── footer.php
+├── functions.php
+├── header.php
+├── home.php
+├── inc
+│   ├── jetpack.php
+│   └── wp-bootstrap-navwalker.php
+├── index.php
+├── LICENSE
+├── package.json
+├── page.php
+├── page-templates
+│   ├── landing-page.php
+│   ├── left-sidebar.php
+│   ├── no-sidebar.php
+│   └── right-sidebar.php
+├── partials
+│   ├── components
+│   │   └── button.php
+│   └── sections
+│       ├── banner
+│       │   ├── image.php
+│       │   └── image-slider.php
+│       ├── card
+│       │   └── info.php
+│       ├── image
+│       │   ├── image.php
+│       │   └── image-slider.php
+│       ├── slider
+│       │   └── standard.php
+│       └── text
+│           ├── image
+│           │   ├── center.php
+│           │   ├── left.php
+│           │   └── right.php
+│           └── standard.php
+├── README.md
+├── screenshot.png
+├── sidebar.php
+├── single.php
+├── src
+│   ├── img
+│   │   ├── angle-left.png
+│   │   └── angle-right.png
+│   ├── js
+│   │   ├── index.js
+│   │   ├── libs
+│   │   │   └── tiny-slider.js
+│   │   └── modules
+│   │       ├── index.js
+│   │       └── sliders.js
+│   └── scss
+│       ├── base
+│       │   ├── _accessibility.scss
+│       │   ├── _alignments.scss
+│       │   ├── _base.scss
+│       │   ├── _clearings.scss
+│       │   ├── _infinite-scroll.scss
+│       │   ├── _normalize.scss
+│       │   └── _page.scss
+│       ├── custom
+│       │   ├── _colors.scss
+│       │   ├── _columns.scss
+│       │   ├── _custom.scss
+│       │   ├── _typography.scss
+│       │   └── _variables-site.scss
+│       ├── elements
+│       │   ├── _cards.scss
+│       │   ├── _carousels.scss
+│       │   ├── _elements.scss
+│       │   ├── _footer.scss
+│       │   ├── forms
+│       │   │   ├── _buttons.scss
+│       │   │   ├── _fields.scss
+│       │   │   └── _forms.scss
+│       │   ├── _lists.scss
+│       │   ├── navigation
+│       │   │   ├── _links.scss
+│       │   │   ├── _menus.scss
+│       │   │   └── _navigation.scss
+│       │   ├── _sliders.scss
+│       │   ├── _tables.scss
+│       │   └── typography
+│       │       ├── _copy.scss
+│       │       ├── _headings.scss
+│       │       └── _typography.scss
+│       ├── helpers
+│       │   └── _functions.scss
+│       ├── layout
+│       │   └── _layout.scss
+│       ├── libs
+│       │   ├── bootstrap
+│       │   │   ├── _alert.scss
+│       │   │   ├── _badge.scss
+│       │   │   ├── bootstrap-grid.scss
+│       │   │   ├── bootstrap-reboot.scss
+│       │   │   ├── bootstrap.scss
+│       │   │   ├── _breadcrumb.scss
+│       │   │   ├── _button-group.scss
+│       │   │   ├── _buttons.scss
+│       │   │   ├── _card.scss
+│       │   │   ├── _carousel.scss
+│       │   │   ├── _close.scss
+│       │   │   ├── _code.scss
+│       │   │   ├── _custom-forms.scss
+│       │   │   ├── _dropdown.scss
+│       │   │   ├── _forms.scss
+│       │   │   ├── _functions.scss
+│       │   │   ├── _grid.scss
+│       │   │   ├── _images.scss
+│       │   │   ├── _input-group.scss
+│       │   │   ├── _jumbotron.scss
+│       │   │   ├── _list-group.scss
+│       │   │   ├── _media.scss
+│       │   │   ├── mixins
+│       │   │   │   ├── _alert.scss
+│       │   │   │   ├── _background-variant.scss
+│       │   │   │   ├── _badge.scss
+│       │   │   │   ├── _border-radius.scss
+│       │   │   │   ├── _box-shadow.scss
+│       │   │   │   ├── _breakpoints.scss
+│       │   │   │   ├── _buttons.scss
+│       │   │   │   ├── _caret.scss
+│       │   │   │   ├── _clearfix.scss
+│       │   │   │   ├── _float.scss
+│       │   │   │   ├── _forms.scss
+│       │   │   │   ├── _gradients.scss
+│       │   │   │   ├── _grid-framework.scss
+│       │   │   │   ├── _grid.scss
+│       │   │   │   ├── _hover.scss
+│       │   │   │   ├── _image.scss
+│       │   │   │   ├── _list-group.scss
+│       │   │   │   ├── _lists.scss
+│       │   │   │   ├── _nav-divider.scss
+│       │   │   │   ├── _pagination.scss
+│       │   │   │   ├── _reset-text.scss
+│       │   │   │   ├── _resize.scss
+│       │   │   │   ├── _screen-reader.scss
+│       │   │   │   ├── _size.scss
+│       │   │   │   ├── _table-row.scss
+│       │   │   │   ├── _text-emphasis.scss
+│       │   │   │   ├── _text-hide.scss
+│       │   │   │   ├── _text-truncate.scss
+│       │   │   │   ├── _transition.scss
+│       │   │   │   └── _visibility.scss
+│       │   │   ├── _mixins.scss
+│       │   │   ├── _modal.scss
+│       │   │   ├── _navbar.scss
+│       │   │   ├── _nav.scss
+│       │   │   ├── _pagination.scss
+│       │   │   ├── _popover.scss
+│       │   │   ├── _print.scss
+│       │   │   ├── _progress.scss
+│       │   │   ├── _reboot.scss
+│       │   │   ├── _root.scss
+│       │   │   ├── _tables.scss
+│       │   │   ├── _tooltip.scss
+│       │   │   ├── _transitions.scss
+│       │   │   ├── _type.scss
+│       │   │   ├── utilities
+│       │   │   │   ├── _align.scss
+│       │   │   │   ├── _background.scss
+│       │   │   │   ├── _borders.scss
+│       │   │   │   ├── _clearfix.scss
+│       │   │   │   ├── _display.scss
+│       │   │   │   ├── _embed.scss
+│       │   │   │   ├── _flex.scss
+│       │   │   │   ├── _float.scss
+│       │   │   │   ├── _position.scss
+│       │   │   │   ├── _screenreaders.scss
+│       │   │   │   ├── _shadows.scss
+│       │   │   │   ├── _sizing.scss
+│       │   │   │   ├── _spacing.scss
+│       │   │   │   ├── _text.scss
+│       │   │   │   └── _visibility.scss
+│       │   │   ├── _utilities.scss
+│       │   │   └── _variables.scss
+│       │   ├── _libs.scss
+│       │   └── _tiny-slider.scss
+│       ├── media
+│       │   ├── _captions.scss
+│       │   ├── _galleries.scss
+│       │   └── _media.scss
+│       ├── mixins
+│       │   └── _mixins.scss
+│       ├── state
+│       │   └── _state.scss
+│       └── style.scss
+├── style.css
+├── webpack.config.js
+└── yarn.lock
