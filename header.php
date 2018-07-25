@@ -34,7 +34,7 @@
 		<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a class="navbar-brand" href="#">Navbar</a>
@@ -42,14 +42,15 @@
 				<?php
 		
 					$args = array(
+						'menu'            => 'main',
 						'theme_location'  => 'main',
-						'depth'	          =>  2,
+						'depth'	          =>  6,
 						'container'       => 'div',
 						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarSupportedContent',
+						'container_id'    => 'main-navigation',
 						'menu_class'      => 'navbar-nav mr-auto',
 						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'          => new WP_Bootstrap_Navwalker(),
+						'walker'          => new WP_Bootstrap_Navwalker,
 					);
 					wp_nav_menu($args);
 				?>	

@@ -175,7 +175,11 @@ function the_parenting_place_2018_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_scripts' );
 
-// // Custom Navigation Walker
+//Custom Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+
+
+
+
 
  
