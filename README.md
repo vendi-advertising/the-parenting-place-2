@@ -96,95 +96,6 @@
 │       │   └── _functions.scss
 │       ├── layout
 │       │   └── _layout.scss
-│       ├── libs
-│       │   ├── bootstrap
-│       │   │   ├── _alert.scss
-│       │   │   ├── _badge.scss
-│       │   │   ├── bootstrap-grid.scss
-│       │   │   ├── bootstrap-reboot.scss
-│       │   │   ├── bootstrap.scss
-│       │   │   ├── _breadcrumb.scss
-│       │   │   ├── _button-group.scss
-│       │   │   ├── _buttons.scss
-│       │   │   ├── _card.scss
-│       │   │   ├── _carousel.scss
-│       │   │   ├── _close.scss
-│       │   │   ├── _code.scss
-│       │   │   ├── _custom-forms.scss
-│       │   │   ├── _dropdown.scss
-│       │   │   ├── _forms.scss
-│       │   │   ├── _functions.scss
-│       │   │   ├── _grid.scss
-│       │   │   ├── _images.scss
-│       │   │   ├── _input-group.scss
-│       │   │   ├── _jumbotron.scss
-│       │   │   ├── _list-group.scss
-│       │   │   ├── _media.scss
-│       │   │   ├── mixins
-│       │   │   │   ├── _alert.scss
-│       │   │   │   ├── _background-variant.scss
-│       │   │   │   ├── _badge.scss
-│       │   │   │   ├── _border-radius.scss
-│       │   │   │   ├── _box-shadow.scss
-│       │   │   │   ├── _breakpoints.scss
-│       │   │   │   ├── _buttons.scss
-│       │   │   │   ├── _caret.scss
-│       │   │   │   ├── _clearfix.scss
-│       │   │   │   ├── _float.scss
-│       │   │   │   ├── _forms.scss
-│       │   │   │   ├── _gradients.scss
-│       │   │   │   ├── _grid-framework.scss
-│       │   │   │   ├── _grid.scss
-│       │   │   │   ├── _hover.scss
-│       │   │   │   ├── _image.scss
-│       │   │   │   ├── _list-group.scss
-│       │   │   │   ├── _lists.scss
-│       │   │   │   ├── _nav-divider.scss
-│       │   │   │   ├── _pagination.scss
-│       │   │   │   ├── _reset-text.scss
-│       │   │   │   ├── _resize.scss
-│       │   │   │   ├── _screen-reader.scss
-│       │   │   │   ├── _size.scss
-│       │   │   │   ├── _table-row.scss
-│       │   │   │   ├── _text-emphasis.scss
-│       │   │   │   ├── _text-hide.scss
-│       │   │   │   ├── _text-truncate.scss
-│       │   │   │   ├── _transition.scss
-│       │   │   │   └── _visibility.scss
-│       │   │   ├── _mixins.scss
-│       │   │   ├── _modal.scss
-│       │   │   ├── _navbar.scss
-│       │   │   ├── _nav.scss
-│       │   │   ├── _pagination.scss
-│       │   │   ├── _popover.scss
-│       │   │   ├── _print.scss
-│       │   │   ├── _progress.scss
-│       │   │   ├── _reboot.scss
-│       │   │   ├── _root.scss
-│       │   │   ├── _tables.scss
-│       │   │   ├── _tooltip.scss
-│       │   │   ├── _transitions.scss
-│       │   │   ├── _type.scss
-│       │   │   ├── utilities
-│       │   │   │   ├── _align.scss
-│       │   │   │   ├── _background.scss
-│       │   │   │   ├── _borders.scss
-│       │   │   │   ├── _clearfix.scss
-│       │   │   │   ├── _display.scss
-│       │   │   │   ├── _embed.scss
-│       │   │   │   ├── _flex.scss
-│       │   │   │   ├── _float.scss
-│       │   │   │   ├── _position.scss
-│       │   │   │   ├── _screenreaders.scss
-│       │   │   │   ├── _shadows.scss
-│       │   │   │   ├── _sizing.scss
-│       │   │   │   ├── _spacing.scss
-│       │   │   │   ├── _text.scss
-│       │   │   │   └── _visibility.scss
-│       │   │   ├── _utilities.scss
-│       │   │   └── _variables.scss
-│       │   ├── _libs.scss
-│       │   └── _tiny-slider.scss
 │       ├── media
 │       │   ├── _captions.scss
 │       │   ├── _galleries.scss
@@ -196,5 +107,5 @@
 │       └── style.scss
 ├── style.css
 ├── webpack.config.js
-└── yarn.loc
+└── yarn.lock
 ```
