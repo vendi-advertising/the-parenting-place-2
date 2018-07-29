@@ -6,8 +6,8 @@
 get_header(); ?>
     <?php 
         $render = ['banner'];
-        $section = AFC_Buddy::prepare_sections($render);
-        AFC_Buddy::render_fields($section);
+        $section = ACF_buddy::prepare_sections($render);
+        ACF_buddy::render_fields($section);
     ?>
 
     <div class="container">
@@ -25,9 +25,9 @@ get_header(); ?>
 
                         <?php
                   
-                            $sections = AFC_Buddy::prepare_sections();
+                            $sections = ACF_buddy::prepare_sections();
                                                         
-                            AFC_Buddy::render_fields($sections, ['banner']);
+                            ACF_buddy::render_fields($sections, ['banner']);
 
                         ?>
 

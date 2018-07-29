@@ -2,12 +2,13 @@
 /*
 * Template Name: Right Sidebar
 */
-
+$handler = new ACFBCore\ACF_buddy();
 get_header(); ?>
      <?php 
+    
         $render = ['banner'];
-        $section = AFC_Buddy::prepare_sections($render);
-        AFC_Buddy::render_fields($section);
+        $section = $handler->prepare_sections($render);
+        $handler->render_fields($section);
     ?>
 
     <div class="container">
@@ -20,9 +21,9 @@ get_header(); ?>
                     
                         <?php
                   
-                            $sections = AFC_Buddy::prepare_sections();
+                            $sections = $handler->prepare_sections();
                                                         
-                            AFC_Buddy::render_fields($sections, ['banner']);
+                             $handler->render_fields($sections, ['banner']);
 
                         ?>
 

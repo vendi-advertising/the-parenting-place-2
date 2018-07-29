@@ -1,4 +1,4 @@
-```
+```console
 .
 ├── 404.php
 ├── archive.php
@@ -196,5 +196,5 @@
 │       └── style.scss
 ├── style.css
 ├── webpack.config.js
-└── yarn.lock
+└── yarn.loc
 ```
