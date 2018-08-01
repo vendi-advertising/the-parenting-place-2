@@ -175,7 +175,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sliders\", function() { return sliders; });\n/* harmony import */ var _libs_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../libs/tiny-slider */ \"./src/js/libs/tiny-slider.js\");\n\n\nlet custom = Object(_libs_tiny_slider__WEBPACK_IMPORTED_MODULE_0__[\"tns\"])({\n        \"container\": \".standard\",\n        \"items\": 3,\n        \"controlsContainer\": \"#customize-controls\",\n        \"navContainer\": \"#customize-thumbnails\",\n        \"navAsThumbnails\": true,\n        \"autoplay\": true,\n        \"autoplayTimeout\": 1000,\n        \"autoplayButton\": \"#customize-toggle\",\n        \"speed\": 400\n    }),\n    sliders = {\n        custom\n    }\n\n\n//# sourceURL=webpack:///./src/js/modules/sliders.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sliders\", function() { return sliders; });\n/* harmony import */ var _libs_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../libs/tiny-slider */ \"./src/js/libs/tiny-slider.js\");\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ \"./src/js/modules/utils.js\");\n\n\n\n\n\nlet standardSliders = document.querySelectorAll(\"[class^='standard-slider-']\"),\n    tinySliders = [];\n\nObject(_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"nodeForEach\"])(standardSliders, (index, value) => {\n    let custom = Object(_libs_tiny_slider__WEBPACK_IMPORTED_MODULE_0__[\"tns\"])({\n        \"container\": `.standard-slider-${index}`,\n        \"items\": 3,\n        \"controlsContainer\": \"#customize-controls\",\n        \"navContainer\": \"#customize-thumbnails\",\n        \"navAsThumbnails\": true,\n        \"autoplay\": true,\n        \"autoplayTimeout\": 1000,\n        \"autoplayButton\": \"#customize-toggle\",\n        \"speed\": 200\n    })\n    tinySliders.push(custom);\n})\n\n\nlet sliders = { ...tinySliders\n}\n\n\n\n\n//# sourceURL=webpack:///./src/js/modules/sliders.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/utils.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/utils.js ***!
+  \*********************************/
+/*! exports provided: nodeForEach, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"nodeForEach\", function() { return nodeForEach; });\nfunction nodeForEach(array, callback, scope) {\n    for (var i = 0; i < array.length; i++) {\n        callback.call(scope, i, array[i]); // passes back stuff we need\n    }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    nodeForEach,\n});\n\n//# sourceURL=webpack:///./src/js/modules/utils.js?");
 
 /***/ }),
 

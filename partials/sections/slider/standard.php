@@ -1,44 +1,22 @@
-<div class="standard" id="standard">
-	<div>
+<?php 
+$slides = $contents[$contents['acf_fc_layout']];
+if(!isset($slider_instance)){
+	$slider_instance = 0;
+}
+if(count($slides)) : 
+?>
+
+<div class="standard-slider-<?php echo esc_html_e( $slider_instance ); ?>" data-name="standard-slider-<?php echo esc_html_e( $slider_instance ); ?>">
+	<?php foreach($slides[0]['slides'] as $slide): ?>
 		<div>
-			<img src="" alt="" width="600" height="400">
+			<div>
+				<img src="<?php echo esc_html_e( $slide['image']); ?>" alt="" width="300" height="300">
+			</div>
+			<p>
+				<?php echo esc_html_e( $slide['text']); ?>
+			</p>
 		</div>
-		<p>
-			Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
-		</p>
-	</div>
-	<div>
-		<div>
-			<img src="" alt="" width="600" height="400">
-		</div>
-		<p>
-			Corrupti, libero minima nihil expedita officiis? Quo.
-		</p>
-	</div>
-	<div>
-		<div>
-			<img src="" alt="" width="600" height="400">
-		</div>
-		<p>
-			Alias rem, ab impedit recusandae repellat tempore.
-		</p>
-	</div>
-	<div>
-		<div>
-			<img src="" alt="" width="600" height="400">
-		</div>
-		<p>
-			Nisi inventore quo delectus perspiciatis voluptatibus, quae.
-		</p>
-	</div>
-	<div>
-		<div>
-			<img src="" alt="" width="600" height="400">
-		</div>
-		<p>
-			Nisi harum earum consectetur laudantium iusto, laboriosam.
-		</p>
-	</div>
+	<?php endforeach; ?>
 </div>
 <div class="customize-tools">
 	<ul class="thumbnails" id="customize-thumbnails">
@@ -70,3 +48,5 @@
 		<button id="customize-toggle">Pause</button>
 	</div>
 </div>
+<?php $slider_instance++; ?>
+<?php endif; ?>

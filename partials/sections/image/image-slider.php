@@ -1,5 +1,5 @@
 <?php 
-$slides = $fields[$fields['acf_fc_layout']];
+$slides = $contents[$contents['acf_fc_layout']];
 if($slides) : ?>
 
 <div class="row">

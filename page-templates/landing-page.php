@@ -8,6 +8,6 @@ get_header(); ?>
 
 <?php
 
-$fields = prepare_sections();
-render_fields($fields);
+$contents = prepare_sections();
+render_fields($contents);
 get_footer();
