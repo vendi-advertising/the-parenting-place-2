@@ -2,13 +2,13 @@
 /*
 * Template Name: Right Sidebar
 */
-$handler = new ACFBCore\ACF_buddy();
+$handler = new IntersectionCore\ACF_handler();
 get_header(); ?>
      <?php 
     
         $render = ['banner'];
-        $section = $handler->prepare_sections($render);
-        $handler->render_fields($section);
+        $section = $handler->prepare($render);
+        $handler->render($section);
     ?>
 
     <div class="container">
@@ -21,9 +21,9 @@ get_header(); ?>
                     
                         <?php
                   
-                            $sections = $handler->prepare_sections();
+                            $sections = $handler->prepare();
                                                         
-                             $handler->render_fields($sections, ['banner']);
+                             $handler->render($sections, ['banner']);
 
                         ?>
 
