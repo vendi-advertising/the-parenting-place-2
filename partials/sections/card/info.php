@@ -2,8 +2,8 @@
 $cards = $contents[$contents['acf_fc_layout']];
 if(count($cards)) : ?>
 <section class="background">
-	<div class="container-fluid">
-		<div class="card-group">
+	<div class="container">
+        <div class="card-columns">
             <?php foreach($cards as $card): ?>
                 
                 <div class="card info bg-<?php echo esc_html_e( $card['color'] ); ?>">
@@ -14,7 +14,7 @@ if(count($cards)) : ?>
                 </div>						
                 
             <?php endforeach; ?>		
-		</div>
+        </div>
 	</div>
 </section>
 <?php endif; ?>
