@@ -1,5 +1,6 @@
 <?php 
-$slides = $contents[$contents['acf_fc_layout']];
+$slides = $contents[$contents['acf_fc_layout']] ?? [];
+$moreThanOne = count($slides) > 1;
 if($slides) : ?>
 
 <div class="row">
@@ -53,6 +54,7 @@ if($slides) : ?>
                     endforeach; 		
                 ?> 
             </div>
+            <?php if($moreThanOne): ?>
             <a class="carousel-control-prev" href="#image-section-image-slider" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -61,6 +63,7 @@ if($slides) : ?>
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            <?php endif; ?>
         </div>
     </div>
     <!-- /.col-md-12 -->

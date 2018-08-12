@@ -1,5 +1,5 @@
 <?php 
-$cards = $contents[$contents['acf_fc_layout']];
+$cards = $contents[$contents['acf_fc_layout']] ?? [];
 if(count($cards)) : ?>
 <section class="background">
 	<div class="container">

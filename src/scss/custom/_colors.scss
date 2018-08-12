@@ -1,7 +1,7 @@
-
 /**
 * General Colours
 */
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -9,7 +9,6 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
-
 $color__text-input: #666;
 $color__text-input-focus: #111;
 $color__text-main: #404040;
@@ -18,9 +17,6 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
-
-
-
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
@@ -29,36 +25,18 @@ $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 $white: #f4f4f4;
 $black: #333;
-
 /**
 * Branding Overrides
 * @see https: //sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 */
-$theme-colors: ( 
-    light-green: #c1d82f, 
-    light-brown: #6d4601, 
-    light-blue: #3caec3, 
-    dark-blue: #00576d, 
-    orange: #d66b32, 
-    green: #aec248, 
-    purple: #83509b, 
-    success: #5cb85c, 
-    info: #5bc0de, 
-    warning: #f0ad4e, 
-    danger: #d9534f
-);
 
-
-
+$theme-colors: ( light-green: #c1d82f, light-brown: #6d4601, light-blue: #3caec3, dark-blue: #00576d, orange: #d66b32, green: #aec248, purple: #83509b, success: #5cb85c, info: #5bc0de, warning: #f0ad4e, danger: #d9534f, white: #f1f1f1);
 $link-color: custom-color('light-green');
 $link-hover-color: darken($link-color, 15%) !default;
 $link-visted-color: custom-color('light-brown');
-
 $link-hover-decoration: underline !default;
 $color__link: $link-color;
 $color__link-visited: $link-visted-color;
 $color__link-hover: $link-hover-color;
-
 $body-bg: #fff !default;
-
 $text-color: $gray-dark !default;

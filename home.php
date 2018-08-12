@@ -52,7 +52,7 @@ get_header('blog');
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'partials/content-posts', get_post_type() );
+					include( dirname(__FILE__) . '/partials/posts/' .  get_post_type() . '.php' );
 
 				endwhile;
 
@@ -76,11 +76,11 @@ get_header('blog');
 
     <?php if ( $default_sidebar_position === 'right' ) : ?>
 
-    <div class="col-md-4 wp-bp-sidebar-width">
+    	<div class="col-md-4 wp-bp-sidebar-width">
 
     <?php elseif ( $default_sidebar_position === 'left' ) : ?>
 
-    <div class="col-md-4 order-md-first wp-bp-sidebar-width">
+    	<div class="col-md-4 order-md-first wp-bp-sidebar-width">
 
     <?php endif; ?>
     

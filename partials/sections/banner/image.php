@@ -1,5 +1,5 @@
 <?php 
-$image = $contents[$contents['acf_fc_layout']];
+$image = $contents[$contents['acf_fc_layout']] ?? [];
 if($image) : ?>
 
 <div class="row">

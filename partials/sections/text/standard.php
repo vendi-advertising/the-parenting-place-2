@@ -1,6 +1,6 @@
 
 <?php 
-$text = $contents[$contents['acf_fc_layout']];
+$text = $contents[$contents['acf_fc_layout']] ?? [];
 if($text) : ?>
 
     <section class="background">
