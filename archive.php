@@ -12,7 +12,6 @@ get_header('blog');
 <?php
 	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
 ?>
-<?php  //DEV ?>
 <?php echo basename( __FILE__ ); ?>
 
 	<div class="container">
