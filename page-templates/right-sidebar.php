@@ -2,14 +2,14 @@
 /*
 * Template Name: Right Sidebar
 */
-$handler = new IntersectionHandler\ACF();
-get_header(); ?>
-     <?php 
+$handler = new IntersectionPluginHandler\ACF();
+get_header(); 
+
     
-        $the_sections = ['banner'];
-        $sections = $handler->prepare($the_sections);
-        $handler->render($sections);
-    ?>
+$the_sections = ['banner'];
+$sections = $handler->prepare($the_sections);
+$handler->render($sections);
+?>
 
     <div class="container">
         <div class="row">
@@ -33,6 +33,7 @@ get_header(); ?>
             <!-- /.col-md-8 -->
 
             <div class="col-md-4 wp-bp-sidebar-width">
+            
                 <?php get_sidebar(); ?>
             </div>
             <!-- /.col-md-4 -->
