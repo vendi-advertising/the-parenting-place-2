@@ -15,20 +15,19 @@ nodeForEach(standardSliders, (index, value) => {
     let custom = tns({
         "container": `.standard-slider-${index}`,
         "items": 3,
-        "controlsContainer": "#customize-controls",
-        "navContainer": "#customize-thumbnails",
+        "controlsContainer": `#customize-controls-${index}`,
+        "navContainer": `#customize-thumbnails-${index}`,
         "navAsThumbnails": true,
-        "autoplay": true,
+        "autoplay": false,
         "autoplayTimeout": 1000,
-        "autoplayButton": "#customize-toggle",
-        "speed": 200
+        "autoplayButton": `#customize-toggle-${index}`,
+        "speed": 1000
     })
     tinySliders.push(custom);
 })
 
 
-let sliders = { ...tinySliders
-}
+let sliders = { tinySliders }
 
 
 export {

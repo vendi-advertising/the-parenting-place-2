@@ -1,4 +1,4 @@
-<section class="content-3 text-center">
+<section class="card content-3 text-center">
         <div class="container">
             <h2>What can we do for you</h2>
             <p class="lead mb-5 constrain-width">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>

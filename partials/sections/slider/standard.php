@@ -10,7 +10,7 @@ if(count($slides)) :
 	<?php foreach($slides[0]['slides'] as $slide): ?>
 		<div class="col-sm-4">
 			<div class="box-image">
-				<img src="<?php echo esc_html_e( $slide['image']); ?>" alt="image" height="300" width="200">
+				<img src="<?php echo esc_html_e( $slide['image']); ?>" alt="slider image">
 			</div>
 			<p>
 				<?php echo esc_html_e( $slide['text']); ?>
@@ -19,7 +19,7 @@ if(count($slides)) :
 	<?php endforeach; ?>
 </div>
 <div class="customize-tools">
-	<ul class="thumbnails" id="customize-thumbnails">
+	<ul class="thumbnails" id="customize-thumbnails-<?php echo esc_html_e( $slider_instance ); ?>">
 		<li>
 			<img src="" alt="" width="600" height="400">
 		</li>
@@ -36,16 +36,16 @@ if(count($slides)) :
 			<img src="" alt="" width="600" height="400">
 		</li>
 	</ul>
-	<ul class="controls" id="customize-controls">
+	<ul class="controls" id="customize-controls-<?php echo esc_html_e( $slider_instance ); ?>">
 		<li class="prev">
-			<img src="assets/img/angle-left.png" alt="">
+			<img src="assets/img/svg/angle-left.png" alt="">
 		</li>
 		<li class="next">
-			<img src="assets/img/angle-right.png" alt="">
+			<img src="assets/img/svg/angle-right.png" alt="">
 		</li>
 	</ul>
 	<div class="playbutton-wrapper">
-		<button id="customize-toggle">Pause</button>
+		<button id="customize-toggle-<?php echo esc_html_e( $slider_instance ); ?>">Pause</button>
 	</div>
 </div>
 <?php $slider_instance++; ?>

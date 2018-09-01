@@ -156,6 +156,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  function the_parenting_place_2018_styles(){
 
 	// main style 
+	//TODO: remove time
 	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/assets/style.css', array(), time(), 'all');
 
  }

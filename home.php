@@ -14,7 +14,7 @@ get_header('blog');
 	?>
 	<?php  //DEV ?> <?php echo basename( __FILE__ ); ?>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
 
 		<?php if ( $default_sidebar_position === 'no' ) : ?>

@@ -11,10 +11,10 @@ $sections = $handler->prepare($the_sections);
 $handler->render($sections);
 ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
-            <div class="col-md-8 wp-bp-content-width">
+            <div class="col-md-9 wp-bp-content-width">
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main">
 
@@ -32,7 +32,7 @@ $handler->render($sections);
             </div>
             <!-- /.col-md-8 -->
 
-            <div class="col-md-4 wp-bp-sidebar-width">
+            <div class="col-md-3 wp-bp-sidebar-width">
             
                 <?php get_sidebar(); ?>
             </div>

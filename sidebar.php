@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'main-sidebar' ) ) {
 <aside id="secondary" class="widget-area">
 	<!-- <?php  //DEV ?> <?php echo basename( __FILE__ ); ?> -->
 
-	<div class="sidebar" id="sidebar" role="navigation">
+	<div class="card sidebar px-5" id="sidebar" role="navigation">
 		<?php dynamic_sidebar( 'main-sidebar' ); ?>
 	</div>
 
