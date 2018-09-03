@@ -8,7 +8,7 @@ if($slides) : ?>
     <div class="col-md-12">
 
 
-        <div id="image-section-image-slider" class="carousel slide" data-ride="carousel">
+        <div id="image-section-image-slider" class="send-to-back carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <?php foreach( $slides as $slide => $value ): ?>

@@ -19,7 +19,6 @@ get_header();
 <?php
     $default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
 ?>
-<?php echo do_shortcode("[ai1ec view='monthly']"); ?>
 
 <div class="container">
     <div class="row">

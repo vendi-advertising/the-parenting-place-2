@@ -3,42 +3,33 @@
 * Template Name: Left Sidebar
 */
 
-get_header(); ?>
-    <?php 
-        $render = ['banner'];
-        $section = ACF_handler::prepare_sections($render);
-        ACF_handler::render_fields($section);
-    ?>
+$handler = new IntersectionPluginHandler\ACF();
+get_header(); 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 wp-bp-sidebar-width">
-                <?php 
-                    get_sidebar(); 
-                ?>
-            </div>
-            <!-- /.col-md-4 -->
-
-            <div class="col-md-8 wp-bp-content-width">
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main">
-
+    
+$the_sections = ['banner'];
+$sections = $handler->prepare($the_sections);
+$handler->render($sections);
+?>
+<div class="container-fluid">
+    <div class="row">
+        <aside class="col-md-3 wp-bp-sidebar-width">
+            <?php get_sidebar(); ?>
+        </aside>   <!-- #sidebar -->
+        <div class="col-md-9 wp-bp-content-width">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <section>
                         <?php
-                  
-                            $sections = ACF_handler::prepare_sections();
+                            $sections = $handler->prepare();
                                                         
-                            ACF_handler::render_fields($sections, ['banner']);
-
+                            $handler->render($sections, ['banner']);
                         ?>
-
-                    </main><!-- #main -->
-                </div><!-- #primary -->
-            </div>
-            <!-- /.col-md-8 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-
+                    </section>
+                </main><!-- #main -->
+            </div><!-- #primary -->
+        </div><!-- #content -->
+    </div><!-- #row -->
+</div><!-- #container -->
 <?php
 get_footer();
