@@ -44,6 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 300px;
+  padding: 50px;
   min-width: 0;
   word-wrap: break-word;
   background-color: #333;
@@ -58,22 +60,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   max-width: 360px;
   padding-top: 15px; }
   .section-title .inner {
-    border: 1px solid #333; }
+    border: 1px solid #333;
+    height: 50px; }
   .section-title p {
     max-width: 600px;
-    margin: 0 auto 5px;
     color: #808080;
     font-style: italic;
-    font-size: 16px;
     line-height: 1.5em; }
   .section-title h1 {
+    position: relative;
     font-size: 1.3em;
     line-height: 1.3em;
     font-weight: 600;
-    margin-top: -20px;
+    margin-top: -10px;
     text-transform: uppercase;
     color: #404040;
-    display: inline-block;
     background: #fffdfd;
     padding: 0 40px; }
 

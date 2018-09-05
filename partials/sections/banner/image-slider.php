@@ -29,7 +29,7 @@ if($slides) : ?>
                                             break;
                                     }
                                 ?>
-                                <div class="carousel-caption <?php echo esc_html_e( $text_align ); ?>">
+                                <div class="carousel-caption-overlay carousel-caption <?php echo esc_html_e( $text_align ); ?>">
                                     <h1><?php echo esc_html_e( $value['title'] ); ?></h1>
                                     <p><?php echo esc_html_e( $value['caption'] ); ?></p>
                                     <?php 
