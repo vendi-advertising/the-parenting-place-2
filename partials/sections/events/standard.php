@@ -70,11 +70,10 @@ $index = 0;
                                 //         break;
                                 // }
                             ?>
+                            <!-- <div class="carousel-caption-overlay"></div>-->
                             <div class="carousel-caption">
-                                <div class="carousel-caption-overlay">
-                                    <h2 class="subtitle"><?php echo esc_html_e( $event['post_title'] ); ?></h2>
-                                    <p><?php echo esc_html_e( $event['post_content'] ); ?></p>
-                                </div>
+                                <h2 class="subtitle"><?php echo esc_html_e( $event['post_title'] ); ?></h2>
+                                <p><?php echo esc_html_e( $event['post_content'] ); ?></p>
                             </div>
                         </div>                
                     </div><!-- item -->

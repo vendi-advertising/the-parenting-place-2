@@ -5,7 +5,8 @@ if($slides) : ?>
     <div class="row">
         <div class="col-md-12">
             <div id="image-section-image-slider" class="send-to-back carousel slide" data-ride="carousel" data-interval="false">
-                <!-- Indicators -->
+                <div class="carousel-overlay"></div>
+                <!-- indicators -->
                 <ol class="carousel-indicators">
                     <?php foreach( $slides as $slide => $value ): ?>
                     <li data-target="#image-section-image-slider" data-slide-to="<?php echo esc_html_e( $slide ); ?>" <?php if($slide==0) : ?>class="active"<?php endif;?>></li>      
@@ -14,22 +15,22 @@ if($slides) : ?>
                 <div class="carousel-inner">
                     <?php  foreach( $slides as $slide => $value): ?>                 
                         <div class="carousel-item<?php if($slide==0) : echo esc_html_e( ' active' ); endif; ?>">
-                            <img src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>" />
-                            <div class="container">
-                                <?php
-                                    $text_align = '';        
-                                    switch($value['text_alignment']) {
-                                        case 'left':
-                                            $text_align = 'text-left';
-                                            break;
-                                        case 'center':
-                                            break;
-                                        case 'right':
-                                            $text_align = 'text-right';
-                                            break;
-                                    }
-                                ?>
-                                <div class="carousel-caption-overlay carousel-caption <?php echo esc_html_e( $text_align ); ?>">
+                            <img style="background-size:cover;" src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>"/>
+                            <?php
+                                $text_align = '';        
+                                switch($value['text_alignment']) {
+                                    case 'left':
+                                        $text_align = 'text-left';
+                                        break;
+                                    case 'center':
+                                        break;
+                                    case 'right':
+                                        $text_align = 'text-right';
+                                        break;
+                                }
+                            ?>
+                            <div class="carousel-caption-overlay"></div>
+                            <div class="carousel-caption <?php echo esc_html_e( $text_align ); ?>">
                                     <h1><?php echo esc_html_e( $value['title'] ); ?></h1>
                                     <p><?php echo esc_html_e( $value['caption'] ); ?></p>
                                     <?php 
@@ -38,8 +39,7 @@ if($slides) : ?>
                                             include( get_template_directory() . '/partials/components/button.php');
                                         }
                                     ?>
-                                </div>
-                            </div>                
+                            </div>             
                         </div><!-- item -->
                     <?php endforeach;?> 
                 </div>
@@ -57,3 +57,4 @@ if($slides) : ?>
         </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
 <?php endif; ?>
+

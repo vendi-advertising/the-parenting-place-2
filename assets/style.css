@@ -33,6 +33,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /***
 * Site Fonts
 */
+.tns-outer {
+  max-width: 100%; }
+  .tns-outer .card {
+    max-width: 100%; }
+
+.tns-inner {
+  flex: 0 0 50%;
+  overflow-x: hidden; }
+
+.controls-wrapper {
+  position: relative;
+  display: flex;
+  margin-left: calc(42.5%); }
+  .controls-wrapper .playbutton-wrapper button {
+    display: none; }
+  .controls-wrapper .controls {
+    padding: 0 70px; }
+    .controls-wrapper .controls li {
+      position: absolute;
+      margin-top: 0px !important; }
+
 .shadow {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
@@ -41,18 +62,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   transform: translateY(-2px); }
 
 .carousel-caption-overlay {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  padding: 50px;
-  min-width: 0;
-  word-wrap: break-word;
   background-color: #333;
-  opacity: 0.8;
   background-clip: border-box;
   border: 1px solid rgba(51, 51, 51, 0.125);
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  position: absolute;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  padding: 5050px;
+  overflow: hidden; }
+
+.carousel-item {
+  background-color: #fffdfd !important; }
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; }
 
 .section-title {
   text-align: center;
@@ -81,15 +108,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .site-main {
   margin-right: auto;
   margin-left: auto;
-  max-width: 900px; }
+  max-width: 1025px; }
 
 #sidebar {
   max-width: 380px;
   margin: 0 auto; }
 
-.send-to-back {
-  z-index: 0; }
-
+/* MORE THAN 75 */
+/* LESS THAN 75 */
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

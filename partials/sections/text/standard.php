@@ -3,7 +3,7 @@
 $text = $contents[$contents['acf_fc_layout']] ?? [];
 if($text) : ?>
 
-    <section class="background">
+    <section>
         <div class="container-fluid">
             <div class="card-group">
                 <?php if(count($text)):?>
@@ -26,8 +26,6 @@ if($text) : ?>
                             } 
                             
                         ?>
-                                                                
-                        
                     <?php endforeach; ?>		
                 <?php endif; ?>	
             </div>
