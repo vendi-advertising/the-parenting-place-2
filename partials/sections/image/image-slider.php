@@ -1,13 +1,8 @@
 <?php 
 $slides = $contents[$contents['acf_fc_layout']] ?? [];
-
 if($slides) : ?>
-
 <div class="row">
-
     <div class="col-md-12">
-
-
         <div id="image-section-image-slider" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">

@@ -1,12 +1,20 @@
-<section class="bar bg-primary no-mb color-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Block with primary background</h1>
-                <p class="lead mb-0">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                    tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                    semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<?php
+    $blocks = $contents[$contents['acf_fc_layout']] ?? [];
+    var_export($blocks);
+    if(count($blocks) > 0) :
+?>
+    <?php foreach($blocks as $block): ?>
+        <section class="bar bg-<?php echo esc_html_e( $block['color'] ); ?> no-mb color-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1><?php echo esc_html_e( $block['title'] ); ?></h1>
+                        <p class="lead mb-0">
+                            <?php echo esc_html_e( $block['main_text'] ); ?>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    <?php endforeach?>
+<?php endif; ?>

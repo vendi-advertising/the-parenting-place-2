@@ -2,15 +2,12 @@
 <?php 
 $text = $contents[$contents['acf_fc_layout']] ?? [];
 if($text) : ?>
-
     <section>
         <div class="container-fluid">
             <div class="card-group">
                 <?php if(count($text)):?>
                     <?php foreach($text as $content): ?>
-
                         <?php 
-                        
                             if($content['has_image']){
                                 switch($content['image_align']){
                                     case 'left': 
@@ -23,17 +20,13 @@ if($text) : ?>
                                         include('image/right.php');
                                     break;
                                 }
-                            } 
-                            
+                            }                             
                         ?>
                     <?php endforeach; ?>		
                 <?php endif; ?>	
             </div>
         </div>
     </section>
-
-
-
     <?php if(!$content['has_image']) : ?>
         <section class="content-4">
             <div class="container">
@@ -43,5 +36,4 @@ if($text) : ?>
             </div>
         </section>
     <?php endif; ?>	
-
 <?php endif; ?>

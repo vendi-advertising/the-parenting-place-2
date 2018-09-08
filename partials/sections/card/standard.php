@@ -13,8 +13,7 @@ if(count($cards)) : ?>
                         <h4 class="card-title"><?php echo esc_html_e( $card['title'] ) ?></h4>
                         <p class="card-text"><?php echo esc_html_e( $card['main_text'] ) ?></p>
                     </div>
-                </div>						
-                
+                </div>						               
             <?php endforeach; ?>		
         </div>
 	</div>

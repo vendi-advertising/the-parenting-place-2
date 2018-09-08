@@ -5,13 +5,13 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-thumbs-o-up"></i></div>
 					<div class="info">
-						<h3 class="title">Made with Bootstrap</h3>
+						<h3 class="title"></h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
 						</p>
 						<div class="more">
 							<a href="#" title="Title Link">
-								Read More <i class="fa fa-angle-double-right"></i>
+							<i class="fa fa-angle-double-right"></i>
 							</a>
 						</div>
 					</div>
@@ -25,13 +25,13 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-flag"></i></div>
 					<div class="info">
-						<h3 class="title">Icons by Font Awesome</h3>
+						<h3 class="title"></h3>
     					<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
 						</p>
 						<div class="more">
 							<a href="#" title="Title Link">
-								Read More <i class="fa fa-angle-double-right"></i>
+								<i class="fa fa-angle-double-right"></i>
 							</a>
 						</div>
 					</div>
@@ -45,13 +45,13 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-desktop"></i></div>
 					<div class="info">
-						<h3 class="title">Desktop Friendly</h3>
+						<h3 class="title"></h3>
     					<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper.
 						</p>
 						<div class="more">
 							<a href="#" title="Title Link">
-								Read More <i class="fa fa-angle-double-right"></i>
+								<i class="fa fa-angle-double-right"></i>
 							</a>
 						</div>
 					</div>
