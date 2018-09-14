@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <div class="row">
+        <?php echo "here";?>
         <section id="primary" class="content-area">
             <main id="main" class="site-main">
                 <?php if ( have_posts() ) :
@@ -12,8 +13,8 @@
                     $query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
                     /* Start the Loop */
                     while ( $query->have_posts() ) :
-                        $query->the_post();
-                        include(dirname(__FILE__, 4) . '/partials/posts/' .  get_post_type($query->the_post()) . '.php' );
+                        $path = dirname(__FILE__, 4) . '/partials/posts/' .  get_post_type($query->the_post()) . '.excerpt.php';
+                        include($path);
                     endwhile;
                     the_posts_navigation();
                 else :

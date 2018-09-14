@@ -15,7 +15,7 @@ get_header();
 <?php
 	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
 ?>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 
 	<?php if ( $default_sidebar_position === 'no' ) : ?>
@@ -29,15 +29,18 @@ get_header();
 
 			<?php
 				while ( have_posts() ) :
-						the_post();
-
-					get_template_part( 'partials/content', get_post_format());
-					
-					the_post_navigation();
+					 the_post();
+					 $path = dirname(__FILE__, 1) . '/partials/posts/' .  get_post_type(get_post()) . '.php';
+					include($path);
+			?>
+			<div class="">
+				<?php the_post_navigation();?>
+			</div>
+			<?php
 
 				// If comments are open or we have at least one comment, load up the comment template. 
-				if ( comments_open() || get_comments_number()) :
-					comments_template();
+				if ( comments_open() || get_comments_number() && false) :
+					 comments_template();
 				endif;
 
 				endwhile; // End of the loop.
