@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "docs": "gitbook serve ./docs"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
