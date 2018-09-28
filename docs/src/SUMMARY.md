@@ -1,18 +1,40 @@
 # Summary
 
-* [Introduction](./README.md)
+* [Introduction](README.md)
 
+---
 
-### Part I
+* [Getting Started](./getting-started/index.md)
 
-* [Writing is nice](./part1/getting-started.md)
-* [GitBook is nice](./part1/configuration.md)
+    * [Terminology](./getting-started/terminology.md)
+    * [Configuration](./getting-started/configuration.md)
+    * [Make a Page](./getting-started/page.md)
+    * [Make a Post](./getting-started/post.md)
 
-### Part II
+--- 
 
-* [We love feedback](./part2/feedback_please.md)
-* [Better tools for authors](./part2/better_tools.md)
+* [Sections](./sections/index.md)
 
-----
+    * [Banner](./sections/banner.md)
+    * [Block](./sections/block.md)
+    * [Blog](./sections/blog.md)
+    * [Box](./sections/box.md)
+    * [Card](./sections/card.md)
+    * [Events](./sections/events.md)
+    * [Gallery](./sections/gallery.md)
+    * [Image](./sections/image.md)
+    * [Slider](./sections/slider.md)
+    * [Text](./sections/text.md)
+
+---
+
+* [Developer Guide](./developer-guide/index.md)
+
+---
+
+* [Theme Customization](./customize/index.md)
+    * [Menus](./customize/menu.md)
+
+---
 
 * [Last part without title](part3/title.md)
