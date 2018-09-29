@@ -4,3 +4,160 @@
 @import "infinite-scroll";
 @import "page";
 @import "accessibility";
+
+@at-root {
+    li {
+        list-style: none;
+    }
+
+    ul,
+    ol,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    pre[class*="language-"]>code[data-language] {
+        overflow: auto !important;
+    }
+
+    section {
+        margin: 50px 0;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        padding-top: 60px;
+        text-align: center;
+    }
+
+    @media (min-width: 300px) and (max-width: 799px) {
+        .slider h2 {
+            padding-top: 20%;
+        }
+    }
+
+    @media (min-width: 800px) {
+        .slider h2 {
+            padding-top: 160px;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 0.8em 0;
+        line-height: 1.4;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    a:focus {
+        outline: 1px solid red;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    img:not(.tns-lazy-img),
+    .lazyload img {
+        height: auto;
+    }
+
+    .img {
+        font-size: 100px;
+        font-weight: 100;
+        color: #fff;
+        text-align: center;
+    }
+
+    .img a {
+        display: block;
+        padding: 22% 0;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .visually-hidden {
+        position: fixed;
+        left: -10000px;
+        opacity: 0;
+    }
+
+    /* nav */
+    .nav.active ul {
+        left: 0;
+    }
+
+    .nav.active .nav-toggle-handle {
+        left: 17em;
+    }
+
+    .nav.active .nav-toggle-handle:before {
+        display: inline-block;
+    }
+
+    .nav.active .nav-toggle-handle:after {
+        display: none;
+    }
+
+    .nav ul {
+        position: fixed;
+        top: 0;
+        left: -17em;
+        z-index: 100;
+        width: 17em;
+        height: 1000px;
+        height: 100vh;
+        background-color: #fff;
+        -webkit-box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+        transition: left 0.25s;
+        overflow-y: auto;
+    }
+
+    .nav a {
+        display: block;
+        padding: 0.7em 1em;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        background-color: #F3F3F3;
+    }
+
+    .nav .active {
+        color: #fff;
+        background-color: #af23ff !important;
+    }
+
+    .nav-toggle-handle {
+        position: fixed;
+        transition: left 0.25s;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        padding: 10px;
+        color: #fff;
+        background-color: #af23ff;
+        cursor: pointer;
+    }
+
+    .nav-toggle-handle:before {
+        display: none;
+        padding-right: 5px;
+        content: '◄';
+        font-size: 0.8em;
+    }
+
+    .nav-toggle-handle:after {
+        padding-left: 5px;
+        content: '►';
+        font-size: 0.8em;
+    }
+
+}

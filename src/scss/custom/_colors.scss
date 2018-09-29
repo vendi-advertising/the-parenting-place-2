@@ -31,10 +31,10 @@ $black: #333;
 * @see https://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 */
 
-$theme-colors: ( light-green: #c1d82f, light-brown: #6d4601, light-blue: #3caec3, dark-blue: #00576d, orange: #d66b32, green: #aec248, purple: #83509b, success: #5cb85c, info: #5bc0de, warning: #f0ad4e, danger: #d9534f, white: #f1f1f1);
-$link-color: custom-color('light-green');
+$theme-colors: ( light-green: #c1d82f, light-brown: #6d4601, light-blue: #3caec3, dark-blue: #00576d, brand-orange: #d66b32, brand-green: #aec248, brand-purple: #83509b, success: #5cb85c, info: #5bc0de, warning: #f0ad4e, danger: #d9534f, white: #f1f1f1);
+$link-color: $black;
 $link-hover-color: darken($link-color, 15%) !default;
-$link-visted-color: custom-color('light-brown');
+$link-visted-color: custom-color('dark-blue');
 $link-hover-decoration: underline !default;
 $color__link: $link-color;
 $color__link-visited: $link-visted-color;

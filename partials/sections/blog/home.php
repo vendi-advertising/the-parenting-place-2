@@ -1,6 +1,5 @@
-<div class="container-fluid">
-    <div class="row">
-        <?php echo "here";?>
+<div class="row">
+    <div class="container-fluid">
         <section id="primary" class="content-area">
             <main id="main" class="site-main">
                 <?php if ( have_posts() ) :

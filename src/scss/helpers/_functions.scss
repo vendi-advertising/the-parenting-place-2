@@ -5,7 +5,7 @@
     @if map-has-key($theme-colors, $key) {
         @return map-get($theme-colors, $key);
     }
-    @warn "Unknown `#{$key}` in $brand-colors.";
+    @warn "Unknown `#{$key}` in $theme-colors.";
     @return null;
 }
 

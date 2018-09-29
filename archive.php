@@ -7,7 +7,7 @@
  * @package the-parenting-place-2018
  */
 
-get_header('blog');
+get_header();
 ?>
 <?php
 	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );

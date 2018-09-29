@@ -26,9 +26,9 @@ $handler->render($sections);
                 </main><!-- #main -->
             </div><!-- #primary -->
         </div><!-- #content -->
-        <aside class="col-md-3 wp-bp-sidebar-width">
+        <div id="sidebar-wrapper" class="col-md-3 wp-bp-sidebar-width">
             <?php get_sidebar(); ?>
-        </aside>   <!-- #sidebar -->
+        </div>   <!-- #sidebar -->
     </div><!-- #row -->
 </div><!-- #container -->
 

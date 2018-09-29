@@ -20397,7 +20397,38 @@ var tns = function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders */ "./src/js/modules/sliders.js");
+/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ "./src/js/modules/sidebar.js");
 
+
+
+Object(_sidebar__WEBPACK_IMPORTED_MODULE_1__["sidebar"])();
+
+/***/ }),
+
+/***/ "./src/js/modules/sidebar.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/sidebar.js ***!
+  \***********************************/
+/*! exports provided: sidebar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sidebar", function() { return sidebar; });
+
+const sidebar = () => {
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            // console.log("sidebar")
+            // $('#sidebar-wrapper').removeClass('col-md-3');
+            // $('.collapse.in').toggleClass('in');
+            // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+};
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

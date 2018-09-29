@@ -14,8 +14,11 @@ if ( ! is_active_sidebar( 'main-sidebar' ) ) {
 
 <aside id="secondary" class="widget-area">
 	<!-- <?php  //DEV ?> <?php echo basename( __FILE__ ); ?> -->
-
-	<div class="card sidebar px-5" id="sidebar" role="navigation">
+	<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+					<i class="glyphicon glyphicon-align-left"></i>
+					<span>Toggle Sidebar</span>
+                </button>
+	<div id="sidebar-content" class="card sidebar px-5" id="sidebar" role="navigation">
 		<?php dynamic_sidebar( 'main-sidebar' ); ?>
 	</div>
 
