@@ -21,7 +21,7 @@ get_header();
 	<?php if ( $default_sidebar_position === 'no' ) : ?>
 		<div class="col-md-12 wp-bp-content-width">
 	<?php else : ?>
-		<div class="col-md-8 wp-bp-content-width">
+		<div class="col-md-9 wp-bp-content-width">
 	<?php endif; ?>
 
 		<div id="primary" class="content-area">
@@ -57,7 +57,7 @@ get_header();
 
 		<?php if ( $default_sidebar_position === 'right' ) : ?>
 
-			<div class="col-md-4 wp-bp-sidebar-width">
+			<div class="col-md-3 wp-bp-sidebar-width">
 
 		<?php elseif ( $default_sidebar_position === 'left' ) : ?>
 

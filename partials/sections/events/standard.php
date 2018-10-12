@@ -15,16 +15,6 @@ $index = 0;
 
 <section>
 
-    <!-- <?php foreach ($events as $event): ?>
-        <?php
-             $img = wp_get_attachment_image_src( get_post_thumbnail_id( $event['ID'] ), 'single-post-thumbnail' );
-        ?>
-    
-        <div>
-            <img src="<?php echo esc_html_e( $img[0] ); ?>" alt="">
-        </div>
-    <?php endforeach ?> -->
-
 
     <div class="row">
 
@@ -37,15 +27,13 @@ $index = 0;
         </div>
 
         <div id="event-section-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-overlay"></div>
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <?php foreach ($events as $index => $event): ?>
                 <li data-target="#event-section-slider" data-slide-to="<?php echo esc_html_e( $index ); ?>" <?php if($index==0) : ?>class="active"<?php endif;?>></li>
                 <?php endforeach;?>
             </ol>
-            </pre>
-            </pre>
-
             <div class="carousel-inner">
                 <?php  foreach( $events as $index => $event): ?> 
                     <?php
@@ -56,24 +44,16 @@ $index = 0;
                         <img src="<?php echo esc_html_e( $img[0]); ?>" alt="event" />
                         <?php endif;?>
                         <div class="container">
-                            <?php
-                                // $text_align = '';
-                        
-                                // switch($value['text_alignment']) {
-                                //     case 'left':
-                                //         $text_align = 'text-left';
-                                //         break;
-                                //     case 'center':
-                                //         break;
-                                //     case 'right':
-                                //         $text_align = 'text-right';
-                                //         break;
-                                // }
-                            ?>
-                            <!-- <div class="carousel-caption-overlay"></div>-->
-                            <div class="carousel-caption">
-                                <h2 class="subtitle"><?php echo esc_html_e( $event['post_title'] ); ?></h2>
-                                <p><?php echo esc_html_e( $event['post_content'] ); ?></p>
+                            <div class="carousel-caption-overlay"></div>
+                            <div class="carousel-caption-wrapper">
+                                <div class="carousel-caption">
+                                    <h2 class="subtitle"><?php echo esc_html_e( $event['post_title'] ); ?></h2>
+                                    <p>
+                                        <a href="<?php echo get_site_url() . '?p=' . $event['ID']; ?>">
+                                            <button class="btn btn-success">Find Out More</button>
+                                        </a>
+                                    </p>
+                                </div>                            
                             </div>
                         </div>                
                     </div><!-- item -->

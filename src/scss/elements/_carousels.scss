@@ -9,10 +9,6 @@
 
 /* Since positioning the image, we need to help out the caption */
 
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
 
 /* Declare heights because of positioning of img element */
 
@@ -63,6 +59,20 @@
   letter-spacing: -0.05rem;
 }
 
+.carousel-caption-wrapper {
+  display: flex;
+  justify-content: center;
+
+
+  .carousel-caption {
+    margin-top: 2em;
+    color: $carousel-caption-color;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em;
+    z-index: 10;
+  }
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

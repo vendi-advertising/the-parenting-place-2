@@ -5,7 +5,6 @@ if($slides) : ?>
     <div class="row">
         <div class="col-md-12">
             <div id="image-section-image-slider" class="send-to-back carousel slide" data-ride="carousel" data-interval="false">
-                <div class="carousel-overlay"></div>
                 <!-- indicators -->
                 <ol class="carousel-indicators">
                     <?php foreach( $slides as $slide => $value ): ?>

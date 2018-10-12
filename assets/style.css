@@ -67,11 +67,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   border: 1px solid rgba(51, 51, 51, 0.125);
   border-radius: 0.25rem;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.4;
   display: flex;
   flex-direction: column;
-  padding: 5050px;
-  overflow: hidden; }
+  padding: 100%;
+  overflow: hidden;
+  left: 0; }
 
 .carousel-item {
   background-color: #fffdfd !important; }
@@ -5117,17 +5118,6 @@ button.close {
   .carousel-indicators .active {
     background-color: #fffdfd; }
 
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fffdfd;
-  text-align: center; }
-
 .align-baseline {
   vertical-align: baseline !important; }
 
@@ -8006,10 +7996,6 @@ img:not(.tns-lazy-img),
   margin-bottom: 4rem; }
 
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10; }
-
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
@@ -8046,6 +8032,17 @@ img:not(.tns-lazy-img),
   font-weight: 300;
   line-height: 1;
   letter-spacing: -0.05rem; }
+
+.carousel-caption-wrapper {
+  display: flex;
+  justify-content: center; }
+  .carousel-caption-wrapper .carousel-caption {
+    margin-top: 2em;
+    color: #fffdfd;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em;
+    z-index: 10; }
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
