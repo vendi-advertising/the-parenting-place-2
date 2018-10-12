@@ -15,7 +15,6 @@
 
 	<footer id="colophon" class="site-footer container-fluid w-100 bg-dark text-light py-3">
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'the-parenting-place-2018' ); ?></button>
 			<?php
 				$args = array(
 					'theme_location' => 'footer',
@@ -24,7 +23,6 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="site-info">
-			<?php get_sidebar('footer'); ?>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
