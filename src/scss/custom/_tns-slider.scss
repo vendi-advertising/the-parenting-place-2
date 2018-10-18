@@ -14,7 +14,8 @@
 .controls-wrapper {
     position: relative;
     display: flex;
-    margin-left: calc(42.5%);
+    justify-content: center;
+    width: 100%;
 
     .playbutton-wrapper {
         button {
@@ -23,11 +24,9 @@
     }
 
     .controls {
-        padding: 0 70px;
-
-        li {
-            position: absolute;
-            margin-top: 0px !important;
+        display: flex;
+        li{
+            margin: 1em 1.7em;
         }
     }
 }

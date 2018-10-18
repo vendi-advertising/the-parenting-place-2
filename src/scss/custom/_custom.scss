@@ -1,6 +1,9 @@
-@import "colors";
-@import "typography";
+@import "functions";
+@import "variables/variables";
+@import "mixins/mixins";
+@import "elements/elements";
 @import "columns";
 @import "tns-slider";
 @import "classes";
-@import "sidebar";
+
+@import "sections/sections";

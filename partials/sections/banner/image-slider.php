@@ -2,7 +2,7 @@
 $slides = $contents[$contents['acf_fc_layout']] ?? [];
 $moreThanOne = count($slides) > 1;
 if($slides) : ?>
-<section class="image-slider-wrapper">
+<section id="banner" class="image-slider-wrapper">
     <div class="row">
         <div class="col-md-12">
             <div id="image-section-image-slider" class="send-to-back carousel slide" data-ride="carousel" data-interval="false">

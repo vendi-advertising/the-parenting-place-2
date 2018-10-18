@@ -4,6 +4,9 @@
 	font-size: $sizeValue * 1rem;
 }
 
+@mixin font-scale($scale: 1){
+	font-size: $font__base * $scale;
+}
 // Center block
 @mixin center-block {
 	display: block;

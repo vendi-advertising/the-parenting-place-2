@@ -1,0 +1,19 @@
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    .nav-menu-wrapper {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+
+        nav {
+            padding: 0;
+            height: 90px;
+
+            .nav-link {
+                color: $white;
+                @include font-scale(1.1);
+            }
+        }
+    }
+}
