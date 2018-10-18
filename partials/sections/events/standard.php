@@ -1,8 +1,7 @@
 <?php
 
 $handler = new IntersectionPluginHandler\Ai1EC();
-$the_events = ['latest'];
-$events_to_display = $handler->prepare($the_events);
+$events_to_display = $handler->prepare();
 $result = $handler->render($events_to_display);
 
 $events = [];
