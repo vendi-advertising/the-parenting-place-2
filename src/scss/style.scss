@@ -2,22 +2,14 @@
 Theme Name: The Parenting Place 2018
 Theme URI: 
 Author: Adam Harpur
-Author URI: https://adamharpur.com
+Author URI: https://codinglab.tech
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: the-parenting-place-2018
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-the-parenting-place-2018 is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
 */
-@import "custom/custom";
-@import "lib/lib";
-@import "base/base";
-@import "media/media";
+@import "custom/index";
+@import "lib/index";
+@import "base/index";
