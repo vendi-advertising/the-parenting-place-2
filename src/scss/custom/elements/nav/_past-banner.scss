@@ -1,8 +1,16 @@
 .nav-menu-wrapper{
-    .navbar{
-        transition: background 0.4s linear;
+    .main-menu-wrapper{
+      .navbar{
+            transition: background 0.4s linear;
+        }
+        .past-banner{
+            background-color: $black;
+        }
     }
-    .past-banner{
-        background-color: $black;
+
+    .sub-menu-wrapper{
+        .past-banner{
+            display: none !important;
+        }
     }
 }

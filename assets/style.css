@@ -207,19 +207,23 @@ object {
     width: 100%;
     height: auto;
     position: fixed;
-    z-index: 1; }
-    .nav-menu-wrapper nav {
-      padding: 0;
+    z-index: 50 !important; }
+    .nav-menu-wrapper .main-menu-wrapper {
       height: 100px; }
+    .nav-menu-wrapper nav {
+      padding: 0; }
       .nav-menu-wrapper nav .nav-link {
         color: #fffdfd;
         font-size: 1.1em; } }
 
-.nav-menu-wrapper .navbar {
+.nav-menu-wrapper .main-menu-wrapper .navbar {
   transition: background 0.4s linear; }
 
-.nav-menu-wrapper .past-banner {
+.nav-menu-wrapper .main-menu-wrapper .past-banner {
   background-color: #333; }
+
+.nav-menu-wrapper .sub-menu-wrapper .past-banner {
+  display: none !important; }
 
 nav ul {
   margin-left: 3em; }
@@ -228,6 +232,13 @@ nav .menu-item {
   padding: 1em; }
   nav .menu-item a:focus, nav .menu-item a:hover, nav .menu-item a:active {
     border-bottom: 3px solid #00576d; }
+
+.sub-menu-wrapper {
+  background-color: #00576d;
+  width: 100%;
+  display: flex;
+  height: 2.5em;
+  justify-content: center; }
 
 .tns-outer {
   max-width: 100%; }

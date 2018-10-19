@@ -8,20 +8,7 @@
  */
 
 if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
 	function the_parenting_place_2018_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on the-parenting-place-2018, use a find and replace
-		 * to change 'the-parenting-place-2018' to the name of your theme in all the template files.
-		 */
 		load_theme_textdomain( 'the-parenting-place-2018', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
@@ -113,7 +100,6 @@ add_action( 'after_setup_theme', 'the_parenting_place_2018_setup' );
  * @global int $content_width
  */
 function the_parenting_place_2018_content_width() {
-	// This variable is intended to be overruled from themes.
 	// erin+adam=sweetsawyer
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
@@ -150,12 +136,10 @@ function the_parenting_place_2018_widgets_init() {
 add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
 
 /**
- * Enqueue styles.
+ * Enqueue built styles from assets
  * 
  */
  function the_parenting_place_2018_styles(){
-
-	// main style 
 	//TODO: remove time
 	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/assets/style.css', array(), time(), 'all');
 
@@ -163,11 +147,10 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_styles' );
 
 /**
- * Enqueue scripts.
+ * Enqueue built scripts from assets
  */
 function the_parenting_place_2018_scripts() {
 
-	// bundle
 	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/assets/bundle.js', array(), time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -186,6 +169,8 @@ require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 // Post Helpers
 require_once get_template_directory() . '/inc/post-helpers.php';
 
+// Automatic Sub Nav creation
+require_once get_template_directory() . '/inc/sub-nav.php';
 
 
 

@@ -24,44 +24,67 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the-parenting-place-2018' ); ?></a>
 		<header id="masthead" class="site-header">
 			<div class="nav-menu-wrapper">
-				<nav class="navbar navbar-expand-md" role="navigation">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<a class="navbar-brand" href="#">
-							<div class="site-branding mb-3">
-								<?php
-									the_custom_logo();
-								?>
-							</div><!-- .site-branding -->
-						</a>
+				<div class="main-menu-wrapper">
+					<nav class="navbar navbar-expand-md" role="navigation">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<a class="navbar-brand" href="#">
+								<div class="site-branding mb-3">
+									<?php
+										the_custom_logo();
+									?>
+								</div><!-- .site-branding -->
+							</a>
+						
+							<?php
 					
+								$args = array(
+									'menu'            	=> 'main',
+									'theme_location'  	=> 'main',
+									'depth'	          	=>  2,
+									'container'       	=> 'div',
+									'container_class' 	=> 'collapse navbar-collapse',
+									'container_id'    	=> 'main-navigation',
+									'menu_class'      	=> 'navbar-nav',
+									'fallback_cb'     	=> 'WP_Bootstrap_Navwalker::fallback',
+									'walker'          	=> new WP_Bootstrap_Navwalker,
+								);
+
+								wp_nav_menu($args);
+
+							?>	
+						<div class="col-md-4 col-md-offset-3">
+							<!-- search -->
+							<form action="" class="search-form">
+								<div class="form-group has-feedback">
+									<label for="search" class="sr-only">Search</label>
+									<input type="text" class="form-control" name="search" id="search" placeholder="Search....">
+									<span class="glyphicon glyphicon-search form-control-feedback"></span>
+								</div>
+							</form>
+						</div>
+					</nav>
+				</div> 
+				<div class="sub-menu-wrapper">
+					<nav class="navbar navbar-expand-md" role="navigation">
 						<?php
-				
-							$args = array(
-								'menu'            => 'main',
-								'theme_location'  => 'main',
-								'depth'	          =>  6,
-								'container'       => 'div',
-								'container_class' => 'collapse navbar-collapse',
-								'container_id'    => 'main-navigation',
-								'menu_class'      => 'navbar-nav',
-								'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'          => new WP_Bootstrap_Navwalker,
+							$sub_menu_args = array(
+								'menu'            	=> 'main',
+								'theme_location'  	=> 'main',
+								'sub_menu'			=> true,
+								'conatiner'         => 'div',
+								'container_id'    	=> 'sub-navigation',
+								'menu_class'      	=> 'navbar-nav',
+								'fallback_cb'     	=> 'WP_Bootstrap_Navwalker::fallback',
+								'walker'          	=> new WP_Bootstrap_Navwalker,
 							);
-							wp_nav_menu($args);
-						?>	
-					<div class="col-md-4 col-md-offset-3">
-						<form action="" class="search-form">
-							<div class="form-group has-feedback">
-								<label for="search" class="sr-only">Search</label>
-								<input type="text" class="form-control" name="search" id="search" placeholder="Search....">
-								<span class="glyphicon glyphicon-search form-control-feedback"></span>
-							</div>
-						</form>
-					</div>
-				</nav>
+							wp_nav_menu($sub_menu_args);
+						?>
+					</nav>
+				</div>
+			
 			
 			</div>
 		</header><!-- #masthead -->

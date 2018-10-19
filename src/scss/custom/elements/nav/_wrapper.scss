@@ -4,10 +4,15 @@
         width: 100%;
         height: auto;
         position: fixed;
-        z-index: 1;
+        z-index: map-get($z-index, 5);
+        .main-menu-wrapper{
+            height: 100px;
+        }
+        .sub-menu-wrapper{
+
+        }
         nav {
             padding: 0;
-            height: 100px;
             .nav-link {
                 color: $white;
                 @include font-scale(1.1);
