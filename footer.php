@@ -1,39 +1,39 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package the-parenting-place-2018
- */
 
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer container-fluid w-100 bg-dark text-light py-3">
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-				$args = array(
-					'theme_location' => 'footer',
-				);
-				wp_nav_menu($args);
-			?>
-		</nav><!-- #site-navigation -->
-		<div class="site-info">
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'the-parenting-place-2018' ), 'the-parenting-place-2018', '<a href="https://adamharpur.com">Adam Harpur</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-	
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
+		<footer class="bg-dark page-footer pt-4">
+			<div class="container-fluid text-center text-md-left">
+			<div class="row">
+				<div class="col-md-6 mt-md-0 mt-3">
+				<h5 class="text-uppercase">Footer Content</h5>
+				<p>Here you can use rows and columns here to organize your footer content.</p>
+				</div>
+				<hr class="clearfix w-100 d-md-none pb-3">
+				<div class="col-md-3 mb-md-0 mb-3">
+					<h5 class="text-uppercase">Links</h5>
+					<?php
+						$args = array(
+							'theme_location' => 'footer',
+						);
+						wp_nav_menu($args);
+ 					?>
+				</div>
+				<div class="col-md-3 mb-md-0 mb-3">
+					<h5 class="text-uppercase">Links</h5>
+					<?php
+						$args = array(
+							'theme_location' => 'footer',
+						);
+						wp_nav_menu($args);
+ 					?>
+				</div>
+			</div>
+			</div>
+			<div class="container site-info py-3">
+				<div class="row justify-content-center">
+					© <?php echo date("Y"); ?> Copyright 
+					<a href="https://mdbootstrap.com/bootstrap-tutorial/"><span> &nbsp <?php echo get_bloginfo( 'name' ); ?></span></a>
+				</div>
+			</div>
+		</footer>
+		<?php wp_footer(); ?>
+	</body>
 </html>

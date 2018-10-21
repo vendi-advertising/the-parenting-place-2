@@ -1,10 +1,11 @@
 .nav-menu-wrapper{
     .main-menu-wrapper{
       .navbar{
-            transition: background 0.4s linear;
+            transition: background 0.5s linear;
         }
         .past-banner{
-            background-color: $black;
+            background: $black;
+            border-bottom: 10px solid custom-color('dark-blue');
         }
     }
 
