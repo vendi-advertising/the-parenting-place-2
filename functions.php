@@ -33,9 +33,9 @@ if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
 		 * Register Menu Locations
 		 */		 
 		$args = array(
-			'main' 		=>  __( 'Main Menu', 'the_parenting_place_2018'),
-			'sub' 		=>  __( 'Sub Menu', 'the_parenting_place_2018'),
-			'footer' 	=>  __( 'Footer Menu', 'the_parenting_place_2018' ),
+			'main' 			=>  __( 'Main Menu', 'the_parenting_place_2018'),
+			'footer-left' 	=>  __( 'Footer Left', 'the_parenting_place_2018' ),
+			'footer-right' 	=>  __( 'Footer Right', 'the_parenting_place_2018' ),
 		); 
 		register_nav_menus( $args );
 
@@ -163,7 +163,7 @@ add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_scripts' );
 
 
 
-//Custom Navigation Walker
+//Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 // Post Helpers
@@ -172,6 +172,8 @@ require_once get_template_directory() . '/inc/post-helpers.php';
 // Automatic Sub Nav creation
 require_once get_template_directory() . '/inc/sub-nav.php';
 
+// // Customizer Options
+// require get_template_directory() . '/inc/customizer.php';
 
 
 

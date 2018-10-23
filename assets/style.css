@@ -243,6 +243,14 @@ nav .menu-item {
   .sub-menu-wrapper nav .menu-item {
     padding: 0; }
 
+#footer {
+  color: #fffdfd; }
+  #footer a {
+    color: #fffdfd; }
+    #footer a:focus, #footer a:hover, #footer a:active {
+      text-decoration: none;
+      border-bottom: 3px solid #00576d; }
+
 .tns-outer {
   max-width: 100%; }
   .tns-outer .card {
