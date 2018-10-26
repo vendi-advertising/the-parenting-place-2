@@ -161,7 +161,8 @@ add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_scripts' );
 
 
 
-
+// Tag Support for Pages
+require_once get_template_directory() . '/inc/page-tags.php';
 
 //Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
