@@ -1,10 +1,4 @@
 <?php
-/**
- * The template for displaying search results pages.
- *
- * @package ultrabootstrap
- */
-
 get_header(); ?>
 <?php
     $handler = new IntersectionPluginHandler\ACF();
@@ -14,10 +8,10 @@ get_header(); ?>
 <div class="container">
     <section id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-
+        <?php get_search_form(); ?>
         <?php if ( have_posts() ) : ?>
 
-            <h4><?php printf( esc_html__( 'Search Results for: %s', 'ultrabootstrap' ), '<span>' . get_search_query() . '</span>' ); ?></h4>
+            <h4><?php printf( esc_html__( 'Search Results for: %s', 'the-parenting-place-2018' ), '<span>' . get_search_query() . '</span>' ); ?></h4>
 
             <?php while ( have_posts() ) : the_post(); ?>
 

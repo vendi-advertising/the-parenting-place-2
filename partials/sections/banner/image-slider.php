@@ -1,5 +1,4 @@
 <?php 
-xdebug_break();
 $slides = $contents[$contents['acf_fc_layout']] ?? [];
 $moreThanOne = count($slides) > 1;
 if($slides) : ?>

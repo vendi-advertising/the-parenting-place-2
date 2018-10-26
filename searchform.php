@@ -1,5 +1,8 @@
 <form action="/" method="get">
-    <label for="search">Search in <?php echo home_url( '/' ); ?></label>
-    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-    <input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search.png" />
+    <div class="input-group">
+        <input name="s" class="form-control py-2 border-right-0 border" type="search" value="<?php the_search_query(); ?>" id="site-search-input">
+        <span class="input-group-append">
+            <div class="input-group-text bg-white"><i class="fa fa-search"></i></div>
+        </span>
+    </div>
 </form>
