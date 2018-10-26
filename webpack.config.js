@@ -34,19 +34,9 @@ module.exports = {
             loader: "sass-loader"
           }
         ]
-      },
+      }, 
        {
-         test: /\.(ttf|eot|svg|woff2?)(\?[a-z0-9]+)?$/,
-         exclude: [/vendors/, /img/],
-         loader: 'file-loader?name=fonts/[name].[ext]',
-       },
-       {
-         test: /\.(ttf|eot|svg|woff2?)(\?[a-z0-9]+)?$/,
-         exclude: [/node_modules/, /img/],
-         loader: 'file-loader?name=font/roboto/[name].[ext]',
-       }, 
-       {
-         test: /\.(png|jpg|gif|svg)$/,
+         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)/,
          loader: 'file-loader',
          options: {
            name: '[name].[ext]',

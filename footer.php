@@ -5,6 +5,8 @@
 				<div class="col-md-6 mt-md-0 mt-3">
 				<h5 class="text-uppercase"><?php esc_url(get_theme_mod ('footer_title'))?></h5>
 				<p><?php esc_url(get_theme_mod ('footer_text'))?></p>
+					<i class="fab fa-twitter"></i>
+					<i class="far fa-abacus"></i>
 					<?php 
                     	$show_social_in_footer = get_theme_mod('socialicon_display' );
                     ?>   
