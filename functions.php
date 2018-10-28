@@ -173,8 +173,8 @@ require_once get_template_directory() . '/inc/post-helpers.php';
 // Automatic Sub Nav creation
 require_once get_template_directory() . '/inc/sub-nav.php';
 
-// // Customizer Options
-// require get_template_directory() . '/inc/customizer.php';
+// Customizer Options
+require get_template_directory() . '/inc/customizer.php';
 
 
 

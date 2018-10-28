@@ -4,16 +4,24 @@
         width: 100%;
         height: auto;
         position: fixed;
+        margin-top: -20px;
+        padding-top: 70px;
         z-index: map-get($z-index, 5);
         .main-menu-wrapper{
             height: 100px;
+            nav{
+                padding: 10px;
+            }
         }
         .sub-menu-wrapper{
-
+            margin-top: 10px;
+            nav{
+                padding: 0;
+            }
         }
         nav {
-            padding: 0;
             .nav-link {
+                padding: 5px;
                 color: $white;
                 @include font-scale(1.1);
             }

@@ -207,14 +207,21 @@ object {
     width: 100%;
     height: auto;
     position: fixed;
+    margin-top: -20px;
+    padding-top: 70px;
     z-index: 50 !important; }
     .nav-menu-wrapper .main-menu-wrapper {
       height: 100px; }
-    .nav-menu-wrapper nav {
-      padding: 0; }
-      .nav-menu-wrapper nav .nav-link {
-        color: #fffdfd;
-        font-size: 1.1em; } }
+      .nav-menu-wrapper .main-menu-wrapper nav {
+        padding: 10px; }
+    .nav-menu-wrapper .sub-menu-wrapper {
+      margin-top: 10px; }
+      .nav-menu-wrapper .sub-menu-wrapper nav {
+        padding: 0; }
+    .nav-menu-wrapper nav .nav-link {
+      padding: 5px;
+      color: #fffdfd;
+      font-size: 1.1em; } }
 
 .nav-menu-wrapper .main-menu-wrapper .navbar {
   transition: background 0.5s linear; }
