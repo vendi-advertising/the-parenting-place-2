@@ -119,7 +119,7 @@ body {
     background-color: red !important; } }
 
 .level-0 {
-  z-index: 0 !important; }
+  z-index: -100 !important; }
 
 .level-1 {
   z-index: 10 !important; }
@@ -207,8 +207,6 @@ object {
     width: 100%;
     height: auto;
     position: fixed;
-    margin-top: -20px;
-    padding-top: 70px;
     z-index: 50 !important; }
     .nav-menu-wrapper .main-menu-wrapper {
       height: 100px; }
@@ -286,6 +284,9 @@ nav .menu-item {
   transition: all 1s;
   max-width: 380px;
   margin: 0 auto; }
+
+#banner {
+  margin: -10px; }
 
 .carousel {
   margin-bottom: 4rem;
@@ -11963,6 +11964,12 @@ figure {
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100 !important; }
+
 li {
   list-style: none; }
 
@@ -11976,7 +11983,7 @@ pre[class*="language-"] > code[data-language] {
   overflow: auto !important; }
 
 section {
-  margin: 50px 0; }
+  margin: 3em 0; }
 
 h1 {
   font-size: 45px; }

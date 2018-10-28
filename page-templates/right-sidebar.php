@@ -21,14 +21,14 @@ $handler->render($sections);
                             $handler->render($sections, $ignore);
                         ?>
                     </section>
-                </main><!-- #main -->
-            </div><!-- #primary -->
-        </div><!-- #content -->
+                </main>
+            </div>
+        </div>
         <div id="sidebar-wrapper" class="col-md-3 wp-bp-sidebar-width">
             <?php get_sidebar(); ?>
-        </div>   <!-- #sidebar -->
-    </div><!-- #row -->
-</div><!-- #container -->
+        </div> 
+    </div>
+</div>
 
 <?php
 get_footer();

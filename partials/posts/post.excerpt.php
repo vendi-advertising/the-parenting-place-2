@@ -14,7 +14,6 @@
 		"shadow-hover"
     ]
 ?>
-<br/>
 <article id="post-<?php the_ID(); ?>" <?php post_class($extra); ?> >
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail(); ?>

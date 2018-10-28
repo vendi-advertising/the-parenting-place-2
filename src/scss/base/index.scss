@@ -4,6 +4,7 @@
 @import "infinite-scroll";
 @import "page";
 @import "accessibility";
+@import "content";
 
 @at-root {
     li {
@@ -22,7 +23,7 @@
     }
 
     section {
-        margin: 50px 0;
+        margin: 3em 0;
     }
 
     h1 {

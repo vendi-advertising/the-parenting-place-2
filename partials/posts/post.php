@@ -14,7 +14,6 @@
 		"shadow-hover"
     ]
 ?>
-<br/>
 <article id="post-<?php the_ID(); ?>" <?php post_class($extra); ?> >
 		<div class="post-thumbnail">
 			<?php the_post_thumbnail(); ?>
@@ -46,12 +45,8 @@
 					?>
 				</nav>
 			</div>
-			
-			
-		</div><!-- .entry-content -->
-	
-		
+		</div>
 		<footer class="entry-footer">
 			<?php the_parenting_place_2018_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		</footer>
+</article>
