@@ -81,8 +81,6 @@
 						?>
 					</nav>
 				</div>
-			
-			
 			</div>
-		</header><!-- #masthead -->
+		</header>
 		<div id="content" class="site-content container-fluid px-0">
