@@ -8,7 +8,7 @@
     ));
 
     $wp_customize->add_setting(
-        'footer_textbox1',
+        'footer_title',
         array(
             'sanitize_callback' => 'the_parenting_place_2018_sanitize_text',
             'default' => '',
@@ -16,17 +16,17 @@
     );
 
     $wp_customize->add_control(
-        'footer_textbox1',
+        'footer_title',
         array(
-          'label' => __('Footer Heading','the_parenting_place_2018'),
+          'label' => __('Footer Title','the_parenting_place_2018'),
           'section' => 'footer_text',
-          'settings' => 'footer_textbox1',
+          'settings' => 'footer_title',
           'type' => 'text',
         )
     );
 
     $wp_customize->add_setting(
-        'footer_textbox2',
+        'footer_textbox',
         array(
             'sanitize_callback' => 'the_parenting_place_2018_sanitize_text',
             'default' => '',
@@ -34,18 +34,18 @@
     );
 
     $wp_customize->add_control(
-        'footer_textbox2',
+        'footer_textbox',
         array(
-          'label' => __('Footer Second Heading','the_parenting_place_2018'),
+          'label' => __('Footer Textbox','the_parenting_place_2018'),
           'section' => 'footer_text',
-          'settings' => 'footer_textbox2',
+          'settings' => 'footer_textbox',
           'type' => 'text',
         )
     );
 
 
     $wp_customize->add_setting( 
-        'textarea_setting' ,
+        'footer_textarea' ,
         array(
             'sanitize_callback' => 'the_parenting_place_2018_sanitize_text',
             'default' => '', 
@@ -54,7 +54,7 @@
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'textarea_setting', array( 
         'label' => __( 'Footer Text Content', 'the_parenting_place_2018' ),
         'section' => 'footer_text',
-        'settings' => 'textarea_setting', 
+        'settings' => 'footer_textarea', 
         'type'     => 'textarea', 
     )));    
 

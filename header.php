@@ -85,4 +85,4 @@
 			
 			</div>
 		</header><!-- #masthead -->
-		<div id="content" class="site-content container-fluid m-0">
+		<div id="content" class="site-content container-fluid px-0">
