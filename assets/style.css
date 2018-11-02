@@ -201,6 +201,9 @@ object {
 .gallery-caption {
   display: block; }
 
+.nav-menu-wrapper * {
+  color: #fffdfd !important; }
+
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   .nav-menu-wrapper {
@@ -220,6 +223,14 @@ object {
       padding: 5px;
       color: #fffdfd;
       font-size: 1.1em; } }
+
+@media (max-width: 74.9em) {
+  .main-menu-wrapper .navbar {
+    transition: background 0.5s linear;
+    background: #333;
+    border-bottom: 10px solid #00576d; }
+  .main-menu-wrapper .nav-link {
+    color: #fffdfd; } }
 
 .nav-menu-wrapper .main-menu-wrapper .navbar {
   transition: background 0.5s linear; }
@@ -285,12 +296,8 @@ nav .menu-item {
   max-width: 380px;
   margin: 0 auto; }
 
-#banner {
-  margin: -10px; }
-
 .carousel {
-  margin-bottom: 4rem;
-  margin-top: -10px; }
+  margin-bottom: 4rem; }
 
 .carousel-caption-overlay {
   background-color: #333;
@@ -11968,6 +11975,7 @@ figure {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 0;
   z-index: -100 !important; }
 
 li {

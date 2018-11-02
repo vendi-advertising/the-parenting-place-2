@@ -25,7 +25,7 @@
 		<header id="masthead" class="site-header">
 			<div class="nav-menu-wrapper">
 				<div class="main-menu-wrapper">
-					<nav class="navbar navbar-expand-md" role="navigation">
+					<nav class="navbar navbar-expand-md navbar-dark" role="navigation">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
