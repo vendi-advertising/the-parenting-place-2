@@ -53,8 +53,8 @@ get_header();
 						endif;
 					?>
 					<?php echo paginate_links( ); ?>
-					</main><!-- #main -->
-				</div><!-- #primary -->
+					</main>
+				</div>
 			</div><!-- /.col-md-8 -->
 			<?php if ( $default_sidebar_position != 'no' ) : ?>
 				<?php if ( $default_sidebar_position === 'right' ) : ?>

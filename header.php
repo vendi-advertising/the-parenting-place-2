@@ -55,12 +55,13 @@
 								wp_nav_menu($args);
 
 							?>	
-						<div class="col-md-4 col-md-offset-3">
+						<div class="col-md-4 pull-right">
 							<!-- search -->
-							<form action="" class="search-form">
-								<div class="form-group has-feedback">
-								</div>
-							</form>
+							
+								  <div class="searchbar">
+									  <?php get_search_form(); ?>
+								  </div>
+
 						</div>
 					</nav>
 				</div> 

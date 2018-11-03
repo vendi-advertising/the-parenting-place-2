@@ -201,7 +201,7 @@ object {
 .gallery-caption {
   display: block; }
 
-.nav-menu-wrapper * {
+.nav-menu-wrapper .nav-link {
   color: #fffdfd !important; }
 
 /* Desktops and laptops ----------- */
@@ -258,6 +258,12 @@ nav .menu-item {
   justify-content: center; }
   .sub-menu-wrapper nav .menu-item {
     padding: 0; }
+
+.searchbar #site-search-input {
+  flex: none;
+  transition: all 0.5s; }
+  .searchbar #site-search-input:focus {
+    flex: 1 1 auto; }
 
 #footer {
   color: #fffdfd; }

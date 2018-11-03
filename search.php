@@ -34,7 +34,7 @@ get_header(); ?>
 
         <?php endif; ?>
 
-        </main><!-- #main -->
-    </section><!-- #primary -->
-</div></div>
+        </main>
+    </section>
+</div>
 <?php get_footer(); ?>

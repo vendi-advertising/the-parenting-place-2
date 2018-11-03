@@ -10,7 +10,6 @@
                 </header>
                 <?php endif;
                     $query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
-                    /* Start the Loop */
                     while ( $query->have_posts() ) :
                         $path = dirname(__FILE__, 4) . '/partials/posts/' .  get_post_type($query->the_post()) . '.excerpt.php';
                         include($path);
@@ -20,7 +19,7 @@
                     get_template_part( 'partials/posts/', 'none' );
                 endif; ?>
                 <?php echo paginate_links( ); ?>
-            </main><!-- #main -->
-        </section><!-- #primary -->
+            </main>
+        </section>
     </div>
 <div/>

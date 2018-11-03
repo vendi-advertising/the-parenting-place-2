@@ -5,8 +5,6 @@
 
 $handler = new IntersectionPluginHandler\ACF();
 get_header(); 
-
-    
 $the_sections = ['banner'];
 $sections = $handler->prepare($the_sections);
 $handler->render($sections);
@@ -26,8 +24,8 @@ $handler->render($sections);
                             $handler->render($sections, ['banner']);
                         ?>
                     </section>
-                </main><!-- #main -->
-            </div><!-- #primary -->
+                </main>
+            </div>
         </div><!-- #content -->
     </div><!-- #row -->
 </div><!-- #container -->

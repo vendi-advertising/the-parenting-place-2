@@ -47,9 +47,9 @@ get_header();
 			?>
 
 			</main>
-			<!-- #main -->
+			
 		</div>
-		<!-- #primary -->
+		
 
 	</div>
 	<!-- /.col-md-8 -->

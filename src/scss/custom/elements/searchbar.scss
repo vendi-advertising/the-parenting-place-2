@@ -1,0 +1,10 @@
+.searchbar{
+   #site-search-input {
+        flex: none;
+        transition: all 0.5s;
+        &:focus{
+            flex: 1 1 auto;
+        } 
+    }
+
+}

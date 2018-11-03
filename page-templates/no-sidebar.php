@@ -25,8 +25,8 @@ get_header(); ?>
                         endwhile; // End of the loop.
                         ?>
 
-                    </main><!-- #main -->
-                </div><!-- #primary -->
+                    </main>
+                </div>
             </div>
             <!-- /.col-md-8 -->
         </div>
