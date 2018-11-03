@@ -1,6 +1,7 @@
 import "./sliders"
 import {sidebar} from "./sidebar";
-import {checkIfPastBanner} from "./nav";
+import {checkIfPastBanner, searchbar} from "./nav";
 
 checkIfPastBanner();
+searchbar();
 sidebar();

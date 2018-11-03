@@ -17020,8 +17020,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-// import "../img/angle-left.png"
-
 /***/ }),
 
 /***/ "./src/js/libs/tiny-slider.js":
@@ -20404,6 +20402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_nav__WEBPACK_IMPORTED_MODULE_2__["checkIfPastBanner"])();
+Object(_nav__WEBPACK_IMPORTED_MODULE_2__["searchbar"])();
 Object(_sidebar__WEBPACK_IMPORTED_MODULE_1__["sidebar"])();
 
 /***/ }),
@@ -20412,12 +20411,13 @@ Object(_sidebar__WEBPACK_IMPORTED_MODULE_1__["sidebar"])();
 /*!*******************************!*\
   !*** ./src/js/modules/nav.js ***!
   \*******************************/
-/*! exports provided: checkIfPastBanner */
+/*! exports provided: checkIfPastBanner, searchbar */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIfPastBanner", function() { return checkIfPastBanner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchbar", function() { return searchbar; });
 const checkIfPastBanner = () => {
     var banner = $('#banner').offset().top + $('#banner').height();
     $(window).on('scroll', function () {
@@ -20430,6 +20430,12 @@ const checkIfPastBanner = () => {
             $('.main-menu-wrapper > .navbar').removeClass('past-banner');
             $('.sub-menu-wrapper > .navbar').removeClass('past-banner');
         }
+    });
+};
+
+const searchbar = () => {
+    $(".sb-icon-search").click(function () {
+        $(".sb-search").toggleClass("sb-search-open");
     });
 };
 

@@ -1,8 +1,7 @@
-<form action="/" method="get">
-    <div class="input-group">
-        <input name="s" class="form-control py-2 border-right-0 border" type="search" value="<?php the_search_query(); ?>" id="site-search-input">
-        <span class="input-group-append">
-            <div class="input-group-text bg-white"><i class="fa fa-search"></i></div>
-        </span>
-    </div>
-</form>
+<div id="sb-search" class="sb-search">
+    <form>
+        <input class="sb-search-input" placeholder="Search" name="s" id="search" type="search">
+        <input class="sb-search-submit" value="" type="submit">
+        <span class="sb-icon-search"> <i class="fas fa-search" aria-hidden="true"> </i> </span>
+    </form>
+</div>

@@ -13,6 +13,13 @@ const checkIfPastBanner = () => {
     });
 }
 
+const searchbar = () => {
+    $(".sb-icon-search").click(function () {
+        $(".sb-search").toggleClass("sb-search-open");
+    });
+}
+
 export {
-    checkIfPastBanner
+    checkIfPastBanner,
+    searchbar,
 }
