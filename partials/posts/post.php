@@ -27,7 +27,7 @@
 				if ( 'post' === get_post_type() ) : ?>
 				<?php
 				endif; ?>
-			</header><!-- .entry-header -->
+			</header>
 			<div class="card-body">
 				<?php
 				if ( is_single() ) :
