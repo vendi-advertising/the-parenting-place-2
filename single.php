@@ -8,6 +8,8 @@
  */
 
 get_header();
+$handler = new IntersectionPluginHandler\ACF();
+$handler->get_section('banner', 'base');
 ?>
 
 <?php  //DEV ?> <?php echo basename( __FILE__ ); 

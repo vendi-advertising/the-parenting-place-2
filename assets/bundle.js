@@ -20420,7 +20420,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchbar", function() { return searchbar; });
 const checkIfPastBanner = () => {
     var banner = $('#banner').offset().top + $('#banner').height();
-    $(window).on('scroll', function () {
+    $(window).on('scroll', () => {
         let stop = Math.round($(window).scrollTop());
         let offset = 250;
         if (stop > banner - offset) {
@@ -20434,7 +20434,7 @@ const checkIfPastBanner = () => {
 };
 
 const searchbar = () => {
-    $(".sb-icon-search").click(function () {
+    $(".sb-icon-search").click(() => {
         $(".sb-search").toggleClass("sb-search-open");
     });
 };

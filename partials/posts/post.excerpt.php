@@ -11,7 +11,8 @@
 <?php
     $extra = [
 		"card",
-		"shadow-hover"
+		"shadow-hover",
+		"post",
     ]
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($extra); ?> >
@@ -29,10 +30,10 @@
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<!-- <?php the_parenting_place_2018_posted_on(); ?> -->
-			</div><!-- .entry-meta -->
+			</div>
 			<?php
 			endif; ?>
-		</header><!-- .entry-header -->
+		</header>
 		<div class="entry-content card-body">
 			<?php
 			if ( is_single() ) :
@@ -46,11 +47,11 @@
 					'after'  => '</div>',
 				) );
 			?>
-		</div><!-- .entry-content -->
+		</div>
 		
 		<a href="<?php echo esc_url( get_permalink() ) ?>"><button type="button" class="btn btn-block btn-default">Read more..</button></a>
 		
 		<footer class="entry-footer">
 			<?php the_parenting_place_2018_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		</footer>
+</article>

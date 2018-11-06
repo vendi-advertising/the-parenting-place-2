@@ -57,11 +57,9 @@
 							?>	
 						<div class="col-md-4 pull-right">
 							<!-- search -->
-							
-								  <div class="searchbar">
-									  <?php get_search_form(); ?>
-								  </div>
-
+							<div class="searchbar">
+								<?php get_search_form(); ?>
+							</div>
 						</div>
 					</nav>
 				</div> 

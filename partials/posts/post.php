@@ -11,7 +11,8 @@
 <?php
     $extra = [
 		"card",
-		"shadow-hover"
+		"shadow-hover",
+		"post"
     ]
 ?>
 <section>
