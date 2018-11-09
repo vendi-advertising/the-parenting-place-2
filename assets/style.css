@@ -346,27 +346,6 @@ input.sb-search-input[type="search"] {
       text-decoration: none;
       border-bottom: 3px solid #00576d; }
 
-.tns-outer {
-  max-width: 100%; }
-  .tns-outer .card {
-    max-width: 100%; }
-
-.tns-inner {
-  flex: 0 0 50%;
-  overflow-x: hidden; }
-
-.controls-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%; }
-  .controls-wrapper .playbutton-wrapper button {
-    display: none; }
-  .controls-wrapper .controls {
-    display: flex; }
-    .controls-wrapper .controls li {
-      margin: 1em 1.7em; }
-
 #sidebar {
   z-index: 999;
   background: #c1d82f;
@@ -450,6 +429,35 @@ input.sb-search-input[type="search"] {
       height: 36em; }
   .featurette-heading {
     margin-top: 7rem; } }
+
+.tns-outer {
+  max-width: 100%; }
+  .tns-outer .card {
+    max-width: 100%; }
+
+.tns-inner {
+  flex: 0 0 50%;
+  overflow-x: hidden; }
+
+.controls-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .controls-wrapper .playbutton-wrapper button {
+    display: none; }
+  .controls-wrapper .controls {
+    display: flex; }
+    .controls-wrapper .controls li {
+      margin: 1em 1.7em; }
+
+[id^="gform_wrapper"] {
+  display: flex;
+  flex-direction: row; }
+  [id^="gform_wrapper"] form {
+    padding: 2em;
+    border: 1px solid #333;
+    border-radius: 3px; }
 
 article {
   margin-bottom: 4em;

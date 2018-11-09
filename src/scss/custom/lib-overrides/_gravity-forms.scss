@@ -1,0 +1,9 @@
+[id^="gform_wrapper"]{
+    display: flex;
+    flex-direction: row;
+    form{
+        padding: 2em;
+        border: 1px solid $black;
+        border-radius: 3px;
+    }
+}
