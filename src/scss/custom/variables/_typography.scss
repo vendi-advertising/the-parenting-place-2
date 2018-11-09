@@ -1,9 +1,16 @@
 /***
 * Site Fonts
 */
-$font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+$font__main: 'Nunito', sans-serif;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 $font__base: 1em;
+
+body {
+    > * {
+        font-family: $font__main;
+        font-size: $font__base * 1.2;
+    }
+
+}
