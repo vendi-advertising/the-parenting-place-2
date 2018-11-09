@@ -1,0 +1,32 @@
+.tns-outer {
+    max-width: 100%;
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+.tns-inner {
+    flex: 0 0 50%;
+    overflow-x: hidden;
+}
+
+.controls-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .playbutton-wrapper {
+        button {
+            display: none;
+        }
+    }
+
+    .controls {
+        display: flex;
+        li{
+            margin: 1em 1.7em;
+        }
+    }
+}

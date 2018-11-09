@@ -1,0 +1,17 @@
+/**
+* This is used to map the theme colors
+* @example
+* body { 
+*    color: custom-color('dark-blue');
+* }
+*
+*/
+@function custom-color($key) {
+    @if map-has-key($theme-colors, $key) {
+        @return map-get($theme-colors, $key);
+    }
+    @warn "Unknown `#{$key}` in $theme-colors.";
+    @return null;
+}
+
+@import "~bootstrap/scss/functions";

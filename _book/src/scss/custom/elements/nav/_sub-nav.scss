@@ -1,0 +1,13 @@
+.sub-menu-wrapper {
+    $color: custom-color('dark-blue');
+    nav {
+        background: linear-gradient($color, darken($color, 2));
+        width: 100%;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        .menu-item{
+            padding: 0;
+        }
+    }
+}

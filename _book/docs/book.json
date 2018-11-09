@@ -1,0 +1,11 @@
+{
+    "gitbook": ">= 3.0.0",
+    "plugins": ["accordion", "expandable-chapters"],
+    "root": "./src",
+    "links": {
+        "sidebar": {
+            "Contact us / Support": "https://www.gitbook.com/contact"
+        }
+    },
+    "pluginsConfig": {}
+}

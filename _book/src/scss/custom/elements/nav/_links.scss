@@ -1,0 +1,16 @@
+nav {
+    ul{
+        margin-left: 3em;
+    }
+    .menu-item {
+        padding: 1em;
+        a{
+            &:focus,
+            &:hover,
+            &:active{
+              border-bottom: 3px solid custom-color('dark-blue');
+            }
+        }
+    }
+    
+}
