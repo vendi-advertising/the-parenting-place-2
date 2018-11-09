@@ -14,3 +14,17 @@ nav {
     }
     
 }
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a{
+        background-color: custom-color('brand-green');
+        border-radius: 4px;
+        padding: 1.5em;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+<?php echo basename( __FILE__ ); ?>
 	<?php
 		$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
 	?>

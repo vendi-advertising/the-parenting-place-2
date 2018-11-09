@@ -39,17 +39,23 @@
 			if ( is_single() ) :
 				the_content();
 			else :
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2018' ) );
 			endif;
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2018' ),
 					'after'  => '</div>',
 				) );
 			?>
 		</div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<a href="<?php echo esc_url( get_permalink() ) ?>">
+					<button type="button" class="mb-3 float-right btn btn-block btn-outline-dark">Read more..</button>
+				</a>
+			</div>
+		</div>
 		
-		<a href="<?php echo esc_url( get_permalink() ) ?>"><button type="button" class="btn btn-block btn-default">Read more..</button></a>
 		
 		<footer class="entry-footer">
 			<?php the_parenting_place_2018_entry_footer(); ?>

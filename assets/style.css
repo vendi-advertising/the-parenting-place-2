@@ -258,6 +258,17 @@ nav .menu-item {
   nav .menu-item a:focus, nav .menu-item a:hover, nav .menu-item a:active {
     border-bottom: 3px solid #00576d; }
 
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .nav-links a {
+    background-color: #aec248;
+    border-radius: 4px;
+    padding: 1.5em; }
+    .nav-links a:hover {
+      text-decoration: none; }
+
 .sub-menu-wrapper nav {
   background: linear-gradient(#00576d, #004f63);
   width: 100%;
@@ -461,7 +472,8 @@ input.sb-search-input[type="search"] {
 
 article {
   margin-bottom: 4em;
-  padding: 2em; }
+  padding: 2em;
+  border-left: solid 6px #83509b !important; }
 
 .section-title {
   text-align: center;
