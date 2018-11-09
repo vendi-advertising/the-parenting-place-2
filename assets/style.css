@@ -437,6 +437,10 @@ input.sb-search-input[type="search"] {
   .featurette-heading {
     font-size: 50px; } }
 
+@media (min-width: 63em) {
+  #banner {
+    margin-top: 8em; } }
+
 @media (min-width: 72em) {
   #banner {
     margin-top: -2em; }
@@ -448,7 +452,8 @@ input.sb-search-input[type="search"] {
     margin-top: 7rem; } }
 
 article {
-  margin: 4em 0; }
+  margin-bottom: 4em;
+  padding: 2em; }
 
 .section-title {
   text-align: center;
@@ -11675,7 +11680,7 @@ pre[class*="language-"] > code[data-language] {
   overflow: auto !important; }
 
 section {
-  margin: 3em 0; }
+  margin-bottom: 3em; }
 
 h1 {
   font-size: 45px; }

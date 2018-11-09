@@ -36,12 +36,8 @@
 								<li><a href="<?php echo $pinterest;?>"><i class="fab fa-pinterest fa-2x"></i></a></li>
 							<?php }?>	
 						</ul>
-
-
-				<?php ?>
-			
+				<?php?>
 				</div>
-				<hr class="clearfix w-100 d-md-none pb-3">
 				<div class="col-md-3 mb-md-0 mb-3">
 					<?php
 						$left_args = array(

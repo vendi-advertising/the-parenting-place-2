@@ -1,16 +1,3 @@
-.tns-outer {
-    max-width: 100%;
-
-    .card {
-        max-width: 100%;
-    }
-}
-
-.tns-inner {
-    flex: 0 0 50%;
-    overflow-x: hidden;
-}
-
 .controls-wrapper {
     position: relative;
     display: flex;
@@ -28,5 +15,11 @@
         li{
             margin: 1em 1.7em;
         }
+    }
+}
+
+#tns1{
+    >.tns-item {
+        width: calc(18.75%) !important;
     }
 }

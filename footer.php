@@ -8,7 +8,30 @@
 						<p class="text-left"><?php echo esc_attr(get_theme_mod( 'footer_textbox', '' )); ?></p>
 						<p class="text-left"><?php echo esc_attr(get_theme_mod( 'footer_textarea', '' )); ?></p>		
 					</div>
-					<ul class="list-inline social">
+				</div>
+				<div class="col-md-3 mb-md-0 mb-3 footer-menu left-menu">
+					<?php
+						$left_args = array(
+							'menu'            	=> 'footer-left',
+							'theme_location'  	=> 'footer-left',
+						);
+						wp_nav_menu($left_args);
+ 					?>
+				</div>
+				<div class="col-md-3 mb-md-0 mb-3 footer-menu right-right">
+					<?php
+						$right_args = array(
+							'menu' 				=> 'footer-right',
+							'theme_location' 	=> 'footer-right',
+						);
+						wp_nav_menu($right_args);
+ 					?>
+				</div>
+			</div>
+			</div>
+			<div class="social-info row">
+				<div class="col-md-6 mx-2">
+					<ul class="list-inline social">	
 						<?php 
 							$facebook =  esc_url(get_theme_mod ('facebook_textbox'));
 							$twitter = esc_url(get_theme_mod('twitter_textbox'));
@@ -35,34 +58,10 @@
 							if($pinterest){?>
 								<li><a href="<?php echo $pinterest;?>"><i class="fab fa-pinterest fa-2x"></i></a></li>
 							<?php }?>	
-						</ul>
-
-
-				<?php ?>
-			
-				</div>
-				<hr class="clearfix w-100 d-md-none pb-3">
-				<div class="col-md-3 mb-md-0 mb-3 footer-menu left-menu">
-					<?php
-						$left_args = array(
-							'menu'            	=> 'footer-left',
-							'theme_location'  	=> 'footer-left',
-						);
-						wp_nav_menu($left_args);
- 					?>
-				</div>
-				<div class="col-md-3 mb-md-0 mb-3 footer-menu right-right">
-					<?php
-						$right_args = array(
-							'menu' 				=> 'footer-right',
-							'theme_location' 	=> 'footer-right',
-						);
-						wp_nav_menu($right_args);
- 					?>
+					</ul>
 				</div>
 			</div>
-			</div>
-			<div class="container site-info py-3">
+			<div class="container site-info">
 				<div class="row justify-content-center">
 					© <?php echo date("Y"); ?> Copyright 
 					<a href=""><span> &nbsp <?php echo get_bloginfo( 'name' ); ?></span></a>
