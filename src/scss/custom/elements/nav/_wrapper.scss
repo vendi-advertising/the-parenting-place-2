@@ -1,10 +1,13 @@
 .nav-menu-wrapper{
+    .custom-logo{
+        max-width: 200px;
+    }
     .nav-link {
         color: $white !important;
     }
 }
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
+@media only screen and (min-width : 72em) {
     .nav-menu-wrapper {
         width: 100%;
         height: auto;

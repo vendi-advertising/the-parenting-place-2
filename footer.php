@@ -3,7 +3,7 @@
 			<div class="container-fluid text-center text-md-left">
 			<div class="row">
 				<div class="col-md-6 mt-md-0 mt-3">
-					<div>
+					<div class="footer-content">
 						<h5><?php echo esc_attr(get_theme_mod ('footer_title'))?></h5>
 						<p class="text-left"><?php echo esc_attr(get_theme_mod( 'footer_textbox', '' )); ?></p>
 						<p class="text-left"><?php echo esc_attr(get_theme_mod( 'footer_textarea', '' )); ?></p>		
@@ -42,7 +42,7 @@
 			
 				</div>
 				<hr class="clearfix w-100 d-md-none pb-3">
-				<div class="col-md-3 mb-md-0 mb-3">
+				<div class="col-md-3 mb-md-0 mb-3 footer-menu left-menu">
 					<?php
 						$left_args = array(
 							'menu'            	=> 'footer-left',
@@ -51,7 +51,7 @@
 						wp_nav_menu($left_args);
  					?>
 				</div>
-				<div class="col-md-3 mb-md-0 mb-3">
+				<div class="col-md-3 mb-md-0 mb-3 footer-menu right-right">
 					<?php
 						$right_args = array(
 							'menu' 				=> 'footer-right',

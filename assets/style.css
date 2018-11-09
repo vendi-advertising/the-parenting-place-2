@@ -206,11 +206,14 @@ object {
 .gallery-caption {
   display: block; }
 
+.nav-menu-wrapper .custom-logo {
+  max-width: 200px; }
+
 .nav-menu-wrapper .nav-link {
   color: #fffdfd !important; }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 72em) {
   .nav-menu-wrapper {
     width: 100%;
     height: auto;
@@ -329,7 +332,14 @@ input.sb-search-input[type="search"] {
   width: 45px; }
 
 #footer {
+  background-image: linear-gradient(#333, black);
   color: #fffdfd; }
+  #footer .footer-menu {
+    border-left: solid 2px #00576d; }
+  #footer .footer-content {
+    width: 50%;
+    border-bottom: solid 2px #00576d;
+    margin-bottom: 2rem; }
   #footer a {
     color: #fffdfd; }
     #footer a:focus, #footer a:hover, #footer a:active {
@@ -365,6 +375,9 @@ input.sb-search-input[type="search"] {
   max-width: 380px;
   margin: 0 auto; }
 
+#banner {
+  margin-top: 10rem; }
+
 .carousel {
   margin-bottom: 4rem; }
 
@@ -380,14 +393,14 @@ input.sb-search-input[type="search"] {
   left: 0; }
 
 .carousel-item {
-  height: 32rem;
-  background-color: #777; }
+  height: 18em;
+  background-color: white; }
   .carousel-item > img {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
-    height: 32rem; }
+    height: 18em; }
 
 .carousel-caption-wrapper {
   display: flex;
@@ -403,7 +416,19 @@ input.sb-search-input[type="search"] {
     flex-direction: column;
     max-width: 300px; }
 
-@media (min-width: 40em) {
+@media (min-width: 34em) {
+  .carousel-item {
+    height: 23em; }
+    .carousel-item > img {
+      height: 23em; } }
+
+@media (min-width: 48em) {
+  #banner {
+    margin-top: 4em; }
+  .carousel-item {
+    height: 32em; }
+    .carousel-item > img {
+      height: 32em; }
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 1.25rem;
@@ -412,7 +437,13 @@ input.sb-search-input[type="search"] {
   .featurette-heading {
     font-size: 50px; } }
 
-@media (min-width: 62em) {
+@media (min-width: 72em) {
+  #banner {
+    margin-top: -2em; }
+  .carousel-item {
+    height: 36em; }
+    .carousel-item > img {
+      height: 36em; }
   .featurette-heading {
     margin-top: 7rem; } }
 
@@ -11670,10 +11701,6 @@ p {
 
 img {
   max-width: 100%; }
-
-img:not(.tns-lazy-img),
-.lazyload img {
-  height: auto; }
 
 .img {
   font-size: 100px;

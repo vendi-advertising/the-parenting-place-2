@@ -1,4 +1,13 @@
 #footer{
+    .footer-menu{
+        border-left: solid 2px custom-color('dark-blue');
+    }
+    .footer-content{
+        width: 50%;
+        border-bottom: solid 2px custom-color('dark-blue');
+        margin-bottom: 2rem;
+    }
+    background-image: linear-gradient($black, darken($black, 50));
     color: $white;
     a {
         color: $white;

@@ -1,4 +1,5 @@
 #banner{
+    margin-top: 10rem;
 }
 .carousel {
     margin-bottom: 4rem;
@@ -17,15 +18,15 @@
 }
 
 .carousel-item {
-    height: 32rem;
-    background-color: #777;
+    height: 18em;
+    background-color: lighten($black, 90);
 
     >img {
         position: absolute;
         top: 0;
         left: 0;
         min-width: 100%;
-        height: 32rem;
+        height: 18em;
     }
 }
 
@@ -46,7 +47,28 @@
     }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 34em){
+    .carousel-item {
+        height: 23em;
+
+        >img {
+            height: 23em;
+        }
+    }
+}
+
+@media (min-width: 48em) {
+
+    #banner{
+        margin-top: 4em;
+    }
+    .carousel-item {
+       height: 32em;
+
+    > img {
+        height:32em;
+      }
+    }
 
     /* Bump up size of carousel content */
     .carousel-caption p {
@@ -60,7 +82,19 @@
     }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 72em) {
+
+    #banner{
+        margin-top: -2em;
+    }
+
+    .carousel-item {
+        height: 36em;
+        >img {
+            height: 36em;
+          }
+      }
+
     .featurette-heading {
         margin-top: 7rem;
     }
