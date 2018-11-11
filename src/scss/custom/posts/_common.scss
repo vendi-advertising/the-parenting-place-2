@@ -2,4 +2,9 @@ article {
     margin-bottom: 4em;
     padding: 2em;
     border-left: solid 6px custom-color('brand-purple') !important;
+    @include fadeIn(
+        $duration: 1s,
+        $delay: 2s,
+        $function: ease
+    );
 }
