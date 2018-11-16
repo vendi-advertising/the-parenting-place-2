@@ -8268,30 +8268,6 @@ body > * {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transform: translateY(-1px); }
 
-/* MORE THAN 75 */
-body {
-  background-color: skyBlue !important; }
-
-/* LESS THAN 75 */
-@media (max-width: 74.9em) {
-  body {
-    background-color: pink !important; } }
-
-/* LESS THAN 62 */
-@media (max-width: 61.9em) {
-  body {
-    background-color: blue !important; } }
-
-/* LESS THAN 48 */
-@media (max-width: 47.9em) {
-  body {
-    background-color: green !important; } }
-
-/* LESS THAN 34 */
-@media (max-width: 33.9em) {
-  body {
-    background-color: red !important; } }
-
 .level-0 {
   z-index: -100 !important; }
 
