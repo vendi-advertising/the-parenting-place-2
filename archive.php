@@ -14,7 +14,7 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php
-                    $path = '/partials/posts/post';
+                    $path = '/partials/posts/post.excerpt';
                     get_template_part($path);
                 ?>
 
