@@ -8266,7 +8266,7 @@ body > * {
 
 .shadow-hover:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transform: translateY(-2px); }
+  transform: translateY(-1px); }
 
 /* MORE THAN 75 */
 body {
@@ -8543,13 +8543,17 @@ input.sb-search-input[type="search"] {
       text-decoration: none;
       border-bottom: 3px solid #00576d; }
 
-#sidebar {
-  z-index: 999;
-  background: #c1d82f;
-  color: #fff;
-  transition: all 1s;
-  max-width: 380px;
-  margin: 0 auto; }
+#sidebar-content {
+  padding: 1em; }
+  #sidebar-content section > ul > li {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0.5rem;
+    border-radius: 3px;
+    text-align: center; }
+    #sidebar-content section > ul > li > span > a, #sidebar-content section > ul > li > a {
+      text-decoration: none; }
+    #sidebar-content section > ul > li:hover {
+      background-color: #f4f8db; }
 
 #banner {
   margin-top: 10rem; }
@@ -8675,11 +8679,11 @@ article {
   -ms-animation-duration: 1s;
   -o-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
   -webkit-animation-timing-function: ease;
   -moz-animation-timing-function: ease;
   -ms-animation-timing-function: ease;
@@ -8713,7 +8717,6 @@ article {
     position: relative;
     font-size: 1.3em;
     font-weight: 600;
-    margin-top: -10px;
     text-transform: uppercase;
     color: #404040;
     background: #fffdfd;

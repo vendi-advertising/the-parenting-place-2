@@ -20,7 +20,6 @@
         position: relative;
         @include font-scale(1.3);
         font-weight: 600;
-        margin-top: -10px;
         text-transform: uppercase;
         color: lighten($black, 5);
         background: $white;

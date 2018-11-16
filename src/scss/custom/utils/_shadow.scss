@@ -5,6 +5,6 @@
 .shadow-hover {
     &:hover {
         @include box-shadow(1);
-        transform: translateY(-2px);
+        transform: translateY(-1px);
     }
 }

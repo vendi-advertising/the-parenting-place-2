@@ -4,7 +4,7 @@ article {
     border-left: solid 6px custom-color('brand-purple') !important;
     @include fadeIn(
         $duration: 1s,
-        $delay: 2s,
+        $delay: 1s,
         $function: ease
     );
 }

@@ -18,7 +18,7 @@ if ( ! is_active_sidebar( 'main-sidebar' ) ) {
 					<i class="glyphicon glyphicon-align-left"></i>
 					<span>Toggle Sidebar</span>
                 </button>-->
-	<div id="sidebar-content" class="card sidebar px-5" id="sidebar" role="navigation">
+	<div id="sidebar-content" class="card sidebar" id="sidebar" role="navigation">
 		<?php dynamic_sidebar( 'main-sidebar' ); ?>
 	</div>
 

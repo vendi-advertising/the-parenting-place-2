@@ -11,9 +11,6 @@ get_header();
 $handler = new IntersectionPluginHandler\ACF();
 $handler->get_section('banner', 'base');
 ?>
-
-<?php  //DEV ?> <?php echo basename( __FILE__ ); 
-?>
 <?php
 	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
 ?>
