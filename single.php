@@ -29,9 +29,7 @@ $handler->get_section('banner', 'base');
 					$path = dirname(__FILE__, 1) . '/partials/posts/' .  get_post_type(get_post()) . '.php';
 					include($path);
 			?>
-			<div class="">
-				<?php the_post_navigation();?>
-			</div>
+			<?php the_post_navigation();?>
 			<?php
 					if ( comments_open() || get_comments_number() && false) :
 						comments_template();

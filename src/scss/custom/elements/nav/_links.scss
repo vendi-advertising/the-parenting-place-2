@@ -19,8 +19,11 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 1em;
+    .nav-previous, .nav-next{
+        display: flex;
+    }
     a{
-        background-color: custom-color('brand-green');
         border-radius: 4px;
         padding: 1.5em;
         &:hover{

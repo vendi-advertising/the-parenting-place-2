@@ -8406,9 +8406,11 @@ nav .menu-item {
 .nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-bottom: 1em; }
+  .nav-links .nav-previous, .nav-links .nav-next {
+    display: flex; }
   .nav-links a {
-    background-color: #aec248;
     border-radius: 4px;
     padding: 1.5em; }
     .nav-links a:hover {

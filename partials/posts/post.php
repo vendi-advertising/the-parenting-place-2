@@ -21,27 +21,25 @@
 				<?php the_post_thumbnail(); ?>
 			</div>
 			<header class="">
-				<?php
-	
-				the_title( '<h2 class="card-title">', '</h2>' );
-	
-				if ( 'post' === get_post_type() ) : ?>
-				<?php
-				endif; ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php
+						the_title( '<h2 class="card-title">', '</h2>' );
+					?>
+				</a>
 			</header>
 			<div class="card-body">
 				<?php
 				if ( is_single() ) :
 					the_content();
 				else :
-					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2018' ) );
 				endif;?>
 	
 				<div class="pagination">
 					<nav>
 						<?php
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2018' ),
 								'after'  => '</div>',
 							) );
 						?>
