@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
+    "dev": "webpack --config webpack.dev.js --watch",
+    "build": "webpack --config webpack.prod.js",
     "docs:build": "gitbook build",
     "docs": "gitbook serve ./docs"
   },
