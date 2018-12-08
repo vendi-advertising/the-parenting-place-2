@@ -1,7 +1,7 @@
 <section class="card content-3 text-center">
         <div class="container">
-            <h2>What can we do for you</h2>
-            <p class="lead mb-5 constrain-width">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
+            <h2><?php echo esc_html_e( $content['title'] ); ?></h2>
+            <p class="lead mb-5 constrain-width"><?php echo esc_html_e( $content['main_text'] ); ?></p>
             <div class="row justify-center">
                 <div class="col-md-3 text-center text-md-right" >
                     <div class="col col-feature">
