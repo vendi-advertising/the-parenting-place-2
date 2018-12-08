@@ -23,12 +23,12 @@ function the_parenting_place_2018_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'the-parenting-place-2018' ),
+		esc_html_x( 'Posted on %s', 'post date', 'the-parenting-place-2.0' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'the-parenting-place-2018' ),
+		esc_html_x( 'by %s', 'post author', 'the-parenting-place-2.0' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -37,7 +37,7 @@ function the_parenting_place_2018_posted_on() {
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
         /* translators: %s: post title */
-        comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'the-parenting-place-2018' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+        comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'the-parenting-place-2.0' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
         echo '</span>';
     }
 
@@ -53,15 +53,15 @@ function the_parenting_place_2018_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'the-parenting-place-2018' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'the-parenting-place-2.0' ) );
 		if ( $categories_list && the_parenting_place_2018_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'the-parenting-place-2018' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'the-parenting-place-2.0' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'the-parenting-place-2018' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'the-parenting-place-2.0' ) );
 		if ( $tags_list ) {
-			printf( ' | <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'the-parenting-place-2018' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( ' | <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'the-parenting-place-2.0' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -69,7 +69,7 @@ function the_parenting_place_2018_entry_footer() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'the-parenting-place-2018' ),
+			esc_html__( 'Edit %s', 'the-parenting-place-2.0' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		' | <span class="edit-link">',
@@ -136,7 +136,7 @@ if ( ! function_exists( 'the_parenting_place_2018_comment' ) ) :
 
             <li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
             <div class="comment-body">
-                <?php _e( 'Pingback:', 'the-parenting-place-2018' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'the-parenting-place-2018' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php _e( 'Pingback:', 'the-parenting-place-2.0' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'the-parenting-place-2.0' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
 
         <?php else : ?>
@@ -151,19 +151,19 @@ if ( ! function_exists( 'the_parenting_place_2018_comment' ) ) :
                     <div class="media-body-wrap card">
 
                         <div class="card-header">
-                            <h5 class="mt-0"><?php printf( __( '%s <span class="says">says:</span>', 'the-parenting-place-2018' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
+                            <h5 class="mt-0"><?php printf( __( '%s <span class="says">says:</span>', 'the-parenting-place-2.0' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
                             <div class="comment-meta">
                                 <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
                                     <time datetime="<?php comment_time( 'c' ); ?>">
-                                        <?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'the-parenting-place-2018' ), get_comment_date(), get_comment_time() ); ?>
+                                        <?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'the-parenting-place-2.0' ), get_comment_date(), get_comment_time() ); ?>
                                     </time>
                                 </a>
-                                <?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'the-parenting-place-2018' ), '<span class="edit-link">', '</span>' ); ?>
+                                <?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'the-parenting-place-2.0' ), '<span class="edit-link">', '</span>' ); ?>
                             </div>
                         </div>
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
-                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'the-parenting-place-2018' ); ?></p>
+                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'the-parenting-place-2.0' ); ?></p>
                         <?php endif; ?>
 
                         <div class="comment-content card-block">

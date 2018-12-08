@@ -39,11 +39,11 @@
 			if ( is_single() ) :
 				the_content();
 			else :
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2018' ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2.0' ) );
 			endif;
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2018' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2.0' ),
 					'after'  => '</div>',
 				) );
 			?>

@@ -1,15 +1,15 @@
 <?php
 /**
- * the-parenting-place-2018 functions and definitions
+ * the-parenting-place-2.0 functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package the-parenting-place-2018
+ * @package the-parenting-place-2.0
  */
 
 if ( ! function_exists( 'the_parenting_place_2018_setup' ) ) :
 	function the_parenting_place_2018_setup() {
-		load_theme_textdomain( 'the-parenting-place-2018', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'the-parenting-place-2.0', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -114,9 +114,9 @@ add_action( 'after_setup_theme', 'the_parenting_place_2018_content_width', 0 );
  */
 function the_parenting_place_2018_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( ' Main Sidebar', 'the-parenting-place-2018' ),
+		'name'          => esc_html__( ' Main Sidebar', 'the-parenting-place-2.0' ),
 		'id'            => 'main-sidebar',
-		'description'   => esc_html__( 'Add widgets for the main sidebar here.', 'the-parenting-place-2018' ),
+		'description'   => esc_html__( 'Add widgets for the main sidebar here.', 'the-parenting-place-2.0' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -124,9 +124,9 @@ function the_parenting_place_2018_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( ' Footer Sidebar', 'the-parenting-place-2018' ),
+		'name'          => esc_html__( ' Footer Sidebar', 'the-parenting-place-2.0' ),
 		'id'            => 'footer-sidebar',
-		'description'   => esc_html__( 'Add widgets for the footer sidebar here.', 'the-parenting-place-2018' ),
+		'description'   => esc_html__( 'Add widgets for the footer sidebar here.', 'the-parenting-place-2.0' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -141,7 +141,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  */
  function the_parenting_place_2018_styles(){
 	//TODO: remove time
-	wp_enqueue_style( 'the-parenting-place-2018-style', get_template_directory_uri() . '/assets/style.css', array(), time(), 'all');
+	wp_enqueue_style( 'the-parenting-place-2.0-style', get_template_directory_uri() . '/assets/style.css', array(), time(), 'all');
 
  }
  add_action( 'wp_enqueue_scripts', 'the_parenting_place_2018_styles' );
@@ -151,7 +151,7 @@ add_action( 'widgets_init', 'the_parenting_place_2018_widgets_init' );
  */
 function the_parenting_place_2018_scripts() {
 
-	wp_enqueue_script( 'the-parenting-place-2018-skip-link-focus-fix', get_template_directory_uri() . '/assets/bundle.js', array(), time(), true );
+	wp_enqueue_script( 'the-parenting-place-2.0-skip-link-focus-fix', get_template_directory_uri() . '/assets/bundle.js', array(), time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

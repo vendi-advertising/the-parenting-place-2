@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package the-parenting-place-2018
+ * @package the-parenting-place-2.0
  */
 
 /**
@@ -28,7 +28,7 @@ function the_parenting_place_2018_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'the-parenting-place-2018-style',
+			'stylesheet' => 'the-parenting-place-2.0-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',

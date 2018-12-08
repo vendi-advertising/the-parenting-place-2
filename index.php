@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package the-parenting-place-2018
+ * @package the-parenting-place-2.0
  */
 
 get_header();
