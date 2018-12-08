@@ -1,38 +1,31 @@
 <?php
 /*
-* Template Name: No Sidebar (Full Width)
+* Template Name: No Sidebar (full width)
 */
 
-get_header(); ?>
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-12">
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main">
-
+$handler = new IntersectionPluginHandler\ACF();
+get_header(); 
+$the_sections = ['banner'];
+$sections = $handler->prepare($the_sections);
+$handler->render($sections);
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 wp-bp-content-width">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <section>
                         <?php
-                        while ( have_posts() ) : the_post();
-
-                            get_template_part( 'partials/content', 'page' );
-
-                            // If comments are open or we have at least one comment, load up the comment template.
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-
-                        endwhile; // End of the loop.
+                            $sections = $handler->prepare();
+                            $ignore = ['banner'];                  
+                            $handler->render($sections, $ignore);
                         ?>
-
-                    </main>
-                </div>
+                    </section>
+                </main>
             </div>
-            <!-- /.col-md-8 -->
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container -->
+</div>
 
 <?php
 get_footer();
