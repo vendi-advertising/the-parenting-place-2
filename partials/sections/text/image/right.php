@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row justify-center">
 			<div class="col-md-5 text-center text-md-left" >
-				<h2><?php echo esc_html_e( $content['title'] ); ?></h2>
+				<a href="<?php echo esc_html_e( $content['link'] ); ?>"><h2><?php echo esc_html_e( $content['title'] ); ?></h2></a>
 				<p class="mt-2 mb-2">
 					<?php echo esc_html_e( $content['main_text'] ); ?>
 				</p>
