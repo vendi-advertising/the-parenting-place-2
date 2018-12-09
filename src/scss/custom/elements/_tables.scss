@@ -1,0 +1,10 @@
+tbody {
+    tr:nth-child(2n) {
+        background: lighten(brand-color('light-blue'), 40);
+    }
+}
+
+td, th {
+    border: 1px solid $black;
+    padding: 1em;
+}
