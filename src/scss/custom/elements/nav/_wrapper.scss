@@ -41,7 +41,7 @@
          .navbar {
              transition: background 0.5s linear;
              background: $black;
-             border-bottom: 10px solid custom-color('dark-blue');
+             border-bottom: 10px solid brand-color('dark-blue');
          }
 
          .nav-link{

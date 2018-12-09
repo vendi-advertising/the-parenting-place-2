@@ -4,8 +4,8 @@
             transition: background 0.5s linear;
         }
         .past-banner{
-            background: $black;
-            border-bottom: 10px solid custom-color('dark-blue');
+            background: brand-color('light-brown');
+            border-bottom: 10px solid brand-color('dark-blue');
         }
     }
 

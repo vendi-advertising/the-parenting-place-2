@@ -1,7 +1,7 @@
 article {
     margin-bottom: 4em;
     padding: 2em;
-    border-left: solid 6px custom-color('brand-purple') !important;
+    border-left: solid 6px brand-color('brand-green') !important;
     @include fadeIn(
         $duration: 1s,
         $delay: 1s,

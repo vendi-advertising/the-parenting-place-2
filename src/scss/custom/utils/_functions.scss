@@ -2,11 +2,11 @@
 * This is used to map the theme colors
 * @example
 * body { 
-*    color: custom-color('dark-blue');
+*    color: brand-color('dark-blue');
 * }
 *
 */
-@function custom-color($key) {
+@function brand-color($key) {
     @if map-has-key($theme-colors, $key) {
         @return map-get($theme-colors, $key);
     }

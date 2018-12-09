@@ -1,6 +1,6 @@
 // this can be made visible by changing display to flex
 .sub-menu-wrapper {
-    $color: custom-color('dark-blue');
+    $color: brand-color('dark-blue');
     nav {
         background: linear-gradient($color, darken($color, 2));
         width: 100%;

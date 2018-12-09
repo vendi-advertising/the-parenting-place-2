@@ -21,7 +21,7 @@ input.sb-search-input[type="search"] {
 }
 
 .sb-search-input {
-    background: darken(custom-color('dark-blue'), 7);
+    background: darken(brand-color('dark-blue'), 7);
     border: medium none;
     color: #fff;
     font-family: inherit;
@@ -47,7 +47,7 @@ input.sb-search-input[type="search"] {
 
 .sb-icon-search {
     border-radius: 0px 5px 5px 0px;
-    background: custom-color('dark-blue');
+    background: brand-color('dark-blue');
     color: $white;
     font-size: 1.5em;
     z-index: map-get($z-index, 1);

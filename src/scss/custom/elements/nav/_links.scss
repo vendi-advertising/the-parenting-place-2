@@ -8,7 +8,7 @@ nav {
             &:focus,
             &:hover,
             &:active{
-              border-bottom: 3px solid custom-color('dark-blue');
+              border-bottom: 3px solid brand-color('dark-blue');
             }
         }
     }
