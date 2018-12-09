@@ -6,7 +6,7 @@
                     <img class="mb-4 img-fluid" src="<?php echo esc_html_e( $content['image']['url'] ); ?>" >
                 </div>
                 <div class="col-md-6 text-left" >
-                    <h2><?php echo esc_html_e( $content['title'] ); ?></h2>
+                    <a href="<?php echo esc_html_e( $content['link'] ); ?>"><h2><?php echo esc_html_e( $content['title'] ); ?></h2></a>
                     <p class="mt-2 mb-2">
                         <?php echo esc_html_e( $content['main_text'] ); ?>
                     </p>
