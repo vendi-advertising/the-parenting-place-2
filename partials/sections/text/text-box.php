@@ -19,6 +19,9 @@ if($text) : ?>
                                     case 'right':
                                         include('image/right.php');
                                     break;
+                                    case 'surrounded':
+                                        include('image/surrounded.php');
+                                    break;
                                 }
                             }                             
                         ?>
