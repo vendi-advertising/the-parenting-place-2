@@ -20,9 +20,10 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 1em;
-    background-color: $white;
+   
     .nav-previous, .nav-next{
         display: flex;
+        background-color: $white;
     }
     a{
         border-radius: 4px;
