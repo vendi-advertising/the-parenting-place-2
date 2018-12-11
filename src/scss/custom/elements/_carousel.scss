@@ -26,7 +26,6 @@
         top: 0;
         left: 0;
         min-width: 100%;
-        height: 18em;
     }
 }
 
@@ -50,10 +49,6 @@
 @media (min-width: 34em){
     .carousel-item {
         height: 23em;
-
-        >img {
-            height: 23em;
-        }
     }
 }
 
@@ -65,9 +60,6 @@
     .carousel-item {
        height: 32em;
 
-    > img {
-        height:32em;
-      }
     }
 
     /* Bump up size of carousel content */
@@ -95,9 +87,6 @@
 
     .carousel-item {
         height: 36em;
-        >img {
-            height: 36em;
-          }
       }
 
     .featurette-heading {
