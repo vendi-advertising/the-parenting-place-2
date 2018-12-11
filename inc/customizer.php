@@ -1,6 +1,9 @@
 <?php
 function the_parenting_place_2018_customizer_register( $wp_customize ) {
 
+    // remove unwanted sections
+    $wp_customize->remove_section('header_image');
+    $wp_customize->remove_section('colors');
 
     $wp_customize->add_panel( 'theme_option', array(
         'priority' => 200,
