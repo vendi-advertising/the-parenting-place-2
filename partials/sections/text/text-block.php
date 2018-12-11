@@ -1,31 +1,30 @@
 
 <?php 
-$text = $contents[$contents['acf_fc_layout']] ?? [];
-if($text) : ?>
+$content = $contents ?? [];
+if($content) : ?>
     <section>
+
         <div class="container-fluid">
             <div class="card-group">
-                <?php if(count($text)):?>
-                    <?php foreach($text as $content): ?>
-                        <?php 
-                            if($content['has_image']){
-                                switch($content['image_align']){
-                                    case 'left': 
-                                        include('image/left.php');
-                                    break;
-                                    case 'center':
-                                        include('image/center.php');
-                                    break; 
-                                    case 'right':
-                                        include('image/right.php');
-                                    break;
-                                    case 'surrounded':
-                                        include('image/surrounded.php');
-                                    break;
-                                }
-                            }                             
-                        ?>
-                    <?php endforeach; ?>		
+                <?php if(count($content)):?>
+                    <?php 
+                        if($content['has_image']){
+                            switch($content['image_align']){
+                                case 'left': 
+                                    include('image/left.php');
+                                break;
+                                case 'center':
+                                    include('image/center.php');
+                                break; 
+                                case 'right':
+                                    include('image/right.php');
+                                break;
+                                case 'surrounded':
+                                    include('image/surrounded.php');
+                                break;
+                            }
+                        }                             
+                    ?>	
                 <?php endif; ?>	
             </div>
         </div>
