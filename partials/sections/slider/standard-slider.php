@@ -1,5 +1,5 @@
 <?php 
-$slides = $contents[$contents['acf_fc_layout']] ?? [];
+$slides = $contents ?? [];
 if(!isset($slider_instance)){
 	$slider_instance = 0;
 }
@@ -9,15 +9,17 @@ if(count($slides)) :
 	<div class="container">
 		<div class="row">
 			<div class="standard-slider-<?php echo esc_html_e( $slider_instance ); ?>" data-name="standard-slider-<?php echo esc_html_e( $slider_instance ); ?>">
-				<?php foreach($slides[0]['slides'] as $slide): ?>
-					<div class="card shadow">
-						<div class="card-body">
-							<img src="<?php echo esc_html_e( $slide['image']); ?>" alt="slider image">
+				<?php foreach($slides['slides'] as $slide): ?>
+					<a href="<?php echo esc_html_e( $slide['link'] ); ?>">
+						<div class="card shadow">
+							<div class="card-body">
+								<img src="<?php echo esc_html_e( $slide['image']); ?>" alt="slider image">
+							</div>
+							<p class="text-center">
+								<?php echo esc_html_e( $slide['text']); ?>
+							</p>
 						</div>
-						<p>
-							<?php echo esc_html_e( $slide['text']); ?>
-						</p>
-					</div>
+					</a>
 				<?php endforeach; ?>
 			</div>
 			<div class="controls-wrapper">
