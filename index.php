@@ -10,7 +10,7 @@
 get_header();
 ?>
 <?php
-	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
+	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'no' );
 ?>
 <div class="container-fluid">
     <div class="row">
