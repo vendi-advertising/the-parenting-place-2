@@ -5,3 +5,12 @@
     }
 }
 
+
+
+.small-slider{
+    > .tns-item{
+        width: calc(4.44%) !important;
+        max-height: 200px;
+        overflow-y: hidden;
+    }
+}
