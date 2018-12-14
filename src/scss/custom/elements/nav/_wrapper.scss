@@ -40,7 +40,7 @@
      .main-menu-wrapper {
          .navbar {
              transition: background 0.5s linear;
-             background: $black;
+             background: brand-color('light-brown');
              border-bottom: 10px solid brand-color('dark-blue');
          }
 

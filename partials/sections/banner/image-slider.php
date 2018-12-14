@@ -5,7 +5,7 @@ if($slides) : ?>
 <section id="banner" class="image-slider-wrapper">
     <div class="row">
         <div class="col-md-12">
-            <div id="image-section-image-slider" class="send-to-back carousel slide" data-ride="carousel" data-interval="false">
+            <div id="image-section-image-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                 <!-- indicators -->
                 <ol class="carousel-indicators">
                     <?php foreach( $slides as $slide => $value ): ?>
@@ -15,7 +15,8 @@ if($slides) : ?>
                 <div class="carousel-inner">
                     <?php  foreach( $slides as $slide => $value): ?>                 
                         <div class="carousel-item<?php if($slide==0) : echo esc_html_e( ' active' ); endif; ?>">
-                            <img style="background-size:cover;" src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>"/>
+                            <div class="carousel-caption-overlay"></div>
+                                <img style="background-size:cover;" src="<?php echo esc_html_e( $value['image']['url'] ); ?>" alt="<?php echo esc_html_e( $value['image']['alt'] ); ?>"/>
                             <?php
                                 $text_align = '';        
                                 switch($value['text_alignment']) {
@@ -29,7 +30,6 @@ if($slides) : ?>
                                         break;
                                 }
                             ?>
-                            <div class="carousel-caption-overlay"></div>
                             <div class="carousel-caption <?php echo esc_html_e( $text_align ); ?>">
                                     <h1><?php echo esc_html_e( $value['title'] ); ?></h1>
                                     <p><?php echo esc_html_e( $value['caption'] ); ?></p>
