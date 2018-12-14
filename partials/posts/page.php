@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place_2
+ * @package the_parenting_place
  */
 
 ?>
@@ -28,7 +28,7 @@
 
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<!-- <?php the_parenting_place_2_posted_on(); ?> -->
+				<!-- <?php the_parenting_place_posted_on(); ?> -->
 			</div><!-- .entry-meta -->
 			<?php
 			endif; ?>
@@ -38,11 +38,11 @@
 			if ( is_single() ) :
 				the_content();
 			else :
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2.0' ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the_parenting_place' ) );
 			endif;
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2.0' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -51,6 +51,6 @@
 		<a href="<?php echo esc_url( get_permalink() ) ?>"><button type="button" class="btn btn-block btn-default">Read more..</button></a>
 		
 		<footer class="entry-footer">
-			<?php the_parenting_place_2_entry_footer(); ?>
+			<?php the_parenting_place_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

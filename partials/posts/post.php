@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place_2
+ * @package the_parenting_place
  */
 
 ?>
@@ -32,14 +32,14 @@
 				if ( is_single() ) :
 					the_content();
 				else :
-					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-parenting-place-2.0' ) );
+					the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the_parenting_place' ) );
 				endif;?>
 	
 				<div class="pagination">
 					<nav>
 						<?php
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-parenting-place-2.0' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place' ),
 								'after'  => '</div>',
 							) );
 						?>
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<footer class="entry-footer">
-				<?php the_parenting_place_2_entry_footer(); ?>
+				<?php the_parenting_place_entry_footer(); ?>
 			</footer>
 	</article>
 </section>

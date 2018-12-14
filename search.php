@@ -20,7 +20,7 @@ get_header(); ?>
         <?php if ( have_posts() ) : ?>
 
             <h4 class="search-query">
-                <?php printf( esc_html__( 'Search Results for: %s', 'the-parenting-place-2.0' ), '<span>' . get_search_query() . '</span>' ); ?>
+                <?php printf( esc_html__( 'Search Results for: %s', 'the_parenting_place' ), '<span>' . get_search_query() . '</span>' ); ?>
             </h4>
 
             <?php while ( have_posts() ) : the_post(); ?>
