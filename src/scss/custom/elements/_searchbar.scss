@@ -6,6 +6,7 @@ $bar-height: 45px;
 .sb-search {
     &.sb-search-open {
         width: 100%;
+        margin-bottom: 1em;
     }
     width: 100%;
     backface-visibility: hidden;
@@ -37,6 +38,7 @@ input.sb-search-input[type="search"] {
     right: 0;
     top: 0;
     width: 100%;
+    margin-bottom: 1em;
 }
 
 .sb-search-submit {

@@ -16,7 +16,6 @@ get_header(); ?>
                 <span class="sb-icon-search"> <i class="fas fa-search" aria-hidden="true"> </i> </span>
             </form>
         </div>
-
         <?php if ( have_posts() ) : ?>
 
             <h4 class="search-query">
