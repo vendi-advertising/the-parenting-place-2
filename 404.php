@@ -45,8 +45,8 @@ get_header();
 
 					<?php
 					/* translators: %1$s: smiley */
-					$the_parenting_place_2018_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'the-parenting-place-2.0' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$the_parenting_place_2018_archive_content" );
+					$the_parenting_place_2_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'the-parenting-place-2.0' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$the_parenting_place_2_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>

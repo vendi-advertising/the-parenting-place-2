@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place_2018
+ * @package the_parenting_place_2
  */
 
 ?>
@@ -29,7 +29,7 @@
 
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<!-- <?php the_parenting_place_2018_posted_on(); ?> -->
+				<!-- <?php the_parenting_place_2_posted_on(); ?> -->
 			</div>
 			<?php
 			endif; ?>
@@ -58,6 +58,6 @@
 		
 		
 		<footer class="entry-footer">
-			<?php the_parenting_place_2018_entry_footer(); ?>
+			<?php the_parenting_place_2_entry_footer(); ?>
 		</footer>
 </article>

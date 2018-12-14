@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place_2018
+ * @package the_parenting_place_2
  */
 
 ?>
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<footer class="entry-footer">
-				<?php the_parenting_place_2018_entry_footer(); ?>
+				<?php the_parenting_place_2_entry_footer(); ?>
 			</footer>
 	</article>
 </section>

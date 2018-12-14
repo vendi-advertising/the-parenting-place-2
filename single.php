@@ -12,11 +12,11 @@ $handler = new IntersectionPluginHandler\ACF();
 $handler->get_section('banner', 'base');
 ?>
 <?php
-	$default_sidebar_position = get_theme_mod( 'default_sidebar_position', 'right' );
+	$default_sidebar_position = get_theme_mod ('side_bar_position');
 ?>
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-	<?php if ( $default_sidebar_position === 'no' ) : ?>
+	<?php if ( $default_sidebar_position === 'none' ) : ?>
 		<div class="col-md-12 wp-bp-content-width">
 	<?php else : ?>
 		<div class="col-md-9 wp-bp-content-width">
@@ -39,7 +39,7 @@ $handler->get_section('banner', 'base');
 			</main>
 		</div>
 	</div>
-		<?php if ( $default_sidebar_position != 'no' ) : ?>
+		<?php if ( $default_sidebar_position != 'none' ) : ?>
 			<?php if ( $default_sidebar_position === 'right' ) : ?>
 				<div class="col-md-3 wp-bp-sidebar-width">
 			<?php elseif ( $default_sidebar_position === 'left' ) : ?>
