@@ -28,3 +28,20 @@
             )
         )
     );
+    
+    $wp_customize->add_setting(
+        'icon_size',
+            array(
+              'default' => '200',
+          )
+    );
+
+    $wp_customize->add_control(
+        'icon_size',
+        array(
+            'label' => __('Icon Size','the_parenting_place'),
+            'section' => 'layout_options',
+            'settings' => 'icon_size',
+            'type' => 'number',
+        )
+    );

@@ -31,6 +31,11 @@
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<a class="navbar-brand" href="#">
+								<style>
+									.custom-logo {
+										width: <?php echo(esc_html_e(get_theme_mod('icon_size'))).'px';?>;
+									}
+								</style>
 								<div class="site-branding mb-3">
 									<?php
 										the_custom_logo();
