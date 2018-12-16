@@ -1,7 +1,12 @@
 clone repo
 
+to install frontend build tools
+
 ```
 npm install
-npm run dev
+```
+to run dev dev server
 
+```
+npm run dev
 ```
