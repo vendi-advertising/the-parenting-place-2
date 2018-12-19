@@ -1,6 +1,3 @@
-#banner{
-    margin-top: 10rem;
-}
 .carousel {
     margin-bottom: 4rem;
 }
@@ -24,6 +21,8 @@
         top: 0;
         left: 0;
         min-width: 100%;
+        position: absolute;
+        z-index: 1;
     }
 }
 
@@ -53,9 +52,6 @@
 
 @media (min-width: 48em) {
 
-    #banner{
-        margin-top: 4em;
-    }
     .carousel-item {
        height: 32em;
 
@@ -74,15 +70,10 @@
 }
 
 @media (min-width: 63em){
-    #banner{
-        margin-top: 8em;
-    }
+
 }
 @media (min-width: 72em) {
 
-    #banner{
-        margin-top: -2em;
-    }
 
     .carousel-item {
         height: 36em;
