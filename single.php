@@ -12,7 +12,7 @@ $handler = new IntersectionPluginHandler\ACF();
 $handler->get_section('banner', 'base');
 ?>
 <?php
-	$default_sidebar_position = get_theme_mod ('side_bar_position');
+	$default_sidebar_position = get_theme_mod('side_bar_position');
 ?>
 <div class="container">
 	<div class="row">

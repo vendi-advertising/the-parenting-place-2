@@ -1,6 +1,6 @@
 
 <?php 
-echo basename( __FILE__ );
+// echo basename( __FILE__ );
 ?>
 
 <section>
