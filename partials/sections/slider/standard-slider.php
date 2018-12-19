@@ -26,23 +26,6 @@ if(count($slides)) :
 			</div>
 			<div class="controls-wrapper">
 				<div class="customize-tools">
-					<ul class="thumbnails" id="customize-thumbnails-<?php echo esc_html_e( $slider_instance ); ?>">
-						<li>
-							<img src="" alt="" width="600" height="400">
-						</li>
-						<li>
-							<img src="" alt="" width="600" height="400">
-						</li>
-						<li>
-							<img src="" alt="" width="600" height="400">
-						</li>
-						<li>
-							<img src="" alt="" width="600" height="400">
-						</li>
-						<li>
-							<img src="" alt="" width="600" height="400">
-						</li>
-					</ul>
 					<ul class="controls" id="customize-controls-<?php echo esc_html_e( $slider_instance ); ?>">
 						<li class="prev">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/png/angle-left.png" alt="">

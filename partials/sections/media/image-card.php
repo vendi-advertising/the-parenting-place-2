@@ -2,7 +2,7 @@
 $image = $contents ?? [];
 if($image) : ?>
 <section>
-    <div class="row">
+    <div class="row image-card">
         <div class="card">
             <div class="card-body" width="100%">
                 <img width="" src="<?php echo esc_html_e( $image['image'] ); ?>" alt=""/>

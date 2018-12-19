@@ -1,14 +1,14 @@
 <?php 
 $slides = $contents ?? [];
-if(!isset($slider_instance)){
-	$slider_instance = 0;
+if(!isset($small_slider_instance)){
+	$small_slider_instance = 0;
 }
 if(count($slides)) : 
 ?>
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="standard-slider-<?php echo esc_html_e( $slider_instance ); ?> small-slider" data-name="standard-slider-<?php echo esc_html_e( $slider_instance ); ?>">
+			<div class="small-slider-<?php echo esc_html_e( $small_slider_instance ); ?>" data-name="small-slider-<?php echo esc_html_e( $small_slider_instance ); ?>">
 				<?php foreach($slides['slides'] as $slide): ?>
 			
 						<div class="card shadow">
@@ -26,24 +26,7 @@ if(count($slides)) :
 			</div>
 			<div class="controls-wrapper">
 				<div class="customize-tools">
-					<ul class="thumbnails" id="customize-thumbnails-<?php echo esc_html_e( $slider_instance ); ?>">
-						<li>
-							<img src="" alt="" width="150" height="100">
-						</li>
-						<li>
-							<img src="" alt="" width="150" height="100">
-						</li>
-						<li>
-							<img src="" alt="" width="150" height="100">
-						</li>
-						<li>
-							<img src="" alt="" width="150" height="100">
-						</li>
-						<li>
-							<img src="" alt="" width="150" height="100">
-						</li>
-					</ul>
-					<ul class="controls" id="customize-controls-<?php echo esc_html_e( $slider_instance ); ?>">
+					<ul class="controls" id="small-customize-controls-<?php echo esc_html_e( $small_slider_instance ); ?>">
 						<li class="prev">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/png/angle-left.png" alt="">
 						</li>
@@ -52,11 +35,11 @@ if(count($slides)) :
 						</li>
 					</ul>
 					<div class="playbutton-wrapper">
-						<button id="customize-toggle-<?php echo esc_html_e( $slider_instance ); ?>">Pause</button>
+						<button id="small-customize-toggle-<?php echo esc_html_e( $small_slider_instance ); ?>">Pause</button>
 					</div>
 				</div>
 			</div>
-			<?php $slider_instance++; ?>
+			<?php $small_slider_instance++; ?>
 			<?php endif; ?>
 		</div>
 	</div>
