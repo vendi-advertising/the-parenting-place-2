@@ -8,6 +8,7 @@ $events = [];
 if( count($result["posts"]) > 0 ){
     $events = $result["posts"];
 }
+
 $moreThanOne = count($events) > 1;
 $index = 0;
 ?>
@@ -20,7 +21,7 @@ $index = 0;
     <div class="col-md-12">
         <div class="section-title">
             <div class="inner">
-                <p>This is a demo</p>
+                <span><?php echo get_bloginfo( 'name' ); ?></span>
             </div>
             <h1> Upcoming Events </h1>
         </div>
