@@ -1,3 +1,11 @@
+<?php
+/**
+ * Card section
+ *
+ * @package 
+ *
+ */
+?>
 <?php 
 $cards = $contents[$contents['acf_fc_layout']] ?? [];
 if(count($cards)) : ?>

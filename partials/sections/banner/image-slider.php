@@ -1,3 +1,11 @@
+<?php
+/**
+ * Image slider section
+ *
+ * @package 
+ * 
+ */
+?>
 <?php 
 $slides = $contents[$contents['acf_fc_layout']] ?? [];
 $moreThanOne = count($slides) > 1;

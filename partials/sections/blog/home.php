@@ -1,3 +1,12 @@
+<?php
+/**
+ * Loops through all the posts and displays them based on type
+ * 
+ * @see posts folder for supported type files
+ *
+ * @package the_parenting_place
+ */
+?>
 <div class="row">
     <div class="container-fluid">
         <section id="primary" class="content-area">

@@ -1,5 +1,19 @@
 <?php
-
+/**
+ * Calendar section
+ * Displays slider of all events in the following priority:
+ *
+ * featured events
+ * upcoming events
+ * 
+ * if none of the above:
+ * 
+ * past events
+ * 
+ * @package the_parenting_place
+ */
+?>
+<?php
 $handler = new IntersectionPluginHandler\Ai1EC();
 $events_to_display = $handler->prepare();
 $result = $handler->render($events_to_display);

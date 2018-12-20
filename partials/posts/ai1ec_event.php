@@ -1,8 +1,13 @@
+<?php
+/**
+ * Template part for displaying all-in-one calendar events
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package the_parenting_place
+ */
 
-<?php 
-// echo basename( __FILE__ );
 ?>
-
 <section>
     <div class="card">
         <div class="card-body">

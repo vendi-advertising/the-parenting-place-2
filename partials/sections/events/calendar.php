@@ -1,4 +1,11 @@
 <?php
+/**
+ * Calendar section
+ * Displays full calendar
+ * @package the_parenting_place
+ */
+?>
+<?php
 $calendar_type = $contents[$contents['acf_fc_layout']] ?? "monthly";
 ?>
 <section class="card shadow">

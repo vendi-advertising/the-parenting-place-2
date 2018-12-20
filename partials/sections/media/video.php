@@ -1,3 +1,12 @@
+<?php
+/**
+ * Video
+ * 
+ * Displays a video embed
+ * 
+ * @package the_parenting_place
+ */
+?>
 <?php 
 $video = $contents?? [];
 if($video) : ?>

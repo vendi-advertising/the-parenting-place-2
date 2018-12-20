@@ -1,3 +1,10 @@
+<?php
+/**
+ * Image centered inside a card
+ * 
+ * @package the_parenting_place
+ */
+?>
 <?php 
 $image = $contents ?? [];
 if($image) : ?>
