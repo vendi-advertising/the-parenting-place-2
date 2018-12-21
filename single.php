@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying a single blog post
+ * Pulls sidebar position from Theme customizer
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
