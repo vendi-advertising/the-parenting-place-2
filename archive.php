@@ -1,10 +1,4 @@
 <?php
-/**
- * Handles rendering archives for blog posts
- *
- *
- * @package the_parenting_place
- */
 get_header(); ?>
 <?php
     $handler = new IntersectionPluginHandler\ACF();

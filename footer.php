@@ -1,11 +1,4 @@
-<?php
-/**
- * The footer
- *
- * 
- *
- * @package the_parenting_place
- */
+
 		<footer id="footer" class="bg-dark page-footer pt-4">
 			<div class="container-fluid text-center text-md-left">
 			<div class="row">
