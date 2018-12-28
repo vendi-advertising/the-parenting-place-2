@@ -1,3 +1,8 @@
+<?php
+/**
+ * The search input
+ */
+?>
 <div id="sb-search" class="sb-search">
     <form action="<?php echo home_url( '/' ); ?>">
         <input class="sb-search-input" placeholder="Search" name="s" id="search" type="search">
