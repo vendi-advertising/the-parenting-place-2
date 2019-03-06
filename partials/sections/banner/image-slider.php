@@ -11,6 +11,8 @@ $slides = $contents[$contents['acf_fc_layout']] ?? [];
 $moreThanOne = count($slides) > 1;
 if($slides) : ?>
 <section id="banner" class="image-slider-wrapper">
+    <div class="banner-social">
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div id="image-section-image-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
