@@ -23,6 +23,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'the_parenting_place' ); ?></a>
 		<header id="masthead" class="site-header">
+			<div class="header-social-links">
+			</div>
 			<div class="nav-menu-wrapper">
 				<div class="main-menu-wrapper">
 					<nav class="navbar navbar-expand-md navbar-dark" role="navigation">
