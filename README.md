@@ -6,13 +6,21 @@ to install frontend build tools
 npm install
 ```
 
-to run tell webpack to build the bundled css and js from /src
+run webpack to build the bundled css and js and watch /src for changes
 
 ```
 npm run dev
 ```
 
+run to build final deployable bundle
+
+```
+npm run build
+```
+
 project map
+
+/partials/sections are mapped to the advanced custom fields of the same name
 
 ```
 .
