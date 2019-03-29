@@ -1,4 +1,4 @@
-var tns = (function () {
+const tns = (function () {
     // keys
     if (!Object.keys) {
         Object.keys = function (object) {
