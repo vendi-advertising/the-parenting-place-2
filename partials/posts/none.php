@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 
 ?>
@@ -27,7 +27,7 @@
 					<nav>
 						<?php
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place_2' ),
 								'after'  => '</div>',
 							) );
 						?>
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<footer class="entry-footer">
-				<?php the_parenting_place_entry_footer(); ?>
+				<?php the_parenting_place_2_entry_footer(); ?>
 			</footer>
 	</article>
 </section>

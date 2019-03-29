@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 
 ?>

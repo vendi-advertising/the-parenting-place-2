@@ -4,7 +4,7 @@
  * 
  * @see posts folder for supported type files
  *
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 ?>
 <div class="row">

@@ -1,4 +1,13 @@
+<?php
+/**
+ * The footer
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package the_parenting_place_2
+ */
 
+?>
 		<footer id="footer" class="bg-dark page-footer pt-4">
 			<div class="container-fluid text-center text-md-left">
 			<div class="row">

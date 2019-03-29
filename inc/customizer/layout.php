@@ -2,8 +2,8 @@
 
     $wp_customize->add_section('layout_options',array(
         'priority' => 70,
-        'title' => __('Layout Options','the_parenting_place'),
-        'description' => __('Determines the position of the sidebar for non-pages','the_parenting_place'),
+        'title' => __('Layout Options','the_parenting_place_2'),
+        'description' => __('Determines the position of the sidebar for non-pages','the_parenting_place_2'),
         'panel' => 'theme_option'
     ));
 
@@ -17,7 +17,7 @@
     $wp_customize->add_control(
         'side_bar_position',
         array(
-            'label' => __('Side-bar layout','the_parenting_place'),
+            'label' => __('Side-bar layout','the_parenting_place_2'),
             'section' => 'layout_options',
             'settings' => 'side_bar_position',
             'type' => 'radio',
@@ -39,7 +39,7 @@
     $wp_customize->add_control(
         'icon_size',
         array(
-            'label' => __('Icon Size','the_parenting_place'),
+            'label' => __('Icon Size','the_parenting_place_2'),
             'section' => 'layout_options',
             'settings' => 'icon_size',
             'type' => 'number',

@@ -2,7 +2,7 @@
 /**
  * Image centered inside a card
  * 
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 ?>
 <?php 

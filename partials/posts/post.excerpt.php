@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 
 ?>
@@ -29,7 +29,7 @@
 
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<!-- <?php the_parenting_place_posted_on(); ?> -->
+				<!-- <?php the_parenting_place_2_posted_on(); ?> -->
 			</div>
 			<?php
 			endif; ?>
@@ -39,11 +39,11 @@
 			if ( is_single() ) :
 				the_content();
 			else :
-				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the_parenting_place' ) );
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the_parenting_place_2' ) );
 			endif;
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the_parenting_place_2' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -58,6 +58,6 @@
 		
 		
 		<footer class="entry-footer">
-			<?php the_parenting_place_entry_footer(); ?>
+			<?php the_parenting_place_2_entry_footer(); ?>
 		</footer>
 </article>

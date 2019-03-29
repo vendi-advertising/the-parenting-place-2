@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package the_parenting_place
+ * @package the_parenting_place_2
  */
 
 if ( ! is_active_sidebar( 'main-sidebar' ) ) {

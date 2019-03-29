@@ -1,7 +1,12 @@
 import "./sliders"
-import {sidebar} from "./sidebar";
-import {checkIfPastBanner, searchbar} from "./nav";
+import {
+    checkIfPastBanner,
+    searchbar
+} from "./nav";
 
-checkIfPastBanner();
-searchbar();
-sidebar();
+const init = () => {
+    checkIfPastBanner();
+    searchbar();
+}
+
+init();
