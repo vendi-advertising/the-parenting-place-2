@@ -24,12 +24,6 @@ require_once TPP_THEME_PATH . '/includes/global-functions.php';
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 
-// Automatic Sub Nav creation
-require_once get_template_directory() . '/inc/sub-nav.php';
-
-// Customizer Options
-require get_template_directory() . '/inc/customizer.php';
-
 // Advanced Custom Fields
 // require get_template_directory() . '/inc/custom-fields.php';
 

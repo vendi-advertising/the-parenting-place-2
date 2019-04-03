@@ -190,3 +190,36 @@ function the_parenting_place_2_category_transient_flusher() {
     // Like, beat it. Dig?
     delete_transient( 'the_parenting_place_2_categories' );
 }
+
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @return void
+ */
+function the_parenting_place_2_customize_partial_blogname() {
+    bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @return void
+ */
+function the_parenting_place_2_customize_partial_blogdescription() {
+    bloginfo( 'description' );
+}
+
+function the_parenting_place_2_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function the_parenting_place_2_sanitize_textarea( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function the_parenting_place_2_sanitize_category($input){
+  $output=intval($input);
+  return $output;
+
+}
