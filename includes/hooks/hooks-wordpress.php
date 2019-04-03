@@ -182,3 +182,6 @@ add_action(
         }
     }
 );
+
+add_action( 'edit_category', 'the_parenting_place_2_category_transient_flusher' );
+add_action( 'save_post',     'the_parenting_place_2_category_transient_flusher' );

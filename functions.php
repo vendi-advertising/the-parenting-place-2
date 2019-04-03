@@ -23,8 +23,6 @@ require_once TPP_THEME_PATH . '/includes/global-functions.php';
 //Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
-// Post Helpers
-require_once get_template_directory() . '/inc/post-helpers.php';
 
 // Automatic Sub Nav creation
 require_once get_template_directory() . '/inc/sub-nav.php';
