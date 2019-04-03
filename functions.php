@@ -18,15 +18,5 @@ require_once TPP_THEME_PATH . '/includes/hooks.php';
 //Global functions
 require_once TPP_THEME_PATH . '/includes/global-functions.php';
 
-
-
 //Navigation Walker
-require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
-
-
-// Advanced Custom Fields
-// require get_template_directory() . '/inc/custom-fields.php';
-
-
-
-
+require_once TPP_THEME_PATH . '/inc/wp-bootstrap-navwalker.php';
