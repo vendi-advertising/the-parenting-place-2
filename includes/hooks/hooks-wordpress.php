@@ -156,3 +156,29 @@ add_action(
         }
     }
 );
+
+// tag hooks
+add_action(
+    'init',
+    function() {
+        register_taxonomy_for_object_type( 'post_tag', 'page' );
+    }
+);
+
+// add tag support to pages
+add_action(
+    'init',
+    function() {
+        register_taxonomy_for_object_type('post_tag', 'page');
+    }
+);
+
+// ensure all tags are included in queries
+add_action(
+    'pre_get_posts',
+    function($wp_query) {
+        if ($wp_query->get('tag')){
+            $wp_query->set('post_type', 'any');
+        }
+    }
+);

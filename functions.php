@@ -9,8 +9,6 @@ define( 'TPP_THEME_URL',  get_bloginfo( 'template_directory' ) );
 
 require_once TPP_THEME_PATH . '/includes/autoload.php';
 
-require_once TPP_THEME_PATH . '/includes/config.php';
-
 //Generally shared across all themse
 require_once TPP_THEME_PATH . '/includes/vendi-base.php';
 
@@ -21,10 +19,6 @@ require_once TPP_THEME_PATH . '/includes/hooks.php';
 require_once TPP_THEME_PATH . '/includes/global-functions.php';
 
 
-
-
-// Tag Support for Pages
-require_once get_template_directory() . '/inc/page-tags.php';
 
 //Navigation Walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
