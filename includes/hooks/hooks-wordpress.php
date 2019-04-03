@@ -97,7 +97,7 @@ add_action(
         // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
         // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
         $GLOBALS['content_width'] = apply_filters( 'the_parenting_place_2_content_width', 640 );
-    }
+    },
     0
 );
 
